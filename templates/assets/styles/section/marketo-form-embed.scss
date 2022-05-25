@@ -1,0 +1,303 @@
+.marketo-form-embed {
+  background-image: linear-gradient(to left, #024253, #2f4d7a);
+  color: $white;
+
+  p,
+  a {
+    color: $white;
+  }
+
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .header {
+    color: $white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'proxima-nova', sans-serif;
+  }
+
+  form {
+    width: 800px !important;
+    margin: 20px auto 0;
+    //color: $white;
+    label,
+    .disclaimer {
+      color: $white;
+    }
+
+    label {
+      white-space: nowrap;
+      margin-bottom: 5px;
+    }
+
+    .disclaimer {
+      text-align: center;
+    }
+
+    .mktoFormRow {
+      &:first-of-type {
+        .mktoFormCol {
+          width: calc(25% - 10px) !important;
+          margin: 0 5px;
+          @media(max-width: 720px) {
+            width: calc(50% - 10px) !important;
+          }
+          @include phonedown_landscape {
+            width: calc(100% - 10px) !important;
+          }
+        }
+      }
+    }
+
+    @media(max-width: 840px) {
+      width: 100% !important;
+    }
+
+    .mktoFieldWrap {
+      width: 100%;
+    }
+
+    input {
+      width: 100% !important;
+      border-radius: 4px;
+      padding: 4px 6px;
+
+      &:focus {
+        border-color: $orange;
+      }
+    }
+
+    .mktoHtmlText {
+      width: 100% !important;
+    }
+
+    .mktoButtonRow {
+      width: 100%;
+
+      .mktoButtonWrap.mktoRound {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: auto !important;
+        button {
+          background: $white;
+          color: $dark-blue !important;
+          border-radius: 100px;
+          border: 2px solid $white;
+          padding: 8px 20px;
+          font-size: 16px;
+          line-height: 1.2;
+          &:hover {
+            background: transparent;
+            color: $white ! important;
+            border: 2px solid $white;
+          }
+        }
+      }
+
+    }
+  }
+  &.dps-registration {
+    background-image: none;
+    color: $primary2;
+
+    //Marketo Form styling
+    .mktoForm {
+      max-width: 730px;
+      margin: 0 auto;
+      width: 100% !important;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+      border: 1px solid $light-gray;
+      padding: 30px 20px 30px;
+      @include tablet-up {
+        padding: 30px 30px 30px;
+      }
+      label {
+        font-size: 16px;
+        color: $dark-gray;
+        margin-bottom: 0;
+      }
+    }
+    .mktoFormRow {
+      @extend .clearfix;
+      @include tablet-up {
+        display: flex;
+        justify-content: space-between;
+      }
+      &:first-of-type {
+        .mktoFormCol {
+          width: auto !important;
+          margin: 0;
+          @media(max-width: 720px) {
+            width: auto !important;
+          }
+          @include phonedown_landscape {
+            width: auto !important;
+          }
+        }
+      }
+      .mktoFormCol {
+        margin-bottom: 0 !important;
+        margin-top: 15px;
+        float: none;
+        @include tablet-up {
+          &:first-of-type {
+            margin-right: 10px;
+          }
+          &:last-of-type {
+            margin-left: 10px;
+          }
+        }
+        .mktoFieldWrap {
+          @include desktop-mid{
+            float: none;
+          }
+          @include desktop-down{
+            float: none;
+          }
+          input[type = text], input[type = email], input[type = tel], input[type = url], textarea {
+            max-width: none;
+            width: 100% !important;
+            min-width: 330px;
+            margin-top: 5px;
+            background-color: $light-gray;
+            padding: 12px 20px;
+            position: relative;
+            height: 48px;
+            box-shadow: none;
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            font-size: 18px;
+
+            //@include desktop {
+            //  min-width: 300px;
+            //}
+            @include tablet-down{
+              min-width: auto;
+            }
+            &::placeholder {
+              font-size: 18px;
+              line-height: 1.33;
+              color: $primary;
+              font-weight: 300;
+              position: relative;
+              &:after {
+                content: '*';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -5px;
+                left: 0;
+              }
+            }
+            //styling placeholder for ie11^
+            &:-ms-input-placeholder {
+              color: $primary !important;
+              font-weight: 300 !important;
+              font-size: 18px !important;
+            }
+            //avoiding autofill icon on safari
+            &::-webkit-contacts-auto-fill-button {
+              visibility: hidden;
+              display: none !important;
+              pointer-events: none;
+              position: absolute;
+              right: 0;
+            }
+          }
+          .mktoCheckboxList {
+            width: 200px!important;
+            label {
+              &:before {
+                box-shadow: none;
+              }
+              .error-msg{
+                p{
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          select{
+            max-width: 335px;
+            width: 100% !important;
+            min-width: 335px;
+            margin-top: 5px;
+            padding: 12px 20px;
+            position: relative;
+            height: 48px;
+            box-shadow: none;
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            background: $light-gray url("/wp-content/themes/kount/templates/assets/images/dropdown.svg") 95% 50% no-repeat;
+            @include desktop {
+              min-width: 300px;
+            }
+            @include phone-down{
+              min-width: auto;
+            }
+          }
+        }
+        .mktoOffset{
+          width: 0!important;
+        }
+      }
+    }
+    .mktoHtmlText {
+      font-size: 11px;
+      line-height: 1.2;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      width: 100% !important;
+      text-align: center;
+      @include tablet-up {
+        padding-left: 10px;
+        //width: calc(100% - 20px) !important;
+      }
+    }
+    // button style scss
+    .mktoButtonRow{
+      width: 100%;
+      .mktoButtonWrap {
+        margin-left: 0!important;
+        text-align: center;
+        display: block;
+        width: 100%;
+        .mktoButton {
+          font-size: 16px;
+          font-weight: 400;
+          font-family: proxima-nova, sans-serif;
+          line-height: 1.2;
+          font-style: normal;
+          letter-spacing: normal;
+          margin: 0;
+          padding: 10px 13.57px;
+          border-radius: 0;
+          position: relative;
+          color: #fff !important;
+          border: 1px solid transparent;
+          background: $orange;
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.15s linear;
+          width: 200px;
+          text-transform: uppercase;
+          &:hover {
+            transition: all 0.15s linear;
+            background: transparent;
+            color: $orange !important;
+            border: 1px solid $light-orange;
+          }
+        }
+      }
+    }
+  }
+}

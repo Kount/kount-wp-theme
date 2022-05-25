@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="721.6" height="702.53" viewBox="0 0 721.6 702.53">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".788" x2=".283" y1="-.109" y2=".898" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0096aa"/>
+            <stop offset="1" stop-color="#2f4d7a"/>
+        </linearGradient>
+    </defs>
+    <g id="Solid_Hex_Dark_Gradient" data-name="Solid Hex Dark Gradient" transform="translate(475.1 -1514.385)">
+        <path id="Path_3502" d="M201.763 12.838L5.732 286.78a30.7 30.7 0 0 0 .279 36.12l199.936 271.059a30.807 30.807 0 0 0 34.446 10.924l319.591-106.36A30.705 30.705 0 0 0 581 469.144l-2.417-336.837a30.684 30.684 0 0 0-21.43-29.054L236.07 1.449a30.733 30.733 0 0 0-34.307 11.389z" class="cls-1" data-name="Path 3502" transform="scale(-1) rotate(-77 -1161.47 -670.674)"/>
+    </g>
+</svg>

@@ -1,0 +1,299 @@
+.promotional-cta{
+  background-image: -webkit-linear-gradient(145deg, #75c9b4, #0096aa);
+  background-image: -o-linear-gradient(145deg, #75c9b4, #0096aa);
+  background-image: linear-gradient(305deg, #75c9b4, #0096aa);
+  overflow: hidden;
+  padding: 52px 0;
+  z-index: 9;
+  @include media-breakpoint-down(md){
+    padding: 30px 0;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 50px 0 43px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: 35px;
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-image: url(/wp-content/themes/kount/templates/images/svg/pentagon2.svg);
+    background-repeat: no-repeat;
+    visibility: hidden;
+    @include media-breakpoint-down(md){
+      opacity: 0.5;
+    }
+    @include media-breakpoint-down(xs){
+      display: none;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    right: -148px;
+    top: -100px;
+    width: 450px;
+    height: 450px;
+    background-size: contain;
+    background-image: url(/wp-content/themes/kount/templates/images/svg/pentagon2.svg);
+    background-repeat: no-repeat;
+    visibility: hidden;
+    @include media-breakpoint-down(md){
+      opacity: 0.5;
+    }
+    @include media-breakpoint-down(xs){
+      display: none;
+    }
+  }
+  .column-wrapper {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+    .img-box {
+      height: auto;
+      width: 100%;
+      float: left;
+      max-width: 255px;
+      @include media-breakpoint-down(md){
+        float: none;
+        margin: 0 auto;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .content-wrap {
+      padding-left: 46px;
+      width: 100%;
+      .btn-orange {
+        border: 2px solid $white;
+        &:hover{
+          border: 2px solid $white;
+          &:after{
+            color: $white!important;
+          }
+        }
+      }
+      @include desktop-down {
+        padding: 0;
+        //margin-top: 20px;
+        display: block!important;
+        text-align: center;
+        max-width: 800px;
+        margin: 20px auto 0;
+      }
+      .inner-wrap {
+        max-width: 67%;
+        margin-right: 20px;
+        @include media-breakpoint-down(md){
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        p {
+          color: #ffffff;
+          max-width: 730px;
+          font-weight: 400;
+          line-height: 1.335;
+          //word-spacing: -1px;
+          @include media-breakpoint-down(md){
+            max-width: 1000px;
+            margin-bottom: 17px;
+          }
+          @include media-breakpoint-down(xs){
+            margin-bottom: 16px;
+          }
+        }
+        h2,
+        .h2{
+          color: #ffffff;
+          margin-bottom: 0;
+          line-height: 1.2;
+          @include media-breakpoint-down(xs){
+            margin-bottom: 7px;
+          }
+        }
+        &.no-content{
+          display: none;
+        }
+      }
+
+      .cta-btn {
+        margin: 0 0 0 auto;
+        min-width: 131px;
+        @include desktop-down {
+          margin-top: 20px;
+        }
+      }
+      &.flex-row-reverse {
+        .cta-btn {
+          margin-left: 0;
+          @include desktop-up {
+            margin-left: 50px;
+          }
+          //margin-right: 50px;
+        }
+      }
+    }
+  }
+  &.blog-mobile-sidebar {
+    &:before,
+    &:after {
+      content: none;
+      //background-image: none;
+    }
+    .column-wrapper {
+      display: block;
+    }
+  }
+  &.no-img-row {
+    &:after{
+      visibility: visible;
+    }
+    &:before{
+      visibility: visible;
+    }
+    .img-box{
+      display: none;
+    }
+    .content-wrap {
+      padding: 0;
+      margin: 0!important;
+      .inner-wrap {
+        max-width: 800px;
+        margin-right: 75px;
+        @include media-breakpoint-down(md){
+          max-width: 10000px;
+          margin: 0;
+        }
+        &.no-content{
+          display: none;
+        }
+      }
+      .cta-btn {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &.blue-bg {
+    background-image: linear-gradient(to right, #024253, $primary2);
+  }
+  &.solid-blue-bg {
+    background: $primary2;
+  }
+  &.teal-bg {
+    background: $teal;
+  }
+  &.green-bg {
+    background: $primary3;
+  }
+
+  &.is-digest {
+    background: none;
+    padding: 30px 0;
+    @include desktop-down {
+      background: $dark-blue;
+      .img-wrapper {
+        display: none;
+      }
+      .column-wrapper .content-wrap {
+        margin: 0 auto !important;
+      }
+    }
+    &:before,
+    &:after {
+      content: none;
+    }
+    .form-wrapper {
+      max-width: 331px;
+      margin: 0 auto;
+      @include desktop-down {
+        margin-top: 20px;
+      }
+      @include desktop-up {
+        top: 15px;
+      }
+    }
+    .img-wrapper {
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      //&:before {
+      //  content: '';
+      //  background: url(/wp-content/themes/kount/templates/dist/images/svg/green-overlay.svg) center/cover no-repeat;
+      //  //mix-blend-mode: multiply;
+      //  //background: rgba(83,192,165,0.9);
+      //  position: absolute;
+      //  width: 100%;
+      //  height: 100%;
+      //  left: 0;
+      //  top: 0;
+      //  opacity: 0.93;
+      //}
+    }
+    .mktoForm {
+      .mktoButtonWrap.mktoRound .mktoButton {
+        @extend .btn-white;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .mktoHtmlText {
+        width: 100% !important;
+        color: $white;
+        line-height: 1.1;
+        font-size: 11px;
+      }
+      label {
+        @extend .sr-only;
+      }
+      input[type=email] {
+        background: $white;
+        border: 0;
+        border-radius: 0;
+        outline: none;
+        font-family: proxima-nova,sans-serif;
+        box-shadow: none;
+        line-height: 2.13;
+        height: 40px;
+        padding: 10px 14px 11px;
+        font-size: 15px;
+        width: 180px !important;
+        border-radius: 100px;
+        @include phone-down {
+          width: calc(100% - 125px) !important;
+        }
+      }
+      label {
+        color: $white;
+      }
+      .mktoOffset {
+        width: 0 !important;
+      }
+      .mktoButtonRow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 140px;
+        @include phone-down {
+          width: 113px;
+          top: 2px;
+        }
+        .mktoButtonWrap {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+

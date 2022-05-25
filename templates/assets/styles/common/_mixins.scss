@@ -1,0 +1,61 @@
+  @each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .border#{$infix}-top {      border-top: $border-width solid $border-color !important; }
+    .border#{$infix}-right {    border-right: $border-width solid $border-color !important; }
+    .border#{$infix}-bottom {   border-bottom: $border-width solid $border-color !important; }
+    .border#{$infix}-left {     border-left: $border-width solid $border-color !important; }
+
+    .border#{$infix}-top-dark {      border-top: $border-width solid #707070 !important; }
+    .border#{$infix}-right-dark {    border-right: $border-width solid #707070 !important; }
+    .border#{$infix}-bottom-dark {   border-bottom: $border-width solid #707070 !important; }
+    .border#{$infix}-left-dark {     border-left: $border-width solid #707070 !important; }
+
+    .border#{$infix}-top-0 {    border-top: 0 !important; }
+    .border#{$infix}-right-0 {  border-right: 0 !important; }
+    .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+    .border#{$infix}-left-0 {   border-left: 0 !important; }
+
+    .border#{$infix}-x {
+      border-left: $border-width solid $border-color !important;
+      border-right: $border-width solid $border-color !important;
+    }
+
+    .border#{$infix}-y {
+      border-top: $border-width solid $border-color !important;
+      border-bottom: $border-width solid $border-color !important;
+    }
+    .w-25,
+    .w-37,
+    .w-50,
+    .w-75 {
+      margin: 0 auto !important;
+    }
+    .w#{$infix}-25 {
+      max-width: 25%;
+      margin: 0 auto;
+    }
+    .w#{$infix}-37 {
+      max-width: 37%;
+      margin: 0 auto;
+    }
+    .w#{$infix}-50 {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+    .w#{$infix}-75 {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+    .w#{$infix}-100 {
+      max-width: 100%;
+    }
+  }
+}
+
+@mixin target-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}

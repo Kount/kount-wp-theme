@@ -1,0 +1,90 @@
+.column-grid{
+  z-index: 9;
+  .col-wrap{
+    float: left;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    @include desktop-down{
+      width: 100%;
+      margin: 0;
+    }
+  .col-four{
+    border-radius: 20px;
+    background-color: $cyan;
+    text-align: center;
+    width: calc(25% - 16px);
+    padding: 20px;
+    margin: 0 8px;
+    @include tablet {
+      width: calc(50% - 10px);
+      margin: 10px 5px;
+
+    }
+    @include phablet{
+      width: calc(50% - 10px);
+      margin: 10px 5px;
+    }
+    @include phablet-down{
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    span{
+      color: $white;
+      font-size: 90px;
+      @include desktop-mid{
+        font-size: 72px;
+      }
+      @include tablet {
+        font-size: 70px;
+      }
+      @include tablet-down {
+        font-size: 65px;
+      }
+    }
+    p{
+      color: $white;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+}
+&.uneven-grid {
+   .col-wrap{
+    .col-four{
+      width: calc(22% - 20px);
+      margin: 0 10px;
+      @include tablet {
+        width: calc(50% - 10px);
+        margin: 10px 5px;
+  
+      }
+      @include phablet{
+        width: calc(50% - 10px);
+        margin: 10px 5px;
+      }
+      @include phablet-down{
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+       &.third{
+        width: calc(32% - 20px);
+        margin: 0 10px;
+        @include tablet {
+          width: calc(50% - 10px);
+          margin: 10px 5px;
+    
+        }
+        @include phablet{
+          width: calc(50% - 10px);
+          margin: 10px 5px;
+        }
+        @include phablet-down{
+          width: 100%;
+          margin: 0 0 20px 0;
+        }
+       }
+   } 
+  }
+ }
+}

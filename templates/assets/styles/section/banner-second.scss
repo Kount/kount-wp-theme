@@ -1,0 +1,276 @@
+.banner-second {
+  z-index: 3;
+  .bg-img {
+    height: 432px;
+    width: 100%;
+    position: relative;
+    @include laptop-only {
+      height: 400px;
+    }
+    @include phablet {
+      height: 400px;
+    }
+    @include phablet-down {
+      height: 380px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+      font-family: 'object-fit: cover, object-position: right;';
+      @include media-breakpoint-down(md){
+        object-position: left;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+70,ffffff+100&0+70,1+100 */
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); /* IE6-9 */
+      @include desktop-down {
+        background: none;
+      }
+    }
+  }
+  .container {
+    @include tablet{
+      padding: 0 50px;
+    }
+    @include tablet-down{
+      padding: 0 30px;
+    }
+  }
+  .pattern {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 72.5%;
+    height: 100%;
+    background-image: url("/wp-content/themes/kount/templates/dist/images/svg/banner-second-pattern-blue.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+    @include large_desktop{
+      background-position: left;
+      width: 80%;
+    }
+    @include desktop-down{
+      background-position: left;
+      width: calc(100% + 250px);
+      opacity: 1;
+    }
+    @include tablet {
+      //width: 97.5%;
+    }
+    @include tablet-down {
+      width: calc(100% + 380px);
+    }
+  }
+  .content-wrapper {
+    text-align: left;
+    max-width: 578px;
+    width: 100%;
+    float: right;
+    margin-right: 13px;
+
+    @include desktop-down{
+      margin-right: 0;
+    }
+    @include tablet {
+      max-width: 500px;
+      padding: 0;
+      float: none;
+    }
+    @include tablet-down{
+      float: none;
+    }
+    @include phablet {
+      padding: 0;
+      max-width: calc(100% - 150px);
+    }
+    @include phablet-down {
+      padding: 0;
+    }
+    .img-wrapper{
+      display: none;
+    }
+    h1 {
+      text-align: left;
+      color: $light-white;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      font-weight: 300;
+      @include desktop {
+        font-size: 35px;
+      }
+      @include tablet {
+        font-size: 30px;
+      }
+      @include phablet {
+        font-size: 28px;
+      }
+      @include phone {
+        font-size: 26px;
+      }
+      @include phone-down {
+        font-size: 24px;
+      }
+    }
+    h6 {
+      color: $light-white;
+      letter-spacing: normal;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.36;
+      margin: 21px 0;
+      color: $light-white;
+      @include desktop {
+        font-size: 20px;
+      }
+      @include tablet {
+        font-size: 18px;
+      }
+      @include tablet-down{
+        margin: 15px 0;
+        font-size: 16px;
+      }
+    }
+    .btn-orange {
+      border: 2px solid $white;
+      &:hover{
+        border: 2px solid $white;
+        &:after{
+          color: $white!important;
+        }
+      }
+    }
+    .btn-white,
+    .btn-trnsprnt{
+      margin-top: 49px;
+      @include tablet-down{
+        margin-top: 15px;
+      }
+    }
+  }
+  &.detail-page{
+    .content-wrapper .btn-white{
+      margin-top: 20px;
+    }
+  }
+  &.reduce-height {
+    .bg-img {
+      height: 280px;
+      width: 100%;
+      position: relative;
+      @include laptop-only {
+        height: 280px;
+      }
+      @include phablet {
+        height: 280px;
+      }
+      @include phablet-down {
+        height: 280px;
+      }
+    }
+  }
+  &.kount-products,
+  &.detail-page {
+    .bg-img {
+      height: 330px;
+      width: 100%;
+      position: relative;
+      @include laptop-only {
+        height: 330px;
+      }
+      @include phablet {
+        height: 330px;
+      }
+      @include phablet-down {
+        height: 330px;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &.case-study-detail {
+    .bg-img {
+      img {
+        @include desktop-up {
+          max-width: 75%;
+        }
+        @include container-up {
+          max-width: 62%;
+        }
+        @include large_container-up {
+          max-width: 50%;
+        }
+      }
+      //&:after {
+      //  content: none;
+      //}
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 62%;
+        margin: 0 auto;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+20&0+0,1+20 */
+        background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+        @include desktop-down {
+          background: none;
+        }
+      }
+    }
+    .content-wrapper {
+      float: none;
+      @include desktop-up {
+        margin-left: 340px;
+      }
+      @include container-up {
+        max-width: 720px;
+        margin-left: 390px;
+      }
+      @media (min-width: 1350px) {
+        margin-left: 340px;
+      }
+    }
+    .pattern {
+      //position: absolute;
+      //right: auto;
+      //left: 20%;
+      //top: 0;
+      //width: 100%;
+      opacity: 0.9;
+      @include desktop-up {
+        width: 80%;
+        //opacity: .98;
+      }
+      @include large_container-up {
+        width: 75%;
+      }
+      //height: 100%;
+      background-image: url("/wp-content/themes/kount/templates/dist/images/svg/banner-second-pattern-green.svg");
+      mix-blend-mode: unset;
+    }
+  }
+}

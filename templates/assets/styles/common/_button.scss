@@ -1,0 +1,520 @@
+@import 'variables';
+
+/*
+ * Links.
+ */
+%btn-default {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'proxima-nova';
+  line-height: 1.2;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 4px 13.57px;
+  border-radius: 100px;
+  position: relative;
+  color: $white !important;
+  border: 2px solid transparent;
+  background: $blue;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  span{
+    display: block;
+    padding: 5px 10px;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  &:after{
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    //height: 100%;
+    text-align: center;
+    padding: 11px 0;
+    height: 58px;
+    top: -2px;
+    //top: -3px;
+    left: 0;
+    opacity: 0;
+    color: $dark-blue;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  //@include transition(all, 0.3s, ease-out);
+  @include phone {
+    padding: 5px 9px;
+  }
+  @include phone-down {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+}
+
+.btn-default,
+.btn-white,
+.btn-trnsprnt,
+.btn-dark-blue,
+.btn-blue,
+.btn-green,
+.btn-orange,
+.btn-dark-orange,
+.btn-teal,
+.btn-yellow {
+  @extend %btn-default;
+}
+
+
+.btn-default{
+  background: $dark-blue;
+  border: 2px solid $dark-blue;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: 2px solid $dark-blue;
+    color: $dark-blue !important;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.btn-white{
+  color: $dark-blue !important;
+  background: $white;
+  border: 2px solid $white;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: 2px solid $white;
+    color: $white !important;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after{
+      color: $white !important;
+    }
+  }
+
+}
+
+.btn-blue {
+  //padding: 3.8px 11px;
+  background-color: #0960B7;
+  border: 2px solid #0960B7;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid #0960B7;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after {
+      color: #0960B7 !important;
+    }
+  }
+}
+
+.btn-green {
+  //padding: 3.8px 11px;
+  background-color: $neon-green;
+  border: 2px solid $neon-green;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border: 2px solid $neon-green;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+      color: $white;
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after {
+      color: $neon-green !important;
+    }
+  }
+}
+
+.btn-orange {
+  //padding: 3.8px 11px;
+  background-color: $light-orange;
+  border: 2px solid $light-orange;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid $light-orange;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after {
+      color: $light-orange !important;
+    }
+  }
+}
+
+.btn-dark-orange {
+  //padding: 3.8px 11px;
+  background-color: $dark-orange;
+  border: 2px solid $dark-orange;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $dark-orange;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      color: $dark-orange !important;
+    }
+  }
+
+}
+
+.btn-teal {
+  background-color: $primary3;
+  border: 2px solid $primary3;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid $primary3;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after {
+      color: $primary3 !important;
+    }
+  }
+
+}
+
+.btn-yellow{
+  color: $white !important;
+  background: $yellow;
+  border: 2px solid $yellow;
+  @include media-breakpoint-only(md) {
+    padding: 3.5px 9px;
+  }
+  @include media-breakpoint-only (sm) {
+    padding: 3.5px 8px;
+  }
+  @include media-breakpoint-only (xs) {
+    padding: 3.5px 7px;
+  }
+  &:hover,
+  &:focus {
+    background: $white;
+    border: 2px solid $white;
+    color: $yellow !important;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:after{
+      color: $yellow !important;
+    }
+  }
+
+}
+
+.mktoForm button {
+  @extend .btn-orange;
+  padding: 10px 20px;
+  background-color: $light-orange;
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: 2px solid $light-orange;
+    color: $light-orange !important;
+  }
+}
+
+
+.btn-trnsprnt {
+  padding: 9px 21px;
+  color: $blue !important;
+  background: transparent;
+  border: 2px solid $blue;
+  @include phone {
+    padding: 5px 9px;
+  }
+  @include phone-down {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $blue !important;
+    text-decoration: none;
+    span {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+    &:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.btn-large {
+  display: inline-block !important;
+  font-size: 16px;
+  //line-height: 1.2;
+  @include desktop-up {
+    font-size: 22px;
+  }
+  font-family: 'proxima-nova-semibold', sans-serif !important;
+  font-weight: 600;
+  @include desktop-up {
+    padding: 10px 20px;
+    span {
+      padding: 10px 20px;
+      //position: relative;
+      //top: 1px;
+    }
+    &:after {
+      padding: 10px 20px;
+      top: 10px;
+    }
+  }
+}
+
+.btn-small {
+  display: inline-block !important;
+  font-size: 12px;
+  line-height: 13px;
+  font-family: 'proxima-nova', sans-serif !important;
+  font-weight: normal;
+  padding: 1px 5px 1px;
+  span {
+    padding: 0 5px;
+    position: relative;
+    top: 1px;
+  }
+  &:after {
+    padding: 3px 0;
+    height: 33px;
+    top: -1px !important;
+  }
+}
+.link {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: $blue;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &:before {
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+}
+
+.link-arrow {
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: $dark-blue;
+  padding-right: 21px;
+  &:before {
+    //content: "";
+    //position: absolute;
+    //left: 50%;
+    //right: 50%;
+    //bottom: 0;
+    //background: $blue;
+    //width: 0;
+    //height: 1px;
+    //transition: all 0.4s ease-in-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 6px;
+    height: 10px;
+    background-size: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;;
+    background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-blue-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s linear;
+  }
+  &:hover {
+    &:after {
+      right: -3px;
+    }
+    //&:before {
+    //  left: 0;
+    //  right: 0;
+    //  width: 100%;
+    //}
+  }
+}
+
+.dps-btn {
+  border-radius: 2px;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  //font-size: 16px;
+  outline: 0;
+  box-shadow: none;
+
+  &.fill-orange{
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    transition: all 0.15s linear;
+    &:hover{
+      color: $orange;
+      background: none;
+    }
+  }
+  &.fill-gray{
+    background-color: $primary;
+    color: $white;
+    transition: all 0.3s linear;
+    &:hover{
+      transition: all 0.15s linear;
+      border: 1px solid $primary;
+      color: $primary;
+      background: none;
+    }
+  }
+}
+
+
+

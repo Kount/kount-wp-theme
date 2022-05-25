@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.887" height="109.85" viewBox="0 0 40.887 109.85">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2{clip-path:url(#clip-path)}.cls-3{fill:#0096aa}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Path_6638" d="M0 0h40.887v109.85H0z" class="cls-1" data-name="Path 6638" transform="translate(165 945.483)"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_9" class="cls-2" data-name="Mask Group 9" transform="translate(-165 -945.483)">
+        <path id="Pentagon_Outline" d="M266.724 261.347L235.1 251.071l-15.47-5.026-17.363-5.645a8.451 8.451 0 0 0-8.84 2.873l-39.836 54.83a8.447 8.447 0 0 0 0 9.3l39.836 54.831a8.448 8.448 0 0 0 8.84 2.872l21.826-7.092 21.654-7.035 20.977-6.816a8.45 8.45 0 0 0 5.464-7.52v-67.777a8.451 8.451 0 0 0-5.464-7.519z" class="cls-3" transform="rotate(109 -72.587 622.934)"/>
+    </g>
+</svg>

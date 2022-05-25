@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.086" height="28.803" viewBox="0 0 44.086 28.803">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke:#53c0a5}.cls-1{stroke-linecap:square;stroke-miterlimit:10;stroke-width:2px}.cls-2{stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="Icon" transform="translate(-990.777 -576.705)">
+        <path id="Path_2054" d="M1029.423 604.508h.577a3.857 3.857 0 0 0 3.863-3.852v-19.1A3.857 3.857 0 0 0 1030 577.7h-34.357a3.857 3.857 0 0 0-3.863 3.852v19.1a3.857 3.857 0 0 0 3.863 3.852h33.78" class="cls-1" data-name="Path 2054" transform="translate(-.001)"/>
+        <path id="Path_2057" d="M1033.141 591.37h-41.364v-6.026h41.364" class="cls-1" data-name="Path 2057" transform="translate(0 -2.887)"/>
+        <path id="Line_21" d="M0 0h7" class="cls-2" data-name="Line 21" transform="translate(995.805 599.898)"/>
+        <path id="Line_22" d="M0 0h5" class="cls-2" data-name="Line 22" transform="translate(1005.805 599.898)"/>
+    </g>
+</svg>

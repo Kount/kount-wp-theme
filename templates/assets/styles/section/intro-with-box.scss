@@ -1,0 +1,243 @@
+.intro-with-box {
+  z-index: 1;
+  @include laptop-only {
+    padding: 40px 0;
+  }
+  .intro-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    p {
+      margin-top: 16px;
+    }
+  }
+  .pattern {
+    position: absolute;
+    width: 584px;
+    height: 610px;
+    right: -237px;
+    top: 44px;
+    @include desktop {
+      width: 514px;
+      height: 540px;
+    }
+    @include tablet {
+      width: 474px;
+      height: 500px;
+    }
+    @include desktop-down {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 610px;
+    }
+    &.pattern-left {
+      right: auto;
+      left: -350px;
+      width: 581px;
+      height: 607px;
+      top: -90px;
+      @include laptop-only{
+        top: 0px;
+      }
+      @include desktop {
+        width: 484px;
+        height: 540px;
+      }
+      img {
+        max-height: 607px;
+      }
+    }
+  }
+  .column-wrapper {
+    margin-top: 152px;
+    width: calc(100% + 90px);
+    margin-left: -45px;
+    font-size: 0;
+    margin-bottom: 10px;
+    position:relative;
+    z-index: 99;
+    @include laptop-only {
+      margin-top: 112px;
+    }
+    @include desktop {
+      margin-top: 100px;
+      width: calc(100% + 60px);
+      margin-left: -30px;
+    }
+    @include tablet {
+      margin-top: 120px;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
+    @include phablet {
+      margin-top: 120px;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      text-align: center;
+      font-size: 0;
+    }
+    @include phablet-down {
+      margin-top: 90px;
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      font-size: 0;
+    }
+    .col-three {
+      float: none;
+      display: inline-block;
+      vertical-align: bottom;
+      text-align: center;
+      margin: 0 45px;
+      width: calc(33.33% - 90px);
+      //min-height: 258px;
+      padding: 0 0px;
+      transition: box-shadow 0.4s ease-in-out;
+      border: 2px solid $lightbrown-gray;
+      border-top: none;
+      background: $white;
+      @include desktop {
+        margin: 0 30px;
+        width: calc(33.33% - 60px);
+      }
+      @include tablet {
+        margin: 0 15px;
+        width: calc(33.33% - 30px);
+      }
+      @include phablet {
+        margin: 0 10px 110px;
+        width: calc(50% - 20px);
+      }
+      @include phablet-down {
+        margin: 0 0 70px;
+        width: 100%;
+      }
+      @include phablet-down{
+        min-height: inherit;
+      }
+      &:last-child {
+        @include tablet-down {
+          margin-bottom: 0;
+        }
+      }
+      &.text-blue {
+        h5 {
+          color: $primary3;
+        }
+      }
+      &.text-dark-blue {
+        h5 {
+          color: $dark-blue;
+        }
+      }
+      &.text-green {
+        h5 {
+          color: $light-green;
+        }
+      }
+      &.text-cyan {
+        h5 {
+          color: $green;
+        }
+      }
+      &.text-yellow {
+        h5 {
+          color: $primary5;
+        }
+      }
+      &.text-orange {
+        h5 {
+          color: $light-orange;
+        }
+      }
+      .content {
+        padding: 0 25px;
+        border: 2px solid $lightbrown-gray;
+        border-bottom: none;
+        transition: all 0.4s ease-in-out;
+        background: $white;
+        width: calc(100% + 4px);
+        margin-left: -2px;
+        @include desktop-down {
+          padding: 0 20px;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20px;
+          height: 60px;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+      .logo {
+        max-width: 65px;
+        margin: -41px auto 0;
+      }
+      h5 {
+        max-width: 185px;
+        margin: 40px auto 0;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        @include laptop-only {
+          margin: 24px auto 0;
+        }
+        @include desktop-mid {
+          margin: 30px auto 0;
+        }
+        @include tablet {
+          margin: 25px auto 0;
+        }
+        @include tablet {
+          margin: 20px auto 0;
+        }
+        @include tablet-down {
+          margin: 20px auto 0;
+        }
+      }
+      p {
+        margin-top: 17px;
+      }
+      a {
+        margin-top: 30px;
+        @include phablet-down {
+          margin: 20px 0;
+        }
+      }
+      .btn-wrap {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        @include phablet-down{
+          opacity: 1;
+        }
+      }
+      &:hover {
+        box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.08);
+        .content {
+          transform: translateY(-66px);
+          @include phablet-down {
+            transform: translateY(-20px);
+          }
+          &:after {
+            box-shadow: 10px 0px 20px -2px rgba(0, 0, 0, 0.08);
+          }
+        }
+        a {
+          display: inline-block;
+          margin-top: 32px;
+        }
+        .btn-wrap {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

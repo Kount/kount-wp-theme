@@ -1,0 +1,514 @@
+.home-hero-banner {
+  height: auto;
+  position: relative;
+  //@include tablet {
+  //  height: 400px;
+  //}
+  //@include phablet {
+  //  height: 460px;
+  //}
+  @include container_down {
+    background: linear-gradient(90deg, #325893 0, rgba(22, 140, 189, 1));
+  }
+
+  @include desktop {
+    //padding-top: 50px !important;
+    //padding-bottom: 50px !important;
+    > .container {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  .pattern {
+    position: absolute;
+    left: calc(50% - 300px);
+    top: 0;
+    width: 80%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#325893+0,53cbf1+100,168cbd+100&1+0,0.8+100 */
+    background: -moz-linear-gradient(left,  rgba(50,88,147,1) 0%, rgba(22,140,189,0.85) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(50,88,147,1) 0%,rgba(22,140,189,0.85) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(50,88,147,1) 0%,rgba(22,140,189,0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#325893', endColorstr='#cc168cbd',GradientType=1 ); /* IE6-9 */
+    @include container-up {
+      background-image: url("/wp-content/themes/kount/templates/dist/images/svg/hero-overlay.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+      //background-color: rgba(22, 140, 189, .85);
+    }
+    z-index: 20;
+    //opacity: 0.9;
+    //@media (min-width: 1201px) and (max-width: 1380px) {
+    //  width: 80%;
+    //}
+    @media (max-width: 1380px) {
+      width: calc(100% + 280px);
+      right: 0;
+      left: calc(50% - 310px);
+    }
+    @include container-down {
+      left: auto;
+      z-index: 0;
+      //display: none;
+      //width: calc(100% + 350px);
+    }
+  }
+  .container {
+    //@include desktop-mid {
+    //  padding: 0 50px;
+    //}
+    //@include tablet{
+    //  padding: 0 50px;
+    //}
+    @include tablet-down{
+      padding: 0 20px;
+    }
+    @include phablet-down {
+      top: auto;
+      transform: translateY(0);
+    }
+  }
+  .bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 65%;
+    @include container-up {
+      //display: none;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        z-index: 10;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.7+66,0+100;White+to+Transparent */
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 66%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 66%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 66%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 */
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        z-index: 10;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+        background: -moz-linear-gradient(right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); /* IE6-9 */
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slider-wrap {
+    .slider {
+      opacity: 0;
+      .item {
+        padding-right: 60px;
+        visibility: hidden;
+        display: none;
+        //@include desktop {
+        //  padding: 0;
+        //}
+        @include container-down {
+          padding: 0;
+        }
+        &.slick-current {
+          visibility: visible;
+        }
+        &:first-child {
+          display: block;
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    text-align: left;
+    max-width: 800px;
+    //float: left;
+    position: relative;
+    left: 405px;
+    min-height: 527px;
+    display: table-cell;
+    vertical-align: middle;
+    //display: flex;
+    //flex-wrap: wrap;
+    ////align-items: center;
+    //justify-content: center;
+    padding: 80px 0;
+    z-index: 30;
+    .btn-wrapper a {
+      border: 2px solid $white;
+      &:hover,
+      &:focus {
+        background: $white;
+      }
+    }
+    @media (max-width: 1380px) {
+      //padding-right: 110px;
+      //left: 100px;
+      //max-width: 100%;
+      left: 375px;
+    }
+    @include large_desktop {
+      //max-width: calc(100% - 160px);
+      //padding-right: 0;
+      //left: 40px;
+      ////padding-left: 280px;
+      //float: left;
+    }
+    @include container_down {
+      //max-width: calc(100% + 360px);
+      left: auto;
+      padding-left: 360px;
+      margin-left: 200px;
+      padding-bottom: 100px;
+    //}
+    //@include container-down {
+      float: none;
+      padding-left: 0;
+      max-width: 100%;
+      padding-top: 30px;
+      .nav-wrapper {
+        position: relative;
+        bottom: -60px;
+      }
+      //max-width: calc(100% - 160px);
+      //left: 0;
+      //left: 300px;
+    }
+    @include tablet-down {
+      padding: 50px 0 70px;
+      .nav-wrapper {
+        //bottom: -60px;
+        padding-bottom: 20px;
+      }
+    }
+    @include phablet-down {
+      padding-bottom: 110px;
+      .btn-wrapper {
+        position: relative;
+        top: 40px;
+      }
+    }
+    h2, h1 {
+      text-align: left;
+      color: $light-white;
+      font-size: 60px;
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.6px;
+      //max-width: 510px;
+      @include desktop-down {
+        max-width: 100%;
+      }
+      @include desktop {
+        font-size: 55px;
+      }
+      @include tablet {
+        font-size: 50px;
+      }
+      @include phablet {
+        font-size: 35px;
+      }
+      @include phone {
+        font-size: 35px;
+      }
+      @include phone-down {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.36;
+      margin: 0;
+      color: $light-white;
+      padding-right: 194px;
+      &.reduce-right-padding {
+        @include tablet-up {
+          padding-right: 88px;
+        }
+      }
+      @include container_down {
+        padding-right: 0;
+      }
+      @include tablet {
+        font-size: 20px;
+      }
+      @include tablet-down {
+        //margin: 15px 0;
+        font-size: 18px;
+      }
+      @include phablet-down {
+        max-width: 100%;
+        padding-right: 0;
+      }
+    }
+    .bottom-text{
+      position: relative;
+      float: left;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.36;
+      padding: 6px 0 6px 0px;
+      margin-right: 20px;
+      display: block;
+      color: #fafafa;
+      //&:after{
+      //  content: "";
+      //  position: absolute;
+      //  width: 20px;
+      //  height: 20px;
+      //  top: 50%;
+      //  transform: translateY(-50%);
+      //  left: 4px;
+      //  background-repeat: no-repeat;
+      //  background-image: url(/wp-content/themes/kount/templates/dist/images/svg/award-45-white.svg);
+      //}
+      @include tablet {
+        font-size: 20px;
+      }
+      @include tablet-down {
+        font-size: 18px;
+      }
+      a{
+        color: $white;
+      }
+    }
+    //a {
+    //  border-color: $white;
+    //  &:hover {
+    //    border-color: $white;
+    //    &:after {
+    //      color: $white !important;
+    //    }
+    //  }
+    //}
+  }
+
+  .home-hero-subnav {
+    @include tablet-down {
+      display: none;
+    }
+    a {
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+      font-size: 16px;
+      padding: 8px 20px;
+      color: $white;
+      font-family: 'proxima-nova-semibold', sans-serif;
+      font-weight: 600;
+      background: transparent;
+      transition: background-color .15s;
+      border-right: 1px solid $white;
+      &:first-of-type {
+        border-left: 1px solid $white;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+      &:last-of-type {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      &:hover,
+      &:focus{
+        background: $orange;
+      }
+    }
+  }
+}
+
+.home-hero-nav-container {
+  .home-hero-nav {
+    position: absolute;
+    left: -80px;
+    z-index: 30;
+    top: 87px;
+    a {
+      color: $dark-blue;
+      max-width: 186px;
+      line-height: 1.1;
+      display: block;
+      padding-bottom: 75px;
+      position: relative;
+      padding-left: 46px;
+      z-index: 20;
+      transition: color .15s;
+      //transform: translateX(0px);
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+      &:before {
+        //content: '';
+        position: absolute;
+        left: 6px;
+        top: 7px;
+        border-radius: 50%;
+        width: 19px;
+        height: 19px;
+        transform: scale(0);
+        transiton: all .15s linear;
+        opacity: 0;
+        background-color: $light-blue;
+        z-index: -1;
+      }
+      &:first-of-type,
+      &:last-of-type {
+        max-width: 248px;
+        padding-left: 108px;
+        &:before {
+          left: 68px;
+          top: 8px;
+        }
+      }
+      &:hover,
+      &:focus{
+        color: $light-blue;
+        cursor: pointer;
+        //transform: translateX(10px);
+        &:before {
+          transform: scale(1);
+          opacity: 1;
+          //border: 3px solid $black;
+          //content: '';
+          //background-color: $light-orange;
+        }
+      }
+    }
+    .inner {
+      position: absolute;
+      top: -2px;
+      left: 1px;
+      width: 300px;
+    }
+  }
+  &:not(.event-detail) {
+    @media(max-width: 1380px) {
+      position: absolute;
+      height: 100%;
+      z-index: 50;
+      width: 300px;
+    }
+    @include container-down {
+      width: 100%;
+      height: auto;
+      bottom: 140px;
+    }
+    .home-hero-nav {
+      svg {
+        position: relative;
+        //z-index: 10;
+        @include container-up {
+          display: inline !important;
+        }
+      }
+      @media (max-width: 1380px) {
+        left: 50px;
+        top: calc(50% - 180px);
+      }
+      @include container-down {
+        left: auto;
+        top: auto;
+        bottom: 20px;
+      }
+      @include tablet-down {
+        bottom: 0;
+      }
+      .inner {
+        @include container-down {
+          left: -15px;
+          top: auto;
+          width: calc(100vw - 30px);
+          display: flex;
+        }
+        @include tablet-down {
+          flex-wrap: wrap;
+          top: -30px;
+        }
+        @include phablet-down {
+          top: -65px;
+        }
+      }
+      a {
+        @include container-down {
+          padding-bottom: 0;
+          //width: 25%;
+          max-width: 25%;
+          padding-left: 15px;
+          padding-right: 15px;
+          text-align: center;
+          float: left;
+          color: $light-gray;
+          border-right: 1px solid $light-gray;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          &:hover,
+          &:focus {
+            color: $white;
+          }
+          &:first-of-type,
+          &:last-of-type {
+            max-width: 25%;
+          }
+          &:last-of-type {
+            border-right: 0;
+            padding-right: 15px;;
+            padding-left: 15px;
+          }
+          &:first-of-type {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+        @include tablet-down {
+          max-width: 50%;
+          border-right: 0;
+          width: 50%;
+          justify-content: center;
+          &:first-of-type,
+          &:last-of-type {
+            max-width: 50%;
+            width: 50%;
+          }
+        }
+        @include phablet-down {
+          height: auto;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  &.event-detail {
+    position: relative;
+    @include container-down {
+      width: 300px;
+      height: 365px;
+      margin: 0 auto;
+      bottom: auto;
+      position: relative;
+    }
+    .home-hero-nav {
+      left: 0;
+      top: 0;
+      > .inner {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+

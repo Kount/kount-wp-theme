@@ -1,0 +1,201 @@
+.img-video {
+  .video-wrap{
+    display: none;
+  }
+  .bg-img {
+    height: 432px;
+    width: 100%;
+    @include laptop-only {
+      height: 400px;
+    }
+    @include phablet {
+      height: 400px;
+    }
+    @include phablet-down {
+      height: 380px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+      font-family: 'object-fit: cover, object-position: right;';
+    }
+  }
+
+  .container {
+    @include tablet {
+      padding: 0 50px;
+    }
+    @include tablet-down {
+      padding: 0 30px;
+    }
+  }
+
+  .pattern {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 72.5%;
+    height: 100%;
+    background-image: url("/wp-content/themes/kount/templates/dist/images/svg/banner-second-pattern-blue.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    opacity: 0.9;
+    @include large_desktop {
+      background-position: left;
+      width: 80%;
+    }
+    @include desktop-down {
+      background-position: left;
+      width: calc(100% + 250px);
+    }
+    @include tablet {
+      //width: 97.5%;
+    }
+    @include tablet-down {
+      width: calc(100% + 380px);
+    }
+  }
+
+  .content-wrapper {
+    text-align: left;
+    max-width: 578px;
+    float: right;
+    margin-right: 13px;
+
+    @include desktop-down {
+      margin-right: 0;
+    }
+    @include tablet {
+      max-width: 500px;
+      padding: 0;
+      float: none;
+    }
+    @include tablet-down {
+      float: none;
+    }
+    @include phablet {
+      padding: 0;
+      max-width: calc(100% - 150px);
+    }
+    @include phablet-down {
+      padding: 0;
+    }
+
+    h1 {
+      text-align: left;
+      color: $light-white;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      font-weight: 300;
+      @include desktop {
+        font-size: 35px;
+      }
+      @include tablet {
+        font-size: 30px;
+      }
+      @include phablet {
+        font-size: 28px;
+      }
+      @include phone {
+        font-size: 26px;
+      }
+      @include phone-down {
+        font-size: 24px;
+      }
+    }
+
+    h6 {
+      color: $light-white;
+      letter-spacing: normal;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.36;
+      margin-top: 21px;
+      color: $light-white;
+      @include desktop {
+        font-size: 20px;
+      }
+      @include tablet {
+        font-size: 18px;
+      }
+      @include tablet-down {
+        margin-top: 15px;
+        font-size: 16px;
+      }
+    }
+
+    .btn-white,
+    .btn-trnsprnt {
+      margin-top: 49px;
+      @include tablet-down {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &.video {
+    height: 649px;
+    overflow: hidden;
+    @include desktop {
+      height: 500px;
+    }
+    @include tablet {
+      height: 400px;
+    }
+    @include phablet {
+      height: 350px;
+    }
+    @include phone {
+      height: 300px;
+    }
+    @include phone-down {
+      height: 250px;
+    }
+    .bg-img{
+      display: none;
+    }
+    .video-wrap {
+      width: 100%;
+      display: block;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      height: 100%;
+
+      video {
+        outline: none;
+
+        border: 1px solid transparent;
+        background: transparent;
+        max-height: 100%;
+        min-width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+
+    }
+    .content-wrapper{
+      margin: 0 auto;
+      float: none;
+      text-align: center;
+      max-width: 708px;
+      h1{
+        text-align: center;
+      }
+    }
+    .pattern {
+      background-image: url("/wp-content/themes/kount/templates/images/svg/gradient-background.svg");
+      width: 100%!important;
+      opacity: 1!important;
+    }
+  }
+}
+

@@ -1,0 +1,120 @@
+.header-search-section {
+  background: $primary;
+  height: auto;
+  width: 100%;
+  //position: absolute;
+  //margin-bottom: 51px;
+}
+#top-searchbar {
+  //max-height: 0;
+  overflow: hidden;
+  max-height: 0;
+  height: auto;
+  transition: max-height .4s linear;
+  //position: absolute;
+  //top: -119px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  //background: $primary;
+  &.active {
+    display: block !important;
+    overflow: auto;
+    max-height: 380px;
+    //height: auto;
+  }
+}
+.yxt-AutoComplete {
+  &:before {
+    background-color: transparent;
+  }
+}
+.yxt-SearchBar-container {
+  padding: 9px 20px !important;
+  border: 0 !important;
+  z-index: 100;
+  background: $primary;
+  //max-height: 50px;
+  input {
+    font-size: 22px;
+  }
+  li {
+    color: $white;
+    padding: 2px 5px;
+    &:hover {
+      background: rgba(0,150,170,0.5);
+      //color: $primary;
+    }
+  }
+}
+.yxt-SearchBar {
+  height: 100%;
+}
+.yxt-AutoComplete-wrapper {
+  background: $primary;
+}
+.yxt-SearchBar-input {
+  background: $primary;
+  color: $white;
+}
+.yxt-SearchBar-clear {
+  padding: 0 4px;
+  border-radius:50%;
+  width: 30px;
+  height: 30px;
+  svg {
+    position: relative;
+    top: 0gi;
+    width: 23px;
+    height: 23px;
+  }
+}
+.yxt-SearchBar-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 22px !important;
+  color: $white !important;
+}
+.yxt-SearchBar-form input::-moz-placeholder { /* Firefox 19+ */
+  font-size: 22px !important;
+  color: $white !important;
+}
+.yxt-SearchBar-form input:-ms-input-placeholder { /* IE 10+ */
+  font-size: 22px !important;
+  color: $white !important;
+}
+.yxt-SearchBar-form input:-moz-placeholder { /* Firefox 18- */
+  font-size: 22px !important;
+  color: $white !important;
+}
+.yxt-SearchBar-AnimatedIcon {
+  display: none !important;
+  color: $white !important;
+}
+#toggle-searchbar {
+  padding-left: 70px;
+}
+.search-icon-wrapper {
+  position: relative;
+  right: 80px;
+  top: -5px;
+  border: 1px solid $primary;
+  border-radius: 50px;
+  &:hover {
+    border: 1px solid $primary3;
+  }
+}
+.search-icon {
+  position: absolute;
+  right: 70px;
+  top: 9px;
+  @include tablet {
+    top: 12px;
+  }
+  @include desktop {
+    right: auto;
+    left: -20px;
+  }
+  @include container-up {
+    right: auto;
+    left: 0;
+  }
+}

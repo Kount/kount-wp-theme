@@ -1,0 +1,11 @@
+{
+  "name": "h20",
+  "homepage": "https://www.webenertia.com",
+  "authors": [
+    "DK Bhardwaj <dk@webenertia.com.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+  }
+}

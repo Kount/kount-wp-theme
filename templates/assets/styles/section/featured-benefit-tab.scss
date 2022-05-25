@@ -1,0 +1,373 @@
+.tab-content-grid {
+  z-index: 12;
+  position: relative;
+  padding-bottom: 3px;
+  @include desktop{
+    padding: 60px 0 0;
+  }
+  @include tablet{
+    padding: 40px 0;
+  }
+  @include tablet-down{
+    position: relative;
+    padding: 30px 0;
+  }
+  .tabs-wrap {
+    width: 100%;
+    padding-top: 84px;
+    @include large_desktop{
+      width: calc(100% - 14px);
+      margin: 0 7px;
+    }
+    @include desktop-down{
+      width: calc(100% - 14px);
+      margin: 0 7px;
+      position: relative;
+    }
+    @include tablet-down{
+      width: 100%;
+      margin: 0;
+      padding-top: 85px;
+    }
+    .tab-list {
+      width: 100%;
+      max-width: 376px;
+      background: transparent;
+      height: 100%;
+      @include media-breakpoint-only (md) {
+        max-width: 320px;
+        margin-top: 0;
+        height: auto !important;
+      }
+      @include media-breakpoint-down (sm) {
+        max-width: inherit;
+        height: auto;
+        margin-top: 0;
+      }
+      @include media-breakpoint-down (xs) {
+        padding: 0;
+      }
+      .tab-panel-outer{
+        height: 100%;
+      }
+      ul {
+        height: 100%;
+        min-height: 448px;
+        background-image: linear-gradient(317deg, $green, $primary3);
+        @include desktop-down{
+          padding-bottom: 0;
+        }
+        @include tablet-down{
+          height: auto;
+          min-height: auto;
+        }
+         h3 {
+               color: $white;
+               padding: 40px 0 18px 35px;
+               font-weight: 500;
+               line-height: 1.23;
+               @include tablet{
+                 padding: 25px 5px 6px 18px;
+                  }
+               @include phablet{
+                 display: none;
+                 padding: 9px 0 12px 16px;
+               }
+               @include phablet-down{
+                 display: none;
+                 padding: 9px 0 12px 16px;
+               }
+         }
+        li {
+          color: $white;
+          font-size: 18px;
+          line-height: 2.17;
+          font-weight: 300;
+          position: relative;
+          padding-left: 65px;
+          width: 100%;
+          &:last-child{
+            padding-bottom: 30px;
+            @include tablet-down{
+              padding-bottom: 0;
+            }
+          }
+          @include desktop {
+            line-height: 2;
+          }
+          @include tablet {
+            line-height: 2;
+            padding-left: 35px;
+          }
+          @include tablet-down{
+            padding-left: 0;
+            line-height: 1.2;
+            font-size: 16px;
+          }
+          a {
+            color: $white;
+            position: relative;
+            max-width: 280px;
+            &:after{
+              content: "";
+              bottom: 7px;
+              left: 0;
+              position: absolute;
+              height: 2px;
+              width: 0;
+              border-bottom: 1px solid $white;
+              transition: all 0.3s linear;
+              @include tablet-down{
+                display: none;
+              }
+            }
+            &:hover{
+             &:after{
+               width: 100%;
+             }
+            }
+          }
+          &:before {
+            content: '';
+            background-image: url("/wp-content/themes/kount/templates/assets/images/svg/small-hexagon.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 13px;
+            left: 32px;
+            height: 16px;
+            width: 16px;
+            @include desktop {
+              top: 8px;
+            }
+            @include tablet {
+              left: 12px;
+              top: 12px;
+            }
+            @include tablet-down {
+              display: none;
+            }
+          }
+        }
+      }
+      .tab-panel-outer {
+        @include media-breakpoint-down (sm) {
+          position: relative;
+          left: auto;
+          top: auto;
+          width: 100%;
+          display: block;
+          border-radius: 21px;
+          margin: 0 auto;
+          font-size: 0;
+        }
+        button {
+          display: none;
+          background: $white;
+          width: 100%;
+          padding: 10px 20px;
+          text-align: left;
+          margin-bottom: 0;
+          position: relative;
+          outline: none;
+          cursor: pointer;
+          background: $green;
+          span {
+            font-family: $font-families;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.0875em;
+            color: $white;
+            @include phablet-down {
+              max-width: 380px;
+              display: block;
+              letter-spacing: normal;
+            }
+            @include phone-down {
+              font-size: 18px;
+              max-width: 270px;
+              display: block;
+              letter-spacing: normal;
+            }
+            @media (max-width: 320px) {
+                &.careers-mobile-text {
+                    padding-right: 18px;
+                }
+            }
+            &.caret {
+              position: absolute;
+              top: calc(50% - 15px);
+              right: 22px;
+              width: 25px;
+              height: 27px;
+              -webkit-transition: transform 0.3s ease-in-out;
+              -o-transition: transform 0.3s ease-in-out;
+              -webkit-transition: -webkit-transform 0.3s ease-in-out;
+              transition: -webkit-transform 0.3s ease-in-out;
+              -o-transition: -o-transform 0.3s ease-in-out;
+              transition: transform 0.3s ease-in-out;
+              transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
+              @include tablet-down {
+                width: 8px;
+                height: 28px;
+                transform: rotate(90deg);
+              }
+              img{
+                height: 100%;
+                object-fit: contain;
+              }
+              &.closeup {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+          @include media-breakpoint-down (sm) {
+            display: block;
+          }
+        }
+        .responsive-tab {
+          @include media-breakpoint-down (sm) {
+            position: absolute;
+            top: auto;
+            left: 0;
+            width: 100%;
+            background: $light-gray;
+            padding-bottom: 0;
+            border: 2px solid $green;
+            border-top: 0;
+            z-index: 12;
+            display: none;
+            &.show-menu {
+              display: block;
+            }
+            li {
+              a {
+                display: block;
+                padding: 10px 20px;
+                margin-bottom: 0;
+                color: $primary;
+              }
+              &:hover {
+                background: $green !important;
+                a{
+                  color: $white !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tab-content-outer {
+      width: calc(100% - 376px);
+      position: relative;
+      background: $light-gray;
+      overflow: hidden;
+      @include media-breakpoint-only (md) {
+        width: calc(100% - 320px);
+        overflow: hidden;
+      }
+      @include media-breakpoint-down (sm) {
+        width: 100%;
+        height: auto;
+      }
+      @include phone-down{
+        height: auto!important;
+      }
+      .feature-content{
+        width: 100%;
+        height: 100%;
+        .tab-pane {
+          display: none;
+          position: relative;
+          width: 100%;
+          top: 0;
+          left: 0;
+          padding: 66px 35px 25px 56px;
+          @include media-breakpoint-only (lg) {
+            padding: 35px 31px 26px;
+          }
+          @include media-breakpoint-only (md) {
+            padding: 25px;
+          }
+          @include media-breakpoint-only (sm) {
+            padding: 40px 30px;
+          }
+          @include media-breakpoint-only (xs) {
+            padding: 20px 15px;
+          }
+          &.active {
+            &.show {
+              display: block !important;
+              height: 100%;
+            }
+          }
+          .content {
+            position: relative;
+            min-height: 233px;
+            @include media-breakpoint-down (sm) {
+              display: block;
+            }
+            @include phone-down{
+              min-height: auto;
+            }
+            h3{
+              font-weight: 500;
+              line-height: 1.23;
+              letter-spacing: -0.3px;
+              color: $primary;
+            }
+            p {
+              line-height: 1.33;
+              margin: 13px 0 18px;
+              @include desktop{
+                margin: 13px 0 15px;
+              }
+            }
+            ol{
+              li{
+                margin-top: 3px;
+                list-style-type: disc;
+                list-style-position: inside;
+                &:first-child{
+                  margin-top: 18px;
+                }
+              }
+            }
+            .process-list {
+              li {
+                font-size: 0;
+                margin-bottom: 0;
+                padding-left: 0;
+                &:before {
+                  display: none;
+                }
+                a {
+                  display: inline-block;
+                  font-size: 14px;
+                  font-weight: normal;
+                  line-height: 1.71;
+                  letter-spacing: 0.0875em;
+                  color: $red;
+                }
+              }
+            }
+            .link-bottom{
+              position: absolute;
+              bottom: -94px;
+              margin-bottom: 30px;
+              @include tablet{
+                bottom: -74px;
+                margin-bottom: 35px;
+              }
+              @include tablet-down{
+                position: relative;
+                bottom: 0;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

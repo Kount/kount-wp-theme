@@ -1,0 +1,146 @@
+.col-two-grid {
+  .pattern{
+    position: absolute;
+    width: 584px;
+    height: 610px;
+    max-height: 610px;
+    right: -70px;
+    top: 100px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+    @include tablet-down{
+      display: none;
+    }
+
+  }
+  .content-wrapper{
+    float: left;
+    width: calc(100% - 150px);
+    margin: 0 75px;
+    margin-top: 19px;
+    @include desktop{
+      width: calc(100% - 76px);
+      margin: 0 38px;
+      margin-top: 15px;
+    }
+    @include tablet{
+      width: calc(100% - 20px);
+      margin: 0 10px;
+      margin-top: 15px;
+    }
+    @include phablet{
+      width: calc(100% - 10px);
+      margin: 0 5px;
+    }
+    @include phablet-down{
+      width: 100%;
+      margin: 0;
+    }
+    .content{
+      float: left;
+      width: calc(50% - 34px);
+      margin: 0 17px;
+      margin-top: 44px;
+      @include tablet{
+        width: calc(50% - 28px);
+        margin: 0 14px;
+        margin-top: 30px;
+      }
+      @include phablet{
+        width: calc(50% - 24px);
+        margin: 0 12px;
+        margin-top: 22px;
+      }
+      @include phablet-down{
+        width: 100%;
+        margin: 15px 0;
+      }
+      .content-head{
+        padding: 25px 5px 15px 40px;
+        min-height: 93px;
+        @include tablet{
+          padding: 20px 5px 15px 25px;
+          min-height: 85px;
+        }
+        @include phablet{
+          padding: 10px;
+        }
+        @include phablet-down{
+          padding: 18px;
+        }
+        .img-box{
+          padding-right: 25px;
+          @include desktop{
+            padding-right: 20px;
+          }
+          @include tablet{
+            padding-right: 15px;
+          }
+          @include phablet{
+            padding-right: 12px;
+          }
+          @include phablet-down{
+            padding-right: 15px;
+          }
+        }
+        p{
+          color: $white;
+          font-size: 20px;
+          font-weight: 600;
+          max-width: 295px;
+          vertical-align: middle;
+          @include tablet{
+            font-size: 18px;
+          }
+          @include phablet{
+            font-size: 16px;
+          }
+          @include phablet-down{
+            font-size: 16px;
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+        &.bg-cyan{
+          background: $green;
+        }
+        &.bg-blue{
+          background: $blue;
+        }
+        &.bg-yellow-green{
+          background: $primary4;
+        }
+        &.bg-yellow{
+          background: $primary5;
+        }
+        &.bg-light-blue{
+          background: $light-blue;
+        }
+      }
+      .inner-content{
+        padding: 22px 40px 38px 40px;
+        border: 2px solid $lightbrown-gray;
+        border-top: none;
+        background: $white;
+        @include tablet{
+          padding: 22px 18px 30px 28px;
+        }
+        @include phablet{
+          padding: 20px 15px;
+        }
+        @include phablet-down{
+          padding: 16px;
+        }
+        p{
+
+        }
+        a{
+          margin-top: 25px;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,660 @@
+.resources-slider {
+  @include desktop-up {
+    padding: 63px 0 50px;
+  }
+  @include laptop-only {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-only(md){
+    padding: 62px 0 45px;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 44px 0 25px;
+  }
+  .intro-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    p {
+      margin-top: 14px;
+    }
+  }
+  .pattern {
+    position: absolute;
+    right: -131px;
+    top: 33px;
+    width: 660px;
+    height: 690px;
+    @include tablet-down {
+      display: none;
+    }
+    img {
+      height: 100%;
+    }
+    &.pattern-left {
+      right: auto;
+      left: -260px;
+      width: 669px;
+      height: 690px;
+      top: 0;
+      img {
+        max-height: 607px;
+      }
+    }
+  }
+
+  .splide {
+    //@include desktop-up {
+      visibility: visible !important;
+    //}
+  }
+  .slider-wrap {
+    position: relative;
+    //opacity: 0;
+    margin: 45px 0 40px;
+    @include laptop-only {
+      margin: 30px 0 0;
+    }
+    @include desktop {
+      margin: 45px 0 40px;
+    }
+    @include tablet {
+      margin: 40px 0 0;
+    }
+    @include tablet-down {
+      margin: 30px 0 0;
+    }
+    .slick-list {
+      padding: 0 25px;
+      padding-bottom: 25px;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      @include tablet-down {
+        //padding-bottom: 0;
+      }
+      @include phone-down{
+        //padding-bottom: 23px;
+      }
+    }
+    .slider,
+    .splide__list {
+      margin: 0 -10px !important;
+      overflow: hidden;
+      width: calc(100% + 20px);
+      //max-width: 1060px;
+      @include media-breakpoint-only(lg) {
+        width: calc(100% - 100px);
+        margin: 0 50px;
+      }
+      @include desktop-down {
+        width: calc(100% - 60px);
+        margin: 0 30px;
+      }
+      @include phone-down {
+        width: 100%;
+        margin: 0;
+      }
+      .item {
+        position: relative;
+        margin: 0 10px;
+        background-color: $white;
+        overflow: hidden;
+        height: auto;
+        @include phablet-down {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .bg-img {
+          text-align: center;
+          height: 180px;
+          width: 100%;
+          position: relative;
+          //@include desktop-down {
+          //  height: 210px;
+          //  width: 100%;
+          //}
+          //@include phone-down {
+          //  height: 170px;
+          //}
+
+          > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover';
+          }
+
+          .icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include phone-down {
+              //height: calc(100% - 30px);
+            }
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .21);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            img {
+              height: 72px;
+              transition: all linear .15s;
+              //height: auto;
+              //left: auto;
+              //object-fit: contain;
+              //position: absolute;
+              //top: 10px;
+//              right: 10px;
+            }
+          }
+        }
+
+        &.text-blue {
+          h5 {
+            color: $primary3;
+          }
+        }
+
+        &.text-light-blue {
+          h5 {
+            color: $light-blue;
+          }
+        }
+
+        &.text-orange {
+          h5 {
+            color: $light-orange;
+          }
+        }
+
+        &.text-dark-blue {
+          h5 {
+            color: $dark-blue;
+          }
+        }
+
+        &.text-green {
+          h5 {
+            color: $light-green;
+          }
+        }
+
+        &.text-cyan {
+          h5 {
+            color: $green;
+          }
+        }
+
+        &.text-blue {
+          h5 {
+            color: $primary3;
+          }
+        }
+
+        .inner-content {
+          //position: absolute;
+          //top: 0;
+          //left: 20px;
+          //right: 20px;
+          //max-height: 93px;
+          height: auto;
+          background: $white;
+          padding: 20px;
+          transition: all 0.4s ease-in-out;
+          overflow: hidden;
+          //@include desktop {
+          //  max-height: 78px;
+          //}
+          //@include phablet {
+          //  left: 10px;
+          //  right: 10px;
+          //  padding: 20px 15px 0;
+          //}
+          @include tablet-down {
+            padding: 20px 0;
+            //position: relative;
+            //top: 0;
+            //max-height: 100%;
+            //left: 0;
+            //right: 0;
+            //margin: auto;
+            //overflow: visible;
+          }
+          //@include phone {
+          //  padding: 30px 15px 0;
+          //  width: calc(100% - 20px);
+          //}
+          //@include phone-down {
+          //  padding: 36px 15px 0;
+          //  width: calc(100% - 10px);
+          //}
+        }
+
+        .content {
+          background: $white;
+          position: relative;
+          padding: 0 20px 35px;
+          //border: 2px solid $lightbrown-gray;
+          min-height: 156px;
+          border-top: 0;
+        }
+
+        @include desktop-down {
+          padding: 0;
+          margin-bottom: 20px;
+        }
+        //@include phablet {
+        //  padding: 0;
+        //}
+        @include phablet-down {
+          //height: auto !important;
+          min-height: auto;
+        }
+        //@include phone {
+        //  padding: 0;
+        //}
+        //@include phone-down {
+        //  padding: 0 0 30px;
+        //}
+
+        h5 {
+          font-size: 20px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          //max-width: 245px;
+          @include desktop {
+            font-size: 18px;
+          }
+          @include tablet {
+            font-size: 17px;
+            line-height: 1;
+          }
+          @include tablet-down {
+            font-size: 16px;
+
+          }
+          @include phablet-down {
+            height: auto !important;
+          }
+        }
+
+        p {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          transition: all 0.4s ease-in-out;
+          @include desktop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 20px;
+          }
+          @include phablet {
+            margin-top: 20px;
+          }
+          @include phone {
+            margin-top: 10px;
+          }
+          @include phone-down {
+            margin-top: 10px;
+          }
+        }
+
+        a.link-arrow {
+          margin-top: 18px;
+          left: 40px;
+          bottom: 34px;
+          position: absolute;
+          @include phablet {
+            left: 25px;
+          }
+          @include phablet-down {
+            bottom: 20px;
+          }
+          @include phone {
+            left: 25px;
+          }
+          @include phone-down {
+            left: 20px;
+            bottom: 8px;
+          }
+        }
+
+        &.play-video {
+          &:hover {
+            .inner-content {
+              top: 0;
+              max-height: 78px;
+              overflow: hidden;
+              @include phablet-down {
+                max-height: 110%;
+              }
+
+              p {
+                margin-top: 15px;
+                @include phablet-down {
+                  margin-top: 10px;
+                }
+              }
+            }
+
+            a.link-arrow {
+              &:after {
+                right: -5px;
+              }
+            }
+          }
+
+          .content {
+            &:hover {
+              .inner-content {
+                top: -100px;
+                //max-height: 110%;
+                max-height: 130%;
+                @include desktop {
+                  max-height: 130%;
+                }
+                @include phablet {
+                  max-height: 130%;
+                }
+                @include phablet-down {
+                  top: -50px;
+                  max-height: 110%;
+                }
+
+                p {
+                  margin-top: 10px;
+                  @include desktop {
+                    margin-top: 5px;
+                  }
+                  @include tablet {
+                    margin-top: 5px;
+                  }
+                  @include phablet {
+                    margin-top: 5px;
+                  }
+                  @include phablet-down {
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > a {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+        }
+
+        &:hover,
+        &:focus {
+          //box-shadow: 8px 10px 20px 0 rgba(0, 0, 0, 0.08);
+
+          .icon {
+            img {
+              transform: translateY(-20px);
+            }
+          }
+        }
+
+          .inner-content {
+            //top: -120px;
+            //--max-lines: 4;
+            //max-height: calc(var(--lh) * var(--max-lines));
+            //max-height: 200px;
+            //white-space: nowrap;
+            //position: relative;
+            //@include desktop-down {
+            //    max-height: 130%;
+            //}
+            //@include desktop {
+            //  max-height: 130%;
+            //}
+            //@include phablet {
+            //  max-height: 130%;
+            //}
+            //@include phablet-down {
+            //  top: -50px;
+            //  max-height: 110%;
+            //}
+
+            p {
+              margin-top: 20px;
+              //overflow: hidden;
+              //text-overflow: ellipsis;
+              //display: -webkit-box;
+              //-webkit-line-clamp: 4;
+              //-webkit-box-orient: vertical;
+              @include desktop {
+                margin-top: 20px;
+              }
+              @include tablet {
+                margin-top: 20px;
+              }
+              @include phablet {
+                margin-top: 20px;
+              }
+              @include phablet-down {
+                margin-top: 10px;
+              }
+            }
+          }
+
+        &:hover,
+        &:focus {
+          a.link-arrow {
+            &:after {
+              right: -5px;
+            }
+          }
+        }
+      }
+    }
+    .splide__list {
+      display: flex;
+      //flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      //align-items: center;
+      @include desktop-down {
+        flex-wrap: wrap;
+      }
+      .splide__slide,
+      .item {
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+        width: 353px !important;
+        border: 1px solid $lightbrown-gray;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .15);
+        //padding: 0 5px;
+        height: auto;
+        //display: inline-block;
+        @include desktop-down {
+          width: calc(50% - 20px) !important;
+        }
+        @include phablet-down {
+          width: 100% !important;
+        }
+      }
+    }
+    .splide__arrow {
+      background: none;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 10;
+      text-align: center;
+      top: calc(50% - 40px);
+      svg {
+        height: 32px;
+        width: auto;
+        //transform: scale(200);
+        opacity: 0.4;
+        position: absolute;
+        //top: 50%;
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          opacity: 0.8;
+        }
+      }
+      &.splide__arrow--prev {
+        left: -30px;
+        transform: rotate(180deg);
+        svg {
+          top: 8px;
+          right: 14px;
+        }
+      }
+      &.splide__arrow--next {
+        right: -30px;
+        //bottom: calc(50% - 40px);
+        svg {
+          top: 8px;
+          left: 14px;
+        }
+      }
+    }
+
+    .slick-dots {
+      position: relative;
+      z-index: 1;
+      margin: 30px auto 0;
+      padding: 0;
+      width: 100%;
+      max-width: 1140px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      @include phone-down{
+        margin-top: 0;
+      }
+      li {
+        display: inline-block;
+        border: 0;
+        border-radius: 50%;
+        padding: 0 5px;
+        font-size: 0;
+        overflow: hidden;
+        &.slick-active {
+          pointer-events: none;
+        }
+        button {
+          border: 0;
+          padding: 0;
+          background: $dark-blue;
+          width: 10px;
+          height: 10px;
+          outline: none;
+          cursor: pointer;
+          border-radius: 50%;
+          text-indent: -9999px;
+          white-space: nowrap;
+          transition: all 0.4s ease-in-out;
+        }
+        &.slick-active {
+          button {
+            background: $green;
+          }
+        }
+        &:hover {
+          button {
+            background: $green;
+          }
+        }
+      }
+    }
+  }
+  .slide-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    top: calc(50% - 22px);
+    @include phone-down {
+      display: none;
+    }
+    .slick-arrow {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 3;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $dark-blue;
+      border-radius: 50%;
+      font-size: 0;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.4s ease-in-out;
+      background-color: transparent;
+      padding: 9px;
+      text-align: center;
+      @include tablet {
+        width: 35px;
+        height: 35px;
+      }
+      @include tablet-down {
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+        max-height: 18px;
+        @include desktop-mid {
+          //max-height: 13px;
+        }
+        @include tablet {
+          max-height: 13px;
+        }
+        @include tablet-down {
+          max-height: 13px;
+        }
+        path {
+          transition: all 0.4s ease-in-out;
+        }
+      }
+      &:hover {
+        //background-color: $green;
+        border-color: $green;
+        svg {
+          path {
+            fill: $green;
+          }
+        }
+      }
+      &.slide-prev {
+        float: left;
+        margin-left: -30px;
+        @include media-breakpoint-down(lg) {
+          margin-left: 0;
+        }
+      }
+      &.slide-next {
+        float: right;
+        margin-right: -30px;
+        @include media-breakpoint-down(lg) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

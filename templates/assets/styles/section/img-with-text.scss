@@ -1,0 +1,179 @@
+.img-with-text {
+  z-index: 1;
+  @include laptop-only {
+    padding: 50px 0;
+  }
+  .img-box{
+    position: absolute;
+    top: 0;
+    left: -30%;
+    height: 500px;
+    max-width: 580px;
+    @include desktop{
+      max-width: 550px;
+    }
+    @include laptop-only {
+      max-width: 430px;
+      top: -10px;
+      left: -15%;
+    }
+    @include tablet{
+      top: 0;
+      left: -30%;
+      max-width: 450px;
+    }
+    @include tablet-down{
+      left: 10px;
+      max-width: 450px;
+      top: -15px;
+
+    }
+  }
+  .inner-img{
+    padding-right: 8px;
+    margin-left: 0;
+    @include desktop{
+      padding-right: 0;
+      margin-left: 0px;
+    }
+    @include laptop-only {
+      max-width: 430px;
+      margin-left: 0;
+    }
+    @include tablet{
+      padding-right: 0;
+      margin-left: 0;
+      max-width: 580px;
+    }
+    @include tablet-down{
+      max-width: 500px;
+      margin: 0 auto;
+      padding-right: 0;
+    }
+    @include phablet-down {
+      max-width: 100%;
+    }
+  }
+  .col-two {
+    //height: 555px;
+    display: table;
+    @include tablet-down{
+      height: auto;
+    }
+    @include phablet-down {
+      float: none;
+      width: 100%;
+    }
+    .img-wrap{
+      .inner-img {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 110px;
+      @include desktop{
+        padding-left: 60px;
+      }
+      @include tablet{
+        padding-left: 35px;
+      }
+      @include tablet-down{
+        display: block;
+        margin-top: 20px;
+        padding-left: 30px;
+      }
+      @include phablet-down {
+        padding-left: 0;
+      }
+      p {
+        margin: 9px 0 39px;
+        max-width: 430px;
+        @include tablet-down{
+          max-width: 100%;
+        }
+        @include phablet-down {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  &.pricing-img-with-text{
+    z-index: 2;
+    @include desktop-up{
+      padding-top: 121px;
+      padding-bottom: 125px;
+    }
+    .img-wrap{
+      .inner-img{
+        margin-left: 0;
+      }
+      .img-box{
+        display: none;
+      }
+    }
+  }
+  //ai page image on left
+  &.ai-left{
+    @include desktop-up{
+      padding: 94px 0 124px;
+    }
+    @include tablet{
+      padding: 62px 0;
+    }
+    .container{
+      &:before{
+        content:'';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: -55px;
+        left: 0;
+        background: $lightbrown-gray;
+        @include desktop-down{
+          top: -30px;
+        }
+      }
+    }
+    .img-box {
+      display: none;
+    }
+    .inner-img{
+      margin-left: 0;
+      padding-right: 0;
+    }
+    .col-two{
+      .content{
+        vertical-align: top;
+        p{
+          margin: 9px 0 15px;
+        }
+      }
+    }
+  }
+  &.product-feature {
+    .img-box {
+      display: none;
+      //position: absolute;
+      //left: -460px;
+      //top: 200px;
+      //z-index: 0;
+    }
+    .inner-img {
+      position: relative;
+      z-index: 10;
+      @include desktop-down{
+        margin-left: auto;
+      }
+    }
+    @include tablet-down {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

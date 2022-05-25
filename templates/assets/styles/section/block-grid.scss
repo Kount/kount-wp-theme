@@ -1,0 +1,394 @@
+.block-grid{
+  position: relative;
+  z-index: 12;
+  .content-wrapper{
+    padding-top: 85px;
+    z-index: 12;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    overflow: hidden;
+    @include large_desktop{
+      width: 100%;
+      margin-left: 0;
+    }
+    @include desktop-down{
+      width: 100%;
+      margin-left: 0;
+    }
+    @include tablet-down{
+      padding-top: 85px;
+      margin-left: 0;
+    }
+  }
+  .big-block{
+    float: left;
+    max-width: 625px;
+    position: relative;
+    margin-right: 18px;
+    //height: 408px;
+    min-height: 360px;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    @include large-desktop{
+      max-width: 100%;
+      width: calc(60% - 10px);
+    }
+    @include desktop{
+      max-width: 100%;
+      width: calc(60% - 10px);
+    }
+    @include tablet{
+      max-width: 100%;
+      width: calc(60% - 10px);
+    }
+    @include tablet-down{
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 20px 0;
+      min-height: auto;
+    }
+    @include phablet-down{
+      min-height: auto;
+      // height: 365px;
+    }
+    .bg-img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include tablet-down{
+        height: 100%;
+      }
+      img{
+        object-fit: cover;
+        height: 100%;
+        min-width: 100%;
+        @include tablet-down{
+          width: 100%;
+        }
+      }
+    }
+    .content{
+      height: 100%;
+      padding: 28px 10px 28px 50px;
+      @include desktop{
+        padding: 28px 20px 15px 25px;
+      }
+      @include tablet{
+        padding: 32px 20px 5px 25px;
+      }
+      @include tablet-down{
+        padding: 25px 20px;
+      }
+      .title {
+        margin-bottom: 25px;
+        display: table;
+        @include desktop{
+          margin-bottom: 25px;
+        }
+        @include tablet{
+          margin-bottom: 25px;
+        }
+        @include phablet{
+          margin-bottom: 20px
+        }
+        @include phablet-down{
+          margin-bottom: 20px;
+        }
+        .inner-title {
+          font-size: 14px;
+          display: table-cell;
+          vertical-align: middle;
+          color: $white;
+          line-height: 1.21;
+        }
+        .image-box{
+          img{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+          }
+          // image display none for press and news
+          &.Press{
+            img{
+              display: none;
+            }
+          }
+          &.News{
+            img{
+              display: none;
+            }
+          }
+        }
+      }
+      h3 {
+        font-weight: 500;
+        line-height: 1.23;
+        letter-spacing: - 0.3px;
+        color: $white;
+        padding-bottom: 17px;
+        max-width: 475px;
+        @include tablet-down{
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+      span {
+        // new change
+        display: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.33;
+        color: $white;
+
+      }
+      p{
+        // new change
+        display: none;
+
+        color: $white;
+        padding-top: 13px;
+        padding-bottom: 22px;
+        line-height: 1.33;
+        max-width: 520px;
+        @include tablet-down{
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+      a{
+        color: $white;
+        &.arrow-white{
+          &:after{
+            background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-white-arrow.svg);
+          }
+        }
+      }
+
+      &.green-gradient{
+        background-image: linear-gradient(303deg, $green, $primary3);
+        opacity: 0.9;
+        width: 100%;
+      }
+      &.blue-gradient {
+        background-image: linear-gradient(122deg, $primary3, #0195a9, $primary2);
+        opacity: 0.9;
+        width: 100%;
+        min-height: 360px;
+        height: 100%;
+        @include tablet-down{
+          min-height: auto;
+        }
+      }
+    }
+    &:after{
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+  .small-block {
+    float: left;
+    max-width: 470px;
+    width: 100%;
+    position: relative;
+    // height: 408px;
+    min-height: 360px;
+    height: 100%;
+
+    overflow: hidden;
+    @include large-desktop{
+      max-width: 100%;
+      width: calc(40% - 10px);
+    }
+    @include desktop{
+      max-width: 100%;
+      width: calc(40% - 10px);
+    }
+    @include tablet{
+      max-width: 100%;
+      width: calc(40% - 10px);
+    }
+    @include tablet-down{
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    .block {
+      // height: 100%;
+      min-height: 170px;
+      overflow: hidden;
+      @include tablet-down{
+        height: 100%;
+      }
+      &:first-child{
+        margin-bottom: 19px;
+        @include tablet-down{
+          margin-bottom: 20px;
+        }
+      }
+      .content{
+        padding: 20px 30px 14px 40px;
+        @include desktop{
+          padding: 22px 20px;
+        }
+        @include tablet{
+          padding: 15px;
+        }
+        @include tablet-down{
+          padding: 20px;
+        }
+        .title{
+          display: table;
+          .inner-title{
+            font-size: 14px;
+            display: table-cell;
+            vertical-align: middle;
+            color: $white;
+            font-weight: 600;
+            line-height: 1.21;
+            margin-left: 10px;
+          }
+          .image-box{
+            img{
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+            }
+            &.Press{
+              img{
+                display: none;
+              }
+            }
+            &.News{
+              img{
+                display: none;
+              }
+            }
+          }
+        }
+        h3{
+          font-size: 20px;
+          font-weight: 600;
+          color: $white;
+          padding: 16px 0 9px;
+          line-height: 1.2;
+          @include tablet{
+            font-size: 16px;
+            font-weight: 500;
+            padding: 26px 0 9px;
+          }
+          @include tablet-down{
+            font-size: 16px;
+          }
+        }
+        span{
+          font-weight: 600;
+          color: $white;
+          @include tablet{
+            font-weight: 500;
+          }
+        }
+        .text{
+          display: none;
+          padding-bottom: 18px;
+          color: $white;
+          font-weight: 600;
+          line-height: 1.33;
+          @include tablet{
+            font-size: 16px;
+          }
+          @include tablet-down{
+            font-size: 16px;
+          }
+        }
+        a{
+          color: $white;
+        }
+      }
+      // add class for blue color
+      &.blue-gradient {
+        background-image: linear-gradient(292deg, $primary3, $primary2);
+        width: 100%;
+      }
+      &.green-gradient{
+        background-image: linear-gradient(303deg, $green, $primary3);
+        width: 100%;
+        .content{
+          a{
+            &:after{
+              background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-white-arrow.svg);
+            }
+          }
+        }
+      }
+      // add class for gray color
+      &.light-gray{
+        background-color: $light-gray;
+        .content{
+          .title{
+            .inner-title{
+              color: $primary;
+              line-height: 1.21;
+            }
+
+          }
+          h3{
+            color: $primary;
+          }
+          .text{
+            color: $primary;
+            @include tablet{
+              font-size: 16px;
+            }
+            @include tablet-down{
+              font-size: 16px;
+            }
+            span{
+              display: inline-block;
+              color: $primary;
+            }
+          }
+          a{
+            color: $dark-blue;
+          }
+        }
+      }
+      &.primary3 {
+        background-color: $primary3!important;
+        .content{
+          .title{
+            .inner-title{
+              color: $white;
+            }
+          }
+          h3{
+            color: $white;
+          }
+          a{
+            color: $white;
+            &.link-arrow{
+              &:after{
+                background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-white-arrow.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+    //add class arrow white for white arrow in link
+    a{
+      color: $white;
+      &.arrow-white{
+        &:after{
+          background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-white-arrow.svg);
+        }
+      }
+    }
+  }
+
+
+}

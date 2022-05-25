@@ -1,0 +1,404 @@
+.text-with-img {
+  z-index: 1;
+  //background: rgba(243, 243, 243, 0.5);
+  position: relative;
+  //margin-top: 210px;
+  //padding-bottom: 158px;
+  padding-top: 0;
+  @include media-breakpoint-only(lg) {
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-only(md) {
+    margin-top: 0;
+    //padding: 62px 0;
+  }
+  @include media-breakpoint-only(sm) {
+    margin-top: 0;
+    padding: 40px 0 0;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+    padding: 41px 0 0;
+    margin-bottom: 14px;
+  }
+  @include laptop-only {
+    padding: 50px 0;
+  }
+  .container {
+    display: block;
+    //border-top: 1px solid $lightbrown-gray;
+
+    //text-align: center;
+  }
+
+  &:not(.case-study-text-with-img) {
+    .container {
+      display: flex;
+      @include phablet-down {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+      }
+      //align-items: center;
+    }
+  }
+
+  .img-wrap {
+    margin-bottom: -90px;
+    @include large_desktop {
+      position: relative;
+    }
+    @include media-breakpoint-only(lg) {
+      margin-bottom: -20px;
+    }
+    @include media-breakpoint-only(md) {
+      margin-bottom: -10px;
+    }
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: 0;
+      right: 0px;
+      margin-bottom: 0;
+      //padding-left: 30px;
+    }
+    @include media-breakpoint-down(xs) {
+      //padding-top: 20px;
+    }
+    .inner-img {
+      position: relative;
+      padding-right: 0;
+      max-width: 629px;
+      max-height: 657px;
+      margin-left: auto;
+
+      @include large_desktop {
+        padding-right: 0;
+        //max-width: 420px;
+        //max-height: 500px;
+        margin-right: auto;
+      }
+      @include laptop-only {
+        //max-width: 430px;
+        margin-left: 0;
+      }
+      @include tablet {
+        padding-right: 0;
+        margin-left: 0;
+        //max-width: 580px;
+      }
+      @include tablet-down {
+        //max-width: 500px;
+        margin: 0 auto;
+        padding-right: 0;
+      }
+      @include media-breakpoint-down(xs) {
+        //max-width: 300px;
+      }
+      .img-box {
+        position: absolute;
+        top: -5px;
+        //left: -7%;
+        left: -70px;
+        max-height: 607px;
+        //max-width: 581px;
+        max-width: 550px;
+        @include large_desktop {
+          position: absolute;
+          top: 18px;
+          left: 2%;
+          max-height: 607px;
+          max-width: 371px;
+        }
+        @include laptop-only {
+          max-width: 430px;
+          top: -10px;
+          left: -15%;
+        }
+        @include tablet {
+          top: 10px;
+          left: -7%;
+          max-width: 270px;
+        }
+        @include tablet-down {
+          left: -30px;
+          max-width: 450px;
+          top: 22px;
+        }
+        @include media-breakpoint-down(xs) {
+        }
+        @include phablet-down {
+          left: -30px;
+          max-width: calc(100% - 20px);
+          top: 20px;
+        }
+      }
+    }
+  }
+
+  .col-two {
+    //height: 555px;
+    position: unset;
+    display: table;
+    @include tablet-down {
+      height: auto;
+      //width: 100%;
+    }
+    @include phablet-down {
+      float: none;
+      width: 100%;
+    }
+    .img-wrap {
+      .inner-img {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .content {
+      padding-left: 0;
+      @include desktop {
+        padding-left: 0px;
+      }
+      @include tablet {
+        padding-left: 0px;
+        padding-right: 20px;
+      }
+      @include phablet {
+        padding-left: 0px;
+        padding-right: 20px;
+      }
+      @include tablet-down {
+        display: block;
+        margin-top: 0px;
+        padding-left: 0;
+        padding-right: 30px;
+        padding-bottom: 0;
+      }
+      @include phablet-down {
+        padding-right: 0;
+      }
+      p {
+        margin: 22px 0 39px;
+        max-width: 436px;
+        line-height: 1.35;
+        @include tablet-down {
+          max-width: 100%;
+        }
+        //@include media-breakpoint-only(md) {
+        //  max-width: 325px;
+        //}
+        @include media-breakpoint-only(sm) {
+          margin: 20px 0;
+        }
+        @include media-breakpoint-down(xs) {
+          margin: 7px 0 25px;
+        }
+      }
+    }
+  }
+  //class added for case study page
+  &.case-study-text-with-img{
+    margin-top: 0;
+    background: none;
+    @include desktop-up{
+      padding-top: 120px;
+    }
+    @include desktop{
+      padding-top: 60px;
+    }
+    @include tablet {
+      padding-bottom: 30px;
+    }
+    @include phablet-down{
+      padding: 41px 0 10px;
+      margin-bottom: 0;
+    }
+    &:before{
+      content: none;
+      //content: "";
+      //position: absolute;
+      //top: 18px;
+      //bottom: 0;
+      //z-index: 0;
+      //left: 0;
+      //width: 0;
+      //height: 0;
+      //border-bottom: 640px solid hsla(0,0%,95%,.5);
+      //border-right: 240vw solid transparent;
+      //@include large_desktop{
+      //  border-bottom: 580px solid hsla(0,0%,95%,.5);
+      //}
+      //@include desktop-mid{
+      //  border-bottom: 515px solid hsla(0,0%,95%,.5);
+      //}
+    }
+    .col-two{
+      .content{
+        p{
+          @include tablet-down{
+            text-align: left;
+          }
+        }
+        ul{
+          margin: 22px 0 39px;
+          @include tablet-down{
+            margin: 20px 0;
+            text-align: left;
+          }
+          li{
+            position: relative;
+            margin-left: 15px;
+            &:after{
+              content: '';
+              width: 8px;
+              height: 8px;
+              background-color: $green;
+              position: absolute;
+              top: 8px;
+              left: -16px;
+              @include tablet-down{
+                top: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .img-wrap{
+      padding: 0;
+      .inner-img{
+         max-width: 350px;
+        img{
+          width: auto;
+        }
+        .img-box{
+          display: none;
+        }
+      }
+
+    }
+  }
+  &.egift-card-use{
+    background: $white;
+    margin-top: 0 ;
+    @include desktop-up {
+      padding: 30px 0 95px 0;
+    }
+    @include tablet-down {
+      padding: 20px 0 40px;
+      margin-bottom: 0;
+    }
+    &:before {
+      display: none;
+    }
+    .img-wrap {
+      @include tablet-down{
+        padding-left: 0;
+      }
+      .inner-img {
+        text-align: center;
+        max-width: 455px;
+        @include tablet {
+          max-width: 400px;
+        }
+        @include tablet-down {
+          max-width: 360px;
+        }
+        @include large_desktop{
+          margin-right: 0;
+        }
+        .img-box {
+          display: none;
+        }
+        img{
+          width: auto;
+          vertical-align: text-bottom;
+          @include tablet-down{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  // ai page image on right
+  &.ai-right {
+    @include desktop-up{
+      margin-top: 100px;
+      padding-bottom: 200px;
+    }
+    @include desktop{
+      padding-bottom: 150px;
+    }
+    background: transparent;
+    &:before{
+      display: none;
+    }
+    .container{
+      &:before{
+        content:'';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: -55px;
+        left: 0;
+        background: $lightbrown-gray;
+        @include desktop-down{
+          top: -30px;
+        }
+      }
+    }
+    .img-wrap{
+      @include tablet-down{
+        padding-left: 0;
+      }
+      .inner-img{
+        text-align: center;
+        @include desktop-down{
+          margin: 0 auto;
+        }
+        .img-box{
+          display: none;
+        }
+        img{
+          width: auto;
+        }
+      }
+    }
+  }
+  &.user-d-col-two{
+    background: none;
+    margin-top: 25px;
+    &:before{
+      display: none;
+    }
+    .img-wrap{
+      .inner-img{
+        .img-box{
+          display: none;
+        }
+      }
+    }
+  }
+  &.product-feature{
+    .img-box {
+      display: none;
+      //position: absolute;
+      //right: -460px;
+      //top: 200px;
+      //z-index: 0;
+    }
+    @include tablet-down {
+      .content p {
+        text-align: left;
+      }
+    }
+    .inner-img {
+      position: relative;
+      z-index: 10;
+      @include desktop-down{
+        margin-left: auto;
+      }
+    }
+  }
+}

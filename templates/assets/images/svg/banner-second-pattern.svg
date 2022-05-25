@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1016" height="431.765" viewBox="0 0 1016 431.765">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_51" data-name="Rectangle 51" width="1016" height="431.764" transform="translate(384 118)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.193" x2="0.92" y2="0.641" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0096aa"/>
+      <stop offset="1" stop-color="#2f4d7a"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-384 -118)" opacity="0.9" clip-path="url(#clip-path)">
+    <path id="iStock-1082922466" d="M1124.419,422.671,855.958,334.458h0L724.635,291.307l-147.4-48.433c-25.5-8.38-59.274,2.719-75.039,24.661L164.027,738.25c-15.774,21.95-15.774,57.859,0,79.8L502.2,1288.772c15.765,21.942,49.537,33.041,75.039,24.653l185.283-60.883h0l183.825-60.4h0l178.073-58.517c25.51-8.38,46.384-37.433,46.384-64.558V487.229C1170.8,460.1,1149.929,431.059,1124.419,422.671Z" transform="translate(318.518 -444.452)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+.block-content{
+  .content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    .summary {
+        margin: 20px 0;
+    }
+    p{
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    //top heading
+    h4{
+      font-weight: 600;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    // In between heading
+    h6{
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    // list item style
+    ul{
+      margin: 18px 0;
+      margin-left: 20px;
+      li{
+        margin-top: 6px;
+        list-style-type: disc;
+        list-style-position: outside;
+        font-family: 'proxima-nova-light', Sans-serif;
+        font-weight: 200;
+      }
+    }
+    //style for anchor only
+    a {
+      color: $primary3;
+      transition: color 0.3s ease;
+      &:hover {
+        color: $primary4;
+      }
+    }
+    // style for link with arrow
+    .link-arrow{
+      margin: 10px 0;
+      color: $dark-blue;
+      &:hover{
+        color: $dark-blue;
+      }
+    }
+    .cta{
+      .btn-default{
+        margin-left: 10px;
+      }
+    }
+  }
+}

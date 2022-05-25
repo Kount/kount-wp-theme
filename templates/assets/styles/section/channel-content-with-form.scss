@@ -1,0 +1,221 @@
+.channel-content-with-form{
+  .content-wrap {
+    float: left;
+    width: 100%;
+    .col-wrap {
+      width: calc(60% - 20px);
+      float: left;
+      margin: 0 10px;
+      position: relative;
+      text-align: center;
+      padding-right: 20px;
+      @include desktop-mid {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      @include desktop-down {
+        float: none;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      img{
+        max-width: 450px;
+        max-height: 450px;
+        @include phablet-down{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .img-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 450px;
+        height: 450px;
+      }
+      p{
+        margin: 15px 0;
+        text-align: left;
+      }
+      h5{
+        margin: 15px 0;
+        text-align: left;
+      }
+    }
+    .col-form{
+      width: calc(40% - 10px);
+      float: left;
+      border: solid 1px $lightbrown-gray;
+      background-color: $white;
+      padding: 38px 52px;
+      @include desktop-mid{
+        width: 100%;
+        padding: 38px 30px;
+        max-width: 400px;
+        margin: 30px auto 0;
+        float: none;
+      }
+      @include desktop-down{
+        width: 100%;
+        padding: 38px 30px;
+        max-width: 400px;
+        margin: 30px auto 0;
+        float: none;
+      }
+
+      .mktoFormRow {
+        .mktoFormCol {
+          margin-bottom: 0 !important;
+          margin-top: 15px;
+          float: none;
+          .mktoFieldWrap {
+            @include desktop-mid{
+              float: none;
+            }
+            @include desktop-down{
+              float: none;
+            }
+            input[type = text], input[type = email], input[type = tel], input[type = url], textarea {
+              max-width: 335px;
+              width: 100% !important;
+              min-width: 335px;
+              margin-top: 5px;
+              background-color: $light-gray;
+              padding: 12px 20px;
+              position: relative;
+              height: 48px;
+              box-shadow: none;
+              border: 0;
+              outline: 0;
+              border-radius: 0;
+              @include desktop {
+                min-width: 300px;
+              }
+              @include phone-down{
+                min-width: auto;
+              }
+              &::placeholder {
+                font-size: 18px;
+                line-height: 1.33;
+                color: $primary;
+                font-weight: 300;
+                position: relative;
+                @include tablet-down {
+                  font-size: 16px;
+                }
+                &:after {
+                  content: '*';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top: -5px;
+                  left: 0;
+                }
+              }
+              //styling placeholder for ie11^
+              &:-ms-input-placeholder {
+                color: $primary !important;
+                font-weight: 300 !important;
+                font-size: 18px !important;
+              }
+              //avoiding autofill icon on safari
+              &::-webkit-contacts-auto-fill-button {
+                visibility: hidden;
+                display: none !important;
+                pointer-events: none;
+                position: absolute;
+                right: 0;
+              }
+            }
+            .mktoCheckboxList {
+              width: 200px!important;
+              label {
+                &:before {
+                  box-shadow: none;
+                }
+                .error-msg{
+                  p{
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            select{
+              max-width: 335px;
+              width: 100% !important;
+              min-width: 335px;
+              margin-top: 5px;
+              padding: 12px 20px;
+              position: relative;
+              height: 48px;
+              box-shadow: none;
+              border: 0;
+              outline: 0;
+              border-radius: 0;
+              background: $light-gray url("/wp-content/themes/kount/templates/assets/images/dropdown.svg") 95% 50% no-repeat;
+              @include desktop {
+                min-width: 300px;
+              }
+              @include phone-down{
+                min-width: auto;
+              }
+            }
+          }
+          .mktoOffset{
+            width: 0!important;
+          }
+        }
+      }
+      .mktoHtmlText {
+        font-size: 8px;
+        line-height: 1.5;
+        margin-top: 18px;
+        margin-bottom: 21px;
+      }
+      // button style scss
+      .mktoButtonRow{
+        width: 100%;
+        .mktoButtonWrap {
+          margin-left: 0!important;
+          .mktoButton {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: proxima-nova, sans-serif;
+            line-height: 1.2;
+            font-style: normal;
+            letter-spacing: normal;
+            margin: 0;
+            padding: 8.5px 13.57px;
+            border-radius: 100px;
+            position: relative;
+            color: #fff !important;
+            border: 2px solid transparent;
+            background: $light-orange;
+            outline: none;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s linear;
+            width: 100%;
+            &:hover {
+              transition: all 0.3s linear;
+              background: transparent;
+              color: $light-orange!important;
+              border: 2px solid $light-orange;
+            }
+          }
+        }
+      }
+      .btn-wrap{
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

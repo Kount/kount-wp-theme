@@ -1,0 +1,110 @@
+.col-four-with-icons{
+  @include desktop-up{
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .pattern{
+    position: absolute;
+    right: -518px;
+    bottom: -298px;
+    width: 713px;
+    height: 673px;
+    @include desktop-mid{
+      display: none;
+    }
+    @include desktop-down{
+      display: none;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      max-height: 703px;
+    }
+  }
+  .title{
+    margin-bottom: 48px;
+    @include tablet{
+      margin-bottom: 35px;
+    }
+    @include tablet-down{
+      margin-bottom: 25px;
+    }
+    h2{
+      text-align: center;
+    }
+  }
+  .content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    //@include tablet{
+    //  display: block;
+    //}
+    //@include tablet-down{
+    //  display: block;
+    //}
+  }
+   .block{
+     padding-right: 20px;
+     margin: 0 auto;
+     @include tablet{
+       padding-right: 5px;
+     }
+     &:last-child{
+       padding-right: 5px;
+     }
+     @include tablet{
+       width: calc(50% - 20px);
+       margin: 0 10px;
+     }
+     @include tablet-down{
+       padding-right: 0;
+     }
+     .icon-wrap{
+       text-align: center;
+       max-width: 155px;
+       margin: 0 auto 30px;
+       //height: 70px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       @include tablet{
+         margin-bottom: 20px;
+       }
+       @include tablet-down{
+         padding-right: 0;
+         max-width: 180px;
+       }
+     }
+     .content-wrap {
+       @include tablet{
+         text-align: center;
+         margin-bottom: 35px;
+       }
+       @include tablet-down {
+         margin-bottom: 25px;
+       }
+       h6{
+         font-weight: 600;
+         margin-bottom: 9px;
+         @include tablet-down{
+           max-width: 250px;
+           margin: 0 auto;
+           margin-bottom: 9px;
+           text-align: center;
+         }
+       }
+       p{
+         max-width: 245px;
+         margin-bottom: 15px;
+         @include tablet{
+           margin: 0 auto;
+         }
+         @include tablet-down{
+           margin: 0 auto;
+           text-align: center;
+           margin-bottom: 10px;
+         }
+       }
+     }
+   }
+}

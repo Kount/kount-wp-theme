@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="601.829" height="626.867" viewBox="0 0 601.829 626.867">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".03" x2=".962" y1=".218" y2=".546" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#53c0a5"/>
+            <stop offset="1" stop-color="#0096aa"/>
+        </linearGradient>
+    </defs>
+    <path id="Pentagon_1" d="M178.654 343.063l153.127-49.754 74.9-24.338 84.073-27.316c14.546-4.726 33.809 1.534 42.8 13.909l192.895 265.489c9 12.38 9 32.633 0 45.008L533.56 831.554c-8.992 12.376-28.255 18.635-42.8 13.9L385.076 811.12l-104.852-34.064-101.57-33C164.1 739.325 152.2 722.939 152.2 707.64V379.474c0-15.299 11.9-31.68 26.454-36.411z" class="cls-1" transform="scale(-1) rotate(2 24547.463 -21126.222)"/>
+</svg>

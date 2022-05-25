@@ -1,0 +1,24 @@
+.mktoForm {
+   visibility: hidden;
+   position: absolute;
+}
+.mktoForm[data-zi-managed="false"],
+.mktoForm[data-zi-managed="true"][data-zi-managed-behaviors-ready="true"]{
+   visibility: visible;
+   position: static;
+}
+
+.mktoForm .mktoFormRow[data-zi-managed="true"] {
+   height: 0;
+   max-height: 0;
+   transition: max-height 200ms ease-out;
+   overflow: hidden;
+}
+.mktoForm .mktoFormRow[data-zi-managed="true"][data-zi-empty="true"] {
+   height: auto;
+   max-height: 200px;
+   transition: max-height 200ms ease-in;
+}
+.mktoForm .mktoFormRow[data-zi-managed][data-mkto-error-ready] {
+   overflow: visible;
+}

@@ -1,0 +1,207 @@
+{
+    "key": "group_60401407258fd",
+    "title": "Featured Resource by Page",
+    "fields": [
+        {
+            "key": "field_60401479e8df9",
+            "label": "Resources Landing Page Feature",
+            "name": "resources_landing_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "casestudy",
+                "ebook",
+                "industryreport",
+                "video",
+                "webinar",
+                "whitepaper"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_604015224aef6",
+            "label": "Case Studies Page Feature",
+            "name": "casestudy_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/case-studies\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "casestudy"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_60c13ab4c093b",
+            "label": "Downloads Page Feature",
+            "name": "downloads_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/downloads\/\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "ebook",
+                "industryreport",
+                "whitepaper"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_604015513a4d5",
+            "label": "eBooks Page Feature",
+            "name": "ebook_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/ebooks\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "ebook"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_6040156d3a4d6",
+            "label": "Industry Reports Page Feature",
+            "name": "industryreport_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/industry-reports\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "industryreport"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_604015ed3a4d9",
+            "label": "Video Pages Feature",
+            "name": "video_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/videos\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "video"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_604015c23a4d8",
+            "label": "Webinars Page Feature",
+            "name": "webinar_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/webinars\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "webinar"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_6040159d3a4d7",
+            "label": "White Papers Page Feature",
+            "name": "whitepaper_page_feature",
+            "type": "post_object",
+            "instructions": "<a href=\"\/fraud-prevention-resources\/white-papers\" target=\"_blank\">view page<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "whitepaper"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-featured-resources"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1623276281
+}

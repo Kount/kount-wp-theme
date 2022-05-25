@@ -1,0 +1,145 @@
+.banner-webinar {
+  width: 100%;
+  background: url(/wp-content/themes/kount/templates/dist/images/banner-webinar-bg.jpg)
+    no-repeat;
+  background-size: cover;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+  @include media-breakpoint-up(md) {
+    padding: 60px 0 72px;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #024253, #2f4d7a);
+    opacity: 0.9;
+  }
+  &.sticky {
+    padding: 38px 0 37px;
+    position: fixed;
+    top: 0;
+    .logo-wrap {
+      display: none;
+    }
+    .content-wrap {
+      margin-top: 0;
+      h1 {
+        display: none;
+      }
+      .form-wrap {
+        margin-top: 19px;
+        .form-info {
+          margin: 24px auto 27px;
+        }
+      }
+    }
+  }
+  .logo-wrap {
+    @include media-breakpoint-down(md) {
+      display: block;
+      text-align: center;
+    }
+  }
+  .content-wrap {
+    text-align: center;
+    margin-top: 29px;
+    h6 {
+      color: $white;
+      span {
+        font-weight: 600;
+      }
+    }
+    h1 {
+      color: white;
+      font-weight: 300;
+      max-width: 750;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .form-wrap {
+      text-align: left;
+      margin-top: 17px;
+      .col-outer {
+        margin: 0 -15px;
+        .input-wrap {
+          padding: 0 15px;
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+          }
+          label {
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            color: $white;
+            margin-bottom: 5px;
+          }
+          input {
+            width: 100%;
+            padding: 5px 10px 4px;
+            outline: none;
+            font-size: 18px;
+            border-color: transparent;
+            &:invalid {
+              box-shadow: none;
+            }
+
+            &:-moz-submit-invalid {
+              box-shadow: none;
+            }
+
+            &:-moz-ui-invalid {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .form-info {
+        font-size: 10px;
+        color: $white;
+        font-weight: 300;
+        line-height: 1.2;
+        text-align: center;
+        display: block;
+        max-width: 765px;
+        margin: 24px auto 27px;
+        a {
+          color: white;
+          font-weight: 600;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-top: 0;
+        }
+      }
+      .btn-wrap {
+        text-align: center;
+        button {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &.banner-ebook {
+    background: url(/wp-content/themes/kount/templates/dist/images/ebook-banner-bg.jpg)
+      no-repeat;
+    background-size: cover;
+    @include media-breakpoint-up(md) {
+      padding: 60px 0 69px;
+    }
+    .content-wrap {
+      margin-top: 28px;
+      h1 {
+        margin: 16px 0 18px;
+      }
+      .form-wrap {
+        margin-top: 21px;
+        .form-info {
+          margin: 21px auto 27px;
+        }
+      }
+    }
+  }
+}

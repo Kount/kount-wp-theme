@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.625" height="35.273" viewBox="0 0 43.625 35.273">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke:#0095ab;stroke-miterlimit:10}.cls-1,.cls-3{stroke-width:2px}.cls-2,.cls-4{stroke-width:1.5px}.cls-3,.cls-4{stroke-linecap:square}
+        </style>
+    </defs>
+    <g id="Icon" transform="translate(-576.693 -416.034)">
+        <path id="Rectangle_80" d="M0 0h41.625v33.273H0z" class="cls-1" data-name="Rectangle 80" transform="translate(577.693 417.034)"/>
+        <path id="Line_8" d="M0 0h41.812" class="cls-2" data-name="Line 8" transform="translate(577.693 421.632)"/>
+        <path id="Line_9" d="M0 0h1.501" class="cls-1" data-name="Line 9" transform="translate(580.305 419.359)"/>
+        <path id="Line_10" d="M0 0h1.501" class="cls-1" data-name="Line 10" transform="translate(583.306 419.359)"/>
+        <path id="Line_11" d="M0 0h1.501" class="cls-1" data-name="Line 11" transform="translate(586.307 419.359)"/>
+        <path id="Path_2061" d="M616.337 446.318l-1.158 1.158-1.158 1.158-1.158 1.158-1.158 1.158-2.316-2.316" class="cls-3" data-name="Path 2061" transform="translate(-14.223 -13.141)"/>
+        <circle id="Ellipse_136" cx="7.166" cy="7.166" r="7.166" class="cls-4" data-name="Ellipse 136" transform="translate(591.473 428.328)"/>
+    </g>
+</svg>

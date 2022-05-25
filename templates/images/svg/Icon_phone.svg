@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.78" height="48.292" viewBox="0 0 29.78 48.292">
+    <defs>
+        <style>
+            .cls-1,.cls-4{fill:none}.cls-1{stroke:#2e4f7c;stroke-width:2.5px}.cls-2{fill:#2e4f7c}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="Icon_phone" data-name="Icon phone" transform="translate(-581 -1968)">
+        <g id="Rectangle_81" class="cls-1" data-name="Rectangle 81" transform="translate(581 1968)">
+            <rect width="29.78" height="48.292" class="cls-3" rx="5"/>
+            <rect width="27.28" height="45.792" x="1.25" y="1.25" class="cls-4" rx="3.75"/>
+        </g>
+        <path id="Line_19" d="M0 0h26.56" class="cls-1" data-name="Line 19" transform="translate(582.207 1978.061)"/>
+        <path id="Line_20" d="M0 0h26.56" class="cls-1" data-name="Line 20" transform="translate(582.207 2004.621)"/>
+        <circle id="Ellipse_138" cx="2.012" cy="2.012" r="2.012" class="cls-2" data-name="Ellipse 138" transform="translate(593.878 2008.243)"/>
+    </g>
+</svg>

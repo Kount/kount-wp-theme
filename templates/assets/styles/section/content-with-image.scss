@@ -1,0 +1,288 @@
+
+.content-with-image {
+  @include desktop-up {
+    padding: 40px 0 163px;
+  }
+  @include laptop-only {
+    padding: 40px 0 0;
+  }
+  @include tablet-down {
+    //padding-bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -431px;
+    z-index: 1;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 579px solid rgba(243, 243, 243, 0.5);
+    border-right: 265vw solid transparent;
+    @include desktop-down {
+      display: none;
+    }
+  }
+  .pattern {
+    position: absolute;
+    top: 395px;
+    z-index: 2;
+
+    right: -440px;
+    width: 649px;
+    height: 670px;
+    @include large_desktop {
+      right: -480px;
+      top: 14.8%;
+    }
+    @include tablet {
+      right: -580px;
+      top: 3%;
+    }
+    @media screen and (min-width: 1201px) and (max-width: 1399px){
+      right: -457px;
+      width: 649px;
+      height: 670px;
+    }
+    @include media-breakpoint-only(lg) {
+      display: none;
+    }
+    @include desktop-down {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 703px;
+    }
+  }
+  .intro-block {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    max-width: 725px;
+    margin: 0 auto;
+    @include desktop-down {
+      padding: 0 20px;
+    }
+    p {
+      text-align: center;
+      line-height: 1.25;
+      margin-bottom: 19px;
+    }
+  }
+  .title {
+    text-align: center;
+    margin: 18px 0 65px 0;
+    @include tablet {
+      margin: 30px 0
+    }
+    @include tablet-down {
+      margin: 20px 0;
+    }
+  }
+  .triangle-wrap {
+    position: absolute;
+    left: 40px;
+    top: 21%;
+    max-width: 410px;
+    width: 45%;
+    height: calc(100% - 250px);
+    @include tablet-down {
+      display: none;
+    }
+  }
+  .triangle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 410px;
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 11px;
+    padding-top: 40px;
+    font-size: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: start;
+    @include laptop-only {
+      padding-bottom: 11px;
+      padding-top: 40px;
+      font-size: 0;
+    }
+    @include tablet {
+      padding: 40px 0 11px;
+    }
+    @include tablet-down {
+      width: 100%;
+      padding: 30px 0 0;
+    }
+    .col-two {
+      padding-top: 0 !important;
+      float: none;
+      @include laptop-only {
+        float: none;
+      }
+      &.image-wrap {
+        width: 45%;
+        @include tablet-down {
+          width: 100%;
+        }
+      }
+      &.content-outer {
+        width: 55%;
+        padding-left: 0px;
+        @include desktop {
+          padding-left: 40px;
+        }
+        @include laptop-only {
+          padding-top: 0;
+        }
+        @include desktop-mid {
+          padding-left: 40px;
+          padding-top: 0;
+        }
+        @include tablet {
+          padding-top: 0;
+          padding-left: 20px;
+        }
+        @include tablet-down {
+          padding: 30px 0 0;
+          width: 100%;
+        }
+      }
+      .content {
+        text-align: left;
+        padding-right: 20px;
+        @include desktop {
+          padding-right: 25px;
+        }
+        @include laptop-only {
+          padding-right: 20px;
+        }
+        @include tablet {
+          padding-right: 20px;
+        }
+        @include tablet-down {
+          width: 100%;
+          margin-bottom: 0;
+          padding-right: 0;
+          padding-top: 30px;
+          text-align: center;
+        }
+        h3 {
+          max-width: 400px;
+          font-weight: 500;
+          @include tablet-down {
+            max-width: 100%;
+          }
+        }
+        p {
+          text-align: left;
+          max-width: 500px;
+          margin: 3px 0 20px;
+          transition: all 0.3s linear;
+          @include tablet-down {
+            max-width: 100%;
+            text-align: center;
+          }
+          &:last-child {
+            @include tablet-down {
+              margin-bottom: 0;
+            }
+          }
+          a {
+            color: $primary3;
+            transition: color 0.3s ease;
+            &:hover {
+              color: $primary4;
+            }
+          }
+        }
+        .link {
+          font-size: 16px;
+          font-weight: 300;
+          color: $blue;
+          background: none;
+          cursor: pointer;
+          display: inline-block;
+          margin-top: 20px;
+          &:after {
+            content: "";
+            position: absolute;
+            right: -17px;
+            width: 6px;
+            height: 10px;
+            background-size: 100%;
+            top: 4px;
+            bottom: 0;
+            margin: auto;
+            background-image: url(/wp-content/themes/kount/templates/dist/images/svg/right-blue-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease-in-out;
+            transform: rotate(90deg);
+          }
+          &.close-it {
+            &:after {
+              transform: rotate(270deg);
+            }
+          }
+        }
+      }
+      .image {
+        text-align: right;
+        margin-top: 8px;
+        @include tablet-down {
+          height: auto;
+          width: 100%;
+          max-width: 100%;
+          text-align: center;
+        }
+        .img-box {
+          width: 100%;
+          max-width: 466px;
+          padding-right: 20px;
+          @include desktop {
+            max-width: 450px;
+            width: 100%;
+          }
+          @include tablet {
+            max-width: 400px;
+            width: 100%;
+          }
+          @include tablet-down {
+            max-width: 380px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  &#leadership-detail{
+    @include desktop-up{
+      padding: 40px 0;
+    }
+    .pattern{
+      display: none;
+    }
+    &:after{
+      display: none;
+    }
+  }
+}

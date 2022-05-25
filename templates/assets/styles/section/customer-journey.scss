@@ -1,0 +1,63 @@
+.customer-journey-section {
+  .icon-wrap {
+    img {
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+  }
+  .cta-link,
+  .cta-link span {
+    color: #215096;
+    font-font: 'proxima-nova', sans-serif;
+    font-weight: 400;
+  }
+  .cta-link span {
+    transition: transform .1s linear;
+    display: inline-block;
+  }
+  article.content-block {
+    transition: background-color .1s linear;
+    position: relative;
+    > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .icon,
+    .hover-icon {
+      transition: opacity .1s linear;
+    }
+    &:hover,
+    &:focus {
+      background: $white;
+      cursor: pointer;
+      .icon {
+        opacity: 0;
+      }
+      .hover-icon {
+        opacity: 1 !important;
+      }
+      .cta-link span {
+        transform: translateX(10px);
+      }
+    }
+  }
+  h2 {
+    @include large_container-up {
+      font-size: 48px;
+    }
+  }
+  .h3 {
+    font-size: 20px;
+    @include desktop-up {
+      font-size: 29px;
+    }
+  }
+  .body-text {
+    line-height: 1.35;
+  }
+}

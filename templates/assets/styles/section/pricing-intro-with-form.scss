@@ -1,0 +1,250 @@
+.pricing-intro-with-form{
+  z-index: 2;
+  @include desktop-up{
+    padding-top: 88px;
+  }
+  .intro{
+    h2{
+      text-align: center;
+    }
+  }
+  .content-wrapper {
+    float: left;
+    width: 100%;
+    margin-top: 47px;
+    @include desktop-down{
+      margin-top: 0;
+    }
+    .col-intro {
+      width: calc(59% - 22px);
+      float: left;
+      padding-top: 16px;
+      @include desktop-down{
+        width: 100%;
+        float: none;
+      }
+      p{
+        line-height: 1.33;
+        max-width: 580px;
+        @include desktop-down{
+          max-width: 100%;
+        }
+      }
+      .col-wrap{
+        float: left;
+        width: 100%;
+        margin: 50px 0;
+        margin-left: -34px;
+        @include desktop{
+          margin-left: 0;
+        }
+        @include desktop-down{
+          margin: 30px 0;
+        }
+        @include tablet-down{
+          margin: 25px 0;
+        }
+        .col-three{
+          text-align: center;
+          @include tablet-down{
+            margin-bottom: 15px;
+          }
+          .img-box{
+            max-width: 65px;
+            margin: 0 auto;
+          }
+          h6{
+            font-weight: 600;
+            margin-top: 26px;
+            @include desktop-down{
+              max-width: 185px;
+              margin: 25px auto 0;
+            }
+            @include tablet-down{
+              margin: 12px auto 0;
+            }
+          }
+          &.text-orange{
+           h6{
+             color: $orange;
+           }
+          }
+          &.text-cyan{
+            h6{
+              color: $green;
+            }
+          }
+          &.text-blue{
+            h6{
+              color: $primary3;
+            }
+          }
+          &:nth-of-type(2){
+            .img-box{
+              max-width: 75px;
+            }
+          }
+          &:nth-of-type(3){
+            .img-box{
+              max-width: 71px;
+            }
+          }
+        }
+        &:after{
+          content: "";
+          clear: both;
+          display: block;
+        }
+      }
+    }
+    .col-form {
+      width: calc(41% - 10px);
+      float: left;
+      border: solid 1px $lightbrown-gray;
+      background-color: $white;
+      padding: 38px 52px;
+      margin-left: 31px;
+      @include desktop-down{
+        width: 100%;
+        padding: 38px 30px;
+        max-width: 400px;
+        margin: 30px auto 0;
+        float: none;
+      }
+      .form-wrap{
+        p{
+          line-height : 1.11;
+          font-weight: 600;
+        }
+        .inner{
+          display: block;
+          font-size: 12px;
+          font-weight: 300;
+          line-height : 1.11;
+          margin-top: 5px;
+        }
+        label{
+          //display: none;
+        }
+        // ******** input styling for marketo *******
+       .mktoForm {
+         .mktoFormRow {
+           .mktoFormCol {
+             margin-bottom: 0 !important;
+             margin-top: 15px;
+             .mktoFieldWrap {
+               input[type = text], input[type = email], input[type = tel] {
+                 max-width: 340px;
+                 width: 100% !important;
+                 min-width: 340px;
+                 margin-top: 5px;
+                 background-color: $light-gray;
+                 padding: 12px 20px;
+                 position: relative;
+                 height: 48px;
+                 box-shadow: none;
+                 border: 0;
+                 outline: 0;
+                 border-radius: 0;
+                 @include desktop {
+                   min-width: 300px;
+                 }
+                 @include phone-down{
+                   min-width: auto;
+                 }
+                 &::placeholder {
+                   font-size: 18px;
+                   line-height: 1.33;
+                   color: $primary;
+                   font-weight: 300;
+                   position: relative;
+                   @include tablet-down {
+                     font-size: 16px;
+                   }
+                   &:after {
+                     content: '*';
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     top: -5px;
+                     left: 0;
+                   }
+                 }
+                 //styling placeholder for ie11^
+                 &:-ms-input-placeholder {
+                   color: $primary !important;
+                   font-weight: 300 !important;
+                   font-size: 18px !important;
+                 }
+                 //avoiding autofill icon on safari
+                 &::-webkit-contacts-auto-fill-button {
+                   visibility: hidden;
+                   display: none !important;
+                   pointer-events: none;
+                   position: absolute;
+                   right: 0;
+                 }
+               }
+             }
+             .mktoOffset{
+               width: 0!important;
+             }
+           }
+         }
+         .mktoHtmlText {
+           font-size: 8px;
+           line-height: 1.5;
+           margin-top: 18px;
+           margin-bottom: 21px;
+         }
+                 // button style scss
+         .mktoButtonRow{
+           width: 100%;
+           .mktoButtonWrap {
+             margin-left: 0!important;
+             .mktoButton {
+               font-size: 16px;
+               font-weight: 400;
+               font-family: proxima-nova, sans-serif;
+               line-height: 1.2;
+               font-style: normal;
+               letter-spacing: normal;
+               margin: 0;
+               padding: 8.5px 13.57px;
+               border-radius: 100px;
+               position: relative;
+               color: #fff !important;
+               border: 2px solid transparent;
+               background: $light-orange;
+               outline: none;
+               cursor: pointer;
+               overflow: hidden;
+               transition: all 0.3s linear;
+               width: 100%;
+               &:hover {
+                 transition: all 0.3s linear;
+                 background: transparent;
+                 color: $light-orange!important;
+                 border: 2px solid $light-orange;
+               }
+             }
+           }
+         }
+       }
+        .bottom{
+          font-size: 8px;
+          display: inline-block;
+          line-height: 1.5;
+          margin-top: 18px;
+          margin-bottom: 21px;
+        }
+        .btn-wrap{
+          .btn-orange{
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

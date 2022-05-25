@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1016" height="527" viewBox="0 0 1016 527">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.939" y1="0.687" x2="0.357" y2="0.313" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0096aa"/>
+      <stop offset="1" stop-color="#2f4d7a"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_425" data-name="Rectangle 425" width="1016" height="527" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_38" data-name="Mask Group 38" opacity="0.979" clip-path="url(#clip-path)" style="mix-blend-mode: multiply;isolation: isolate">
+    <path id="iStock-1082922466" d="M1124.419,462.947,855.958,355.275h0L724.635,302.607l-147.4-59.115c-25.5-10.229-59.274,3.319-75.039,30.1L164.027,848.133c-15.774,26.792-15.774,70.621,0,97.4L502.2,1520.086c15.765,26.782,49.537,40.329,75.039,30.091l185.283-74.312h0l183.825-73.719h0l178.073-71.425c25.51-10.228,46.384-45.689,46.384-78.8V541.744C1170.8,508.636,1149.929,473.185,1124.419,462.947Z" transform="translate(-65.482 -633.559)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+{
+    "key": "group_5efd4b8596997",
+    "title": "Google Analytics",
+    "fields": [
+        {
+            "key": "field_5efd4b9780579",
+            "label": "GA Embed Script",
+            "name": "ga_embed_script",
+            "type": "textarea",
+            "instructions": "Google Analytics script(s) will be embedded at the top of the site <strong>head<\/strong> tags.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-google-analytics"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1593658814
+}

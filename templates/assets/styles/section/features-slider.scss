@@ -1,0 +1,429 @@
+.features-slider {
+  .column-wrap {
+    float: left;
+    width: 100%;
+    height: 153px;
+    overflow: hidden;
+    margin-top: 68px;
+    @include desktop {
+      margin-top: 50px;
+    }
+    @include tablet {
+      margin-top: 40px;
+    }
+    @include tablet-down {
+      height: auto;
+      margin-top: 30px;
+    }
+    .slide-item {
+      cursor: pointer;
+      display: table;
+      @include desktop {
+        margin: 0px 5px;
+        //display: block;
+      }
+      @include tablet {
+        margin: 0px 5px;
+      }
+      @include tablet-down {
+        margin: 0px;
+      }
+      @include phone-down {
+        padding: 0 20px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 90px;
+        z-index: 3;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-top: 12px;
+        border: 1px solid $silver-gray;
+        background: $white;
+        transition: all 0.4s ease-in-out;
+        text-indent: 100%;
+        @include desktop {
+          width: 22px;
+          height: 22px;
+          top: 90px;
+        }
+        @include tablet {
+          width: 22px;
+          height: 22px;
+          top: 90px;
+        }
+        @include tablet-down {
+          display: none;
+        }
+      }
+      .content {
+        display: table-cell;
+        vertical-align: bottom;
+        @include tablet-down {
+          margin: 0 auto;
+        }
+        @include phablet {
+          max-width: 240px;
+        }
+        @include phone {
+          max-width: 240px;
+        }
+        @include phone-down {
+          max-width: 210px;
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 0 30px;
+        font-weight: 600;
+        color: $silver-gray;
+        transition: all 0.5s ease-in-out;
+        @include desktop {
+          padding: 0 20px;
+        }
+        @include tablet {
+          padding: 0 15px;
+        }
+        @include tablet-down {
+          font-size: 16px;
+          padding: 0 10px;
+        }
+      }
+      &.slick-current {
+        p {
+          font-size: 30px;
+          line-height: 1.07;
+          transition: all 0.5s ease-in-out;
+          transition-delay: 800ms;
+          color: $primary4;
+          @include desktop {
+            font-size: 24px;
+          }
+          @include tablet {
+            font-size: 22px;
+          }
+          @include tablet-down {
+            font-size: 18px;
+          }
+        }
+        &:after {
+          background: $primary4;
+          border-color: $primary4;
+        }
+      }
+      &:hover {
+        .content {
+          p {
+            color: $primary4;
+          }
+        }
+        &:after {
+          background: $primary4;
+          border-color: $primary4;
+        }
+      }
+    }
+    .slick-track,
+    .slick-list{
+      height: 78px;
+      z-index: 9;
+      overflow: visible;
+      @include tablet-down {
+        height: auto;
+      }
+    }
+    ul {
+      position: absolute;
+      top: 93px;
+      z-index: 0;
+      width: 100%;
+      height: 50px;
+      padding-left: 0;
+      overflow: hidden;
+      @include desktop {
+        top: 90px;
+      }
+      @include tablet {
+        top: 90px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top:  24px;
+        z-index: -1;
+        width: 100%;
+        height: 2px;
+        background: $lightbrown-gray;
+        @include desktop {
+          top:  23px;
+        }
+        @include tablet {
+          top:  22px;
+        }
+      }
+      li {
+        width: 20%;
+        text-align: center;
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
+        @include tablet {
+          width: 33.33%;
+        }
+        &:nth-child(n+6) {
+          display: none;
+        }
+        button {
+          display: none;
+          width: 23px;
+          height: 23px;
+          margin-top: 12px;
+          background: $orange;
+          transition: transform 0.5s linear;
+          text-indent: 100%;
+          @include desktop {
+            width: 22px;
+            height: 22px;
+          }
+          @include tablet {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+    .slick-list {
+      @include tablet-down {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        overflow: hidden;
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 47%;
+      z-index: 3;
+      width: 7px;
+      height: 11px;
+      font-size: 0;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.4s ease;
+      background-size: 100%;
+      border: 0;
+      background: transparent;
+      @include desktop-down {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &.slick-prev {
+        left: 6.3%;
+        background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+        background-position: center;
+        background-color: transparent;
+        @include media-breakpoint-only(lg) {
+          left: 0;
+        }
+        @include desktop-down {
+          left: 0;
+        }
+      }
+      &.slick-next {
+        right: 6.3%;
+        background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        @include media-breakpoint-only(lg) {
+          right: 0;
+        }
+        @include desktop-down {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .slider-wrap {
+    float: left;
+    width: 100%;
+    margin-top: 14px;
+    @include phablet {
+      margin-top: 30px;
+    }
+    @include phablet-down {
+      margin-top: 20px;
+    }
+    .slick-list {
+      max-width: 920px;
+      margin: 0 auto;
+      box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.08);
+      @include desktop-down {
+        box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.08);
+      }
+      @include tablet {
+        width: calc(100% - 40px);
+      }
+      @include tablet-down {
+        width: 100%;
+      }
+    }
+    .slick-dots {
+      padding-left: 0;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      margin-top: 30px;
+      .slick-active {
+        button {
+          background: $green;
+        }
+      }
+      li {
+        display: inline-block;
+        line-height: initial;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        border-radius: 50%;
+        overflow: hidden;
+        button {
+          width: 100%;
+          height: 100%;
+          background: $black;
+          text-indent: -9999px;
+          padding: 0;
+          outline: none;
+        }
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+    .slide-item {
+      border-top: 11px solid $primary4;
+      font-size: 0;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      .col-two {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        &.image-wrap {
+          width: 44%;
+          padding-right: 6px;
+          @include desktop-down {
+            width: 100%;
+            padding: 0;
+          }
+          img {
+            @include desktop-down {
+              width: 100%;
+            }
+          }
+        }
+        &.content-wrap {
+          width: 56%;
+          padding: 37px 51px;
+          @include desktop-down {
+            width: 100%;
+          }
+          @include tablet {
+            padding: 35px 40px;
+          }
+          @include tablet-down {
+            width: 100%;
+            display: block;
+            max-width: 520px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px 20px;
+          }
+          span {
+            font-size: 20px;
+            color: $blue;
+            margin-bottom: 8px;
+            display: inline-block;
+            font-weight: 600;
+            line-height: 1.2;
+            text-transform: capitalize;
+            letter-spacing: normal;
+          }
+          p {
+            margin-bottom: 15px;
+          }
+          a {
+            margin-top: 19px;
+            padding-right: 17px;
+            @include desktop-down {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+      &.slick-current {
+        transition: all 0.5s ease-in-out;
+        transition-delay: 800ms;
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 47%;
+      z-index: 3;
+      width: 7px;
+      height: 11px;
+      font-size: 0;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.4s ease;
+      background-size: 100%;
+      border: 0;
+      background: transparent;
+      @include desktop-down {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &.slick-prev {
+        left: 6.3%;
+        background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+        background-repeat: no-repeat;
+        transform: rotate(-180deg);
+        background-position: center;
+        background-color: transparent;
+        @include media-breakpoint-only(lg) {
+          left: 0;
+        }
+        @include desktop-down {
+          left: 0;
+        }
+      }
+      &.slick-next {
+        right: 6.3%;
+        background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        @include media-breakpoint-only(lg) {
+          right: 0;
+        }
+        @include desktop-down {
+          right: 0;
+        }
+      }
+    }
+  }
+}

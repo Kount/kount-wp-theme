@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1018.606" height="1076.148" viewBox="0 0 1018.606 1076.148">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+        <linearGradient id="linear-gradient" x1="-.011" x2=".869" y1=".488" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0096aa"/>
+            <stop offset="1" stop-color="#2f4d7a"/>
+        </linearGradient>
+    </defs>
+    <path id="iStock-1082922466" d="M1124.419 422.671l-268.461-88.213-131.323-43.151-147.4-48.433c-25.5-8.38-59.274 2.719-75.039 24.661L164.027 738.25c-15.774 21.95-15.774 57.859 0 79.8L502.2 1288.772c15.765 21.942 49.537 33.041 75.039 24.653l185.283-60.883 183.825-60.4 178.073-58.517c25.51-8.38 46.384-37.433 46.384-64.558V487.229c-.004-27.129-20.875-56.17-46.385-64.558z" class="cls-1" transform="translate(-152.197 -240.079)"/>
+</svg>

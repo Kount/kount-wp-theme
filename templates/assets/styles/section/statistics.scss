@@ -1,0 +1,429 @@
+.statistics {
+  background-color: rgba(243, 243, 243, 0.5);
+  @include desktop-up{
+    padding: 107px 0 103px;
+    margin-top: -221px;
+  }
+  @include laptop-only {
+    padding: 40px 0 25px;
+  }
+  &:before {
+    //content: '';
+    position: absolute;
+    top: -26%;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 513px;
+    background: $white;
+    transform-origin: left center;
+    transform: skewY(-11deg);
+    @media screen and (min-width: 2560px) {
+      transform: skewY(-3deg);
+    }
+    @media screen and (min-width: 1951px) and (max-width: 2559px) {
+      transform: skewY(-6deg);
+    }
+    @media screen and (min-width: 1401px) and (max-width: 1950px) {
+      transform: skewY(-8deg);
+    }
+    @include desktop-down {
+      //display: none;
+      top: -50%;
+    }
+  }
+  .side-pattern {
+    display: none;
+    position:  absolute;
+    left: -487px;
+    top: -5%;
+    width: 722px;
+    height: 703px;
+    @include desktop {
+      width: 662px;
+      height: 643px;
+    }
+    @include tablet {
+      width: 622px;
+      height: 603px;
+    }
+    @include tablet-down {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 703px;
+    }
+  }
+  .column-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 0;
+    @include desktop-up {
+      margin-top: 193px;
+    }
+    @include desktop-down {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .col-two {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+      &:first-child {
+        width: 60%;
+        padding-left: 38px;
+        @include desktop {
+          padding-left: 88px;
+        }
+        @include desktop-down {
+          order: 2;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 0 50px;
+          text-align: center;
+        }
+        @include tablet-down {
+          width: 100%;
+          text-align: center;
+          padding: 0;
+        }
+      }
+      &:last-child {
+        width: 40%;
+        padding-bottom: 43px;
+        @include desktop {
+          padding-bottom: 0;
+        }
+        @include desktop-down {
+          order: 1;
+        }
+        @include tablet {
+          width: 100%;
+          text-align: center;
+          padding-bottom: 20px;
+        }
+        @include tablet-down {
+          padding-bottom: 20px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .content {
+        padding-left: 34px;
+        @include desktop {
+          padding-left: 34px;
+        }
+        @include tablet {
+          padding: 20px 0 0 0;
+        }
+        @include tablet-down {
+          padding-left: 0;
+          padding-top: 30px;
+        }
+        h2 {
+
+        }
+        p {
+          margin-top: 14px;
+        }
+      }
+
+    }
+    .col {
+      max-width: 200px;
+      margin: 24px;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      @include desktop {
+        width: 50%;
+        margin: 20px;
+      }
+
+      @include tablet {
+        width: calc(50% - 30px);
+        margin: 15px;
+      }
+
+      @include phablet {
+        width: calc(50% - 30px);
+        margin: 15px;
+      }
+      @include phone {
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+      @include phone-down {
+        width: 100%;
+        margin: 10px;
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        circle {
+          fill: transparent;
+          stroke-width: 10;
+          stroke-dasharray: 550;
+          transition: stroke-dashoffset 1s;
+          -webkit-animation-play-state: running;
+          -moz-transform: rotate(-89deg) translateX(-190px);
+        }
+      }
+
+      .progress {
+        width: 200px;
+        height: 203px;
+        background: none;
+        margin: 0 auto;
+        box-shadow: none;
+        overflow: visible;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          width: 180px;
+          height: 180px;
+          border: 10px solid $lightbrown-gray;
+          border-radius: 50%;
+        }
+        p {
+          color: $primary;
+          margin: 0 auto;
+          font-size: 17px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-transform: capitalize;
+          margin-top: 7px;
+        }
+        .value {
+          font-size: 45px;
+          color: $green;
+          margin: 0 auto;
+          font-weight: 300;
+          font-family: $font-families;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.22;
+          letter-spacing: normal;
+          span {
+            font-weight: 300;
+            font-family: $font-families;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.22;
+            letter-spacing: normal;
+          }
+        }
+      }
+    }
+  }
+  .col {
+    &.circle-one {
+      svg {
+        circle {
+          stroke: $primary3;
+        }
+      }
+      .progress {
+        .value, span {
+          color: $primary3;
+        }
+      }
+    }
+    &.circle-two {
+      svg {
+        circle {
+          stroke: $light-orange;
+        }
+      }
+      .progress {
+        .value, span {
+          color: $light-orange;
+        }
+      }
+    }
+    &.circle-three {
+      svg {
+        circle {
+          stroke: $green;
+        }
+      }
+      .progress {
+        .value, span {
+          color: $green;
+        }
+      }
+    }
+    &.circle-four {
+      svg {
+        circle {
+          stroke: $primary2;
+          stroke-dasharray: 597;
+        }
+      }
+      .progress {
+        .value, span {
+          color: $primary2;
+        }
+      }
+    }
+
+    &.animate-complete {
+      &.circle-one {
+        svg {
+          circle {
+            stroke-dashoffset: 170;
+            animation: circle_1_animation 2s;
+          }
+        }
+      }
+      &.circle-two {
+        svg {
+          circle {
+            stroke-dashoffset: 385;
+            animation: circle_2_animation 2s;
+          }
+        }
+      }
+      &.circle-three {
+        svg {
+          circle {
+            stroke-dashoffset: 260;
+            animation: circle_3_animation 2s;
+          }
+        }
+      }
+      &.circle-four {
+        svg {
+          circle {
+            stroke-dashoffset: 0;
+            animation: circle_4_animation 2s;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes circle_1_animation {
+    0% {
+      stroke-dashoffset: 537;
+    }
+
+    100% {
+      stroke-dashoffset: 170;
+    }
+  }
+
+  @keyframes circle_2_animation {
+    0% {
+      stroke-dashoffset: 537;
+    }
+
+    100% {
+      stroke-dashoffset: 385;
+    }
+  }
+
+  @keyframes circle_3_animation {
+    0% {
+      stroke-dashoffset: 537;
+    }
+
+    100% {
+      stroke-dashoffset: 260;
+    }
+  }
+
+  @keyframes circle_4_animation {
+    0% {
+      stroke-dashoffset: 597;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  &.homepage {
+    background-color: $white;
+    padding: 0;
+    .column-wrapper {
+      max-width: none !important;
+      margin-top: 0;
+      .col {
+        margin: 10px !important;
+        @include large_container-up {
+          margin: 20px !important;
+        }
+        @include phablet-down {
+          width: 136px;
+          max-width: 136px;
+          margin: 5px !important;
+        }
+        @include phone {
+          width: 136px;
+        }
+        @include phone-down {
+          width: 136px;
+          margin: 0 !important;
+        }
+        .progress {
+          @include phablet-down {
+            width: 136px;
+            height: 136px;
+          }
+          .value,
+          .value span {
+            font-family: 'proxima-nova-light', Sans-serif;
+            font-weight: 200;
+            font-size: 60px;
+            @include phablet-down {
+              font-size: 44px;
+            }
+          }
+          p {
+            margin-top: -5px;
+            //font-size: 17px;
+            //@include desktop-down {
+            //  font-size: 15px;
+            //}
+            @include phablet-down {
+              font-size: 14px;
+            }
+          }
+          &:after {
+            @include phablet-down {
+              width: 126px;
+              height: 126px;
+              border-width: 5px;
+              left: 5px;
+              top: 5px;
+            }
+          }
+        }
+      }
+    }
+    &:before {
+      content: none;
+    }
+    @include desktop-up{
+      padding: 30px 0;
+      margin-top: 0;
+    }
+    @include laptop-only {
+      padding: 30px 0;
+    }
+
+  }
+}

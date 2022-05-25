@@ -1,0 +1,187 @@
+.event-cards {
+text-align: center;
+  @include desktop-up {
+    padding: 63px 0 28px;
+  }
+  @include laptop-only {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-down(xs){
+    padding: 43px 0;
+  }
+
+
+
+  .intro-block {
+    margin-bottom: 49px;
+    //margin-top: 16px;
+
+    h2 {
+      @include media-breakpoint-down(xs) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+
+  .column-wrapper {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    text-align: center;
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin: 0;
+    }
+
+    .col-three {
+      width: calc(33.33% - 30px);
+      margin: 0 15px;
+      //min-height: 472px;
+      overflow: hidden;
+      text-align: start;
+      background: #ffffff;
+      max-width: 340px;
+      border: 1px solid $lightbrown-gray;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .15);
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+      @include media-breakpoint-down(lg) {
+        //min-height: 100px;
+        //width: calc(50% - 20px);
+        //max-width: 100%;
+      }
+      @include media-breakpoint-down(xs) {
+        //height: auto;
+        //width: 100%;
+        //margin: 0;
+        min-height: 100px;
+        width: calc(50% - 20px);
+        max-width: 100%;
+      }
+
+      &.text-cyan {
+        .content-wrapper {
+          .head-content {
+            h5 {
+              color: #53c0a5;
+            }
+          }
+        }
+      }
+
+      &.text-blue {
+        .content-wrapper {
+          .head-content {
+            h5 {
+              color: #0096aa;
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: calc(50% - 30px);
+        float: none;
+        display: inline-block;
+        margin: 0 10px 20px;
+      }
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 340px;
+      }
+
+      .img-wrapper {
+        height: 238px;
+        width: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content-wrapper {
+        width: 100%;
+        padding: 23px 30px;
+        @include media-breakpoint-down(md) {
+          padding: 20px;
+        }
+
+        .head-content {
+          border-bottom: 1px solid #dbdbdb;
+          //padding-bottom: 20px;
+          display: block;
+          text-align: left;
+          @include media-breakpoint-down(xs) {
+            padding-bottom: 10px;
+          }
+
+          h5 {
+            font-size: 20px;
+            line-height: 1.25;
+            padding-bottom: 5px;
+            font-weight: 600;
+            color: #f46036;
+            @include media-breakpoint-down(md) {
+              font-size: 18px;
+            }
+            @include media-breakpoint-down(sm) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .bottom-content {
+          padding-top: 18px;
+          display: block;
+          text-align: left;
+          @include media-breakpoint-down(xs) {
+            padding-top: 10px;
+          }
+        }
+
+        .card-arrow{
+          position: absolute;
+          bottom: 30px;
+          width: 100%;
+          padding: 0 30px;
+          left: 0;
+          background: #ffffff;
+          text-align: left;
+          //height: 73px;
+          //border-top: 17px solid #ffffff;
+          @include media-breakpoint-down(sm){
+            height: 67px;
+          }
+          @include media-breakpoint-down(md){
+            padding: 0 20px;
+            height: 78px;
+            border-top: 22px solid #fff;
+          }
+          @include media-breakpoint-down(xs){
+            height: 40px;
+            border: 0;
+            padding: 0 20px;
+          }
+          .link-arrow{
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-default {
+    margin: 46px 0 49px;
+    @include media-breakpoint-only(md) {
+      margin: 30px 0 0;
+    }
+    @include media-breakpoint-down(sm) {
+      margin: 0;
+    }
+  }
+}

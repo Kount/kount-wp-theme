@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95.458" height="358" viewBox="0 0 95.458 358">
+    <g transform="translate(-431.542 -1023)">
+        <g transform="translate(494 1023)" fill="none" stroke="#024253" stroke-width="3">
+            <circle cx="16.5" cy="16.5" r="16.5" stroke="none"/>
+            <circle cx="16.5" cy="16.5" r="15" fill="none"/>
+        </g>
+        <g transform="translate(494 1348)" fill="none" stroke="#024253" stroke-width="3">
+            <circle cx="16.5" cy="16.5" r="16.5" stroke="none"/>
+            <circle cx="16.5" cy="16.5" r="15" fill="none"/>
+        </g>
+        <g transform="translate(432 1131)" fill="none" stroke="#024253" stroke-width="3">
+            <ellipse cx="16.5" cy="16" rx="16.5" ry="16" stroke="none"/>
+            <ellipse cx="16.5" cy="16" rx="15" ry="14.5" fill="none"/>
+        </g>
+        <g transform="translate(432 1240)" fill="none" stroke="#024253" stroke-width="3">
+            <circle cx="16.5" cy="16.5" r="16.5" stroke="none"/>
+            <circle cx="16.5" cy="16.5" r="15" fill="none"/>
+        </g>
+        <line x1="47" y2="80" transform="translate(456.5 1053.5)" fill="none" stroke="#024253" stroke-width="2"/><line x1="47" y1="80" transform="translate(456.5 1270.5)" fill="none" stroke="#024253" stroke-width="2"/><path d="M-15147.837-15521.663a90.282,90.282,0,0,0-8.61,39.528c.346,22.482,8.61,43.276,8.61,43.276" transform="translate(15589 16682)" fill="none" stroke="#024253" stroke-width="2"/></g></svg>

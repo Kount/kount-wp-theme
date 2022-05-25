@@ -1,0 +1,15 @@
+<svg id="outline-play_circle_outline-24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #f7f8f6;
+      }
+    </style>
+  </defs>
+  <path id="Path_2436" data-name="Path 2436" class="cls-1" d="M0,0H48V48H0Z"/>
+  <path id="Path_2437" data-name="Path 2437" class="cls-2" d="M19.6,33.9,32.8,24,19.6,14.1ZM24,2A22,22,0,1,0,46,24,22.008,22.008,0,0,0,24,2Zm0,39.6A17.6,17.6,0,1,1,41.6,24,17.623,17.623,0,0,1,24,41.6Z"/>
+</svg>

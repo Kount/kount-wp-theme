@@ -1,0 +1,176 @@
+@import 'global';
+
+//
+//// Bootstrap integration
+////@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/functions";
+//@import "bootstrap/scss/variables";
+//@import "bootstrap/scss/mixins";
+//@import "bootstrap/scss/root";
+//@import "bootstrap/scss/reboot";
+//@import "bootstrap/scss/type";
+//@import "bootstrap/scss/images";
+//@import "bootstrap/scss/code";
+//@import "bootstrap/scss/grid";
+////@import "bootstrap/scss/tables";
+////@import "bootstrap/scss/forms";
+////@import "bootstrap/scss/buttons";
+////@import "bootstrap/scss/transitions";
+////@import "bootstrap/scss/dropdown";
+////@import "bootstrap/scss/button-group";
+////@import "bootstrap/scss/input-group";
+////@import "bootstrap/scss/custom-forms";
+////@import "bootstrap/scss/nav";
+////@import "bootstrap/scss/navbar";
+////@import "bootstrap/scss/card";
+////@import "bootstrap/scss/breadcrumb";
+////@import "bootstrap/scss/pagination";
+////@import "bootstrap/scss/badge";
+////@import "bootstrap/scss/jumbotron";
+////@import "bootstrap/scss/alert";
+////@import "bootstrap/scss/progress";
+////@import "bootstrap/scss/media";
+////@import "bootstrap/scss/list-group";
+////@import "bootstrap/scss/close";
+////@import "bootstrap/scss/modal";
+////@import "bootstrap/scss/tooltip";
+////@import "bootstrap/scss/popover";
+////@import "bootstrap/scss/carousel";
+//@import "bootstrap/scss/utilities";
+//@import "bootstrap/scss/print";
+////@import "bootstrap/scss/functions";
+////@import "bootstrap/scss/_variables";
+////@import "bootstrap/scss/mixins/_breakpoints";
+//
+//
+//@import 'common/default';
+//@import 'common/variables';
+//@import 'common/color-classes';
+//@import 'common/effect';
+////@import "plugins/slick";
+//@import "plugins/animate";
+////@import 'global/footer';
+//
+//@import "common/_fonts";
+//
+//@import "common/variables";
+//@import "common/button";
+//@import "common/mixins";
+//
+//// Plugins
+//@import "plugins/animate";
+////@import "plugins/slick";
+//@import "plugins/splide-core.min";
+//
+//// custom scss
+//@import "custom";
+//
+//
+//body * {
+//  -webkit-font-smoothing: subpixel-antialiased !important;
+//  text-rendering:optimizeLegibility !important;
+//}
+body .refresh19 {
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: #ffffff !important;
+  overflow: hidden;
+  @import "common/default";
+  @import "common/button";
+  @import 'global/header';
+  @import "global/footer";
+  //@import "global/footer-digital-summit";
+  //@import "global/header-digital-summit";
+  @import "section/hero-banner";
+  @import "section/logo-slider";
+  @import "section/intro-with-box";
+  @import "section/footer-cta";
+  @import "section/resources-slider";
+  @import "section/statistics";
+  @import "section/banner-second";
+  @import "section/banner-multiview";
+  @import "section/intro-with-icons";
+  @import "section/tab-slider";
+  @import "section/interactive-logo-slider";
+  @import "section/img-with-text";
+  @import "section/overlay-search";
+  @import "section/video-overlay";
+  @import "section/col-two-grid";
+  @import "section/col-two-video";
+  @import "section/form-with-video";
+  @import "section/features-slider";
+  @import "section/feature-tabs";
+  @import "section/intro-block";
+  @import "section/content-with-image";
+  //@import "section/countdown-page";
+  @import "section/text-slider-blade";
+  @import "section/col-three-block";
+  @import "section/scroll-nav";
+  @import "section/event-cards";
+  @import "section/image-col-grid";
+  @import "section/video-col-grid";
+  @import "section/channel-partner";
+  @import "section/promotional-cta";
+  @import "section/data-partner";
+  @import "section/text-with-img";
+  //@import "section/latest-news-slider";
+  @import "section/contact-us";
+  @import "section/img-video";
+  @import "section/demo-form";
+  @import "section/banner-webinar";
+  @import "section/featuring";
+  @import "section/team-grid";
+  @import "section/webinar-cta";
+  @import "section/footer-bottom";
+  @import "section/events-card-grid";
+  @import "section/two-grid-slider";
+  @import "section/two-grid-block";
+  @import "section/featured-benefit-tab";
+  @import "section/intro-with-image";
+  @import "section/resource-card-grid";
+  @import "section/news-card-grid";
+  @import "section/career-grid";
+  @import "section/block-grid";
+  @import "section/blog-grid";
+  @import "section/blog-detail";
+  @import "section/sign-up-form";
+  @import "section/event-cta";
+  @import "section/case-study-intro";
+  @import "section/pricing-intro-with-form";
+  @import "section/customer-quotes";
+  @import "section/video-intro";
+  @import "section/tbd-pricing-logo-slider";
+  @import "section/simple-content";
+  @import "section/col-four-with-icons";
+  @import "section/block-content";
+  @import "section/rich-text-editor";
+  @import "section/partner-content-with-form";
+  @import "section/channel-content-with-form";
+  @import "section/search-results";
+  @import "section/error-404";
+  @import "section/grid-table";
+  @import "section/column-grid";
+  @import "section/banner-fourth";
+  @import "section/vertical-col-grid";
+  @import "section/vertical-accordion";
+  @import "section/marketo-form-embed";
+  @import "section/content-toggle-with-image";
+  @import "section/hero-banner-transparent-image";
+  @import "section/glossary";
+  @import "section/customer-logo-list";
+  @import "section/home-hero-banner";
+  @import "section/press-articles";
+  @import "section/podcast";
+  @import "section/customer-journey";
+  @import "section/interactive-partner-ecosystem";
+  @import "section/assess-partner-slider";
+  @import "section/chili-piper-calendar-embed";
+
+  //@import "section/digital-summit-form";
+}
+

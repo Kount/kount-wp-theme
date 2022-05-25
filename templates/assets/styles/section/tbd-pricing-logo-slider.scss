@@ -1,0 +1,150 @@
+.pricing-logo-slider {
+  @include desktop-up{
+    padding: 80px 0 55px;
+  }
+  @include laptop-only {
+    //padding: 25px 0;
+  }
+  .intro{
+    margin-bottom: 27px;
+    @include desktop-down{
+      margin-bottom: 20px;
+    }
+    @include tablet-down{
+      margin-bottom: 0;
+    }
+    h2{
+      color: $primary;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    p{
+      font-weight: 300;
+      line-height: 1.22;
+      text-align: center;
+    }
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 640px solid hsla(0,0%,95%,.5);
+    border-right: 320vw solid transparent;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: -360px;
+    top: -360px;
+    background-image: url(/wp-content/themes/kount/templates/dist/images/svg/pentagon_blue.svg);
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 600px;
+    transform: rotate(100deg);
+    @include desktop-down{
+      display: none;
+    }
+  }
+  .slider-wrap {
+    opacity: 0;
+    .slick-list {
+      @include media-breakpoint-down(lg){
+        max-width: calc(100% - 30px);
+        margin: 0 auto;
+      }
+    }
+    .slider {
+      .item {
+        margin: 0 25px;
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        height: auto;
+        .logo {
+          text-align: center;
+          img {
+            display: inline-block;
+            max-height: 100%;
+          }
+        }
+        > a {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+      }
+      .slick-arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 3;
+        width: 7px;
+        height: 11px;
+        font-size: 0;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.4s ease;
+        background-size: 100%;
+        border: 0;
+        background: transparent;
+        &.slick-disabled {
+          display: none !important;
+        }
+        &.slick-prev {
+          left: -15px;
+          background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+          background-repeat: no-repeat;
+          transform: rotate(-180deg);
+          background-position: center;
+          background-color: transparent;
+          @include media-breakpoint-only(lg) {
+            left: 0;
+          }
+          @include desktop-down {
+            left: 0;
+          }
+        }
+        &.slick-next {
+          right: -15px;
+          background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          @include media-breakpoint-only(lg) {
+            right: 0;
+          }
+          @include desktop-down {
+            right: 0;
+          }
+        }
+      }
+    }
+
+  }
+  .btn-wrap{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    @include desktop-down{
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+    @include tablet-down{
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .btn-default{
+      padding: 3.5px 24px;
+    }
+  }
+}

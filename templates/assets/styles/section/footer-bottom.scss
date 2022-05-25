@@ -1,0 +1,15 @@
+.footer-bottom {
+  padding: 20px 0;
+  @include media-breakpoint-down(xs) {
+    padding: 15px 0;
+  }
+  span {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    @include media-breakpoint-down(xs) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.glossary-content {
+  .content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+.glossary-filter {
+  ul.letters {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+      width: 36px;
+      height: 32px;
+      float: left;
+      display: table;
+      padding: 0 2px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-family: 'proxima-nova-bold', sans-serif;
+        font-size: 14px;
+        border-radius: 2px;
+        background: $white;
+        transition: all .15s ease-in-out;
+        display: table-cell;
+        vertical-align: middle;
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $dark-blue;
+        }
+      }
+      &.active {
+        a {
+          color: $white;
+          background: $dark-blue;
+        }
+      }
+    }
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 5px 10px;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 16px;
+  }
+}
+
+.glossary-index-wrapper {
+  #ajax-loader.loading {
+    display: block !important;
+  }
+  dl#definition-list {
+    max-width: 960px;
+    margin: 0 auto;
+    dt {
+      margin-bottom: 5px;
+    }
+    dd {
+      margin-bottom: 20px;
+      @include desktop-up {
+        margin-left: 50px;
+      }
+    }
+  }
+  ul,
+  ol {
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  ol li {
+    list-style: decimal;
+  }
+  ul li {
+    list-style: disc;
+  }
+  li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+}

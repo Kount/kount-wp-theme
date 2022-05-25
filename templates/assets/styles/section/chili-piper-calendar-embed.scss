@@ -1,0 +1,15 @@
+section.chili-piper-section {
+  background: linear-gradient(0deg,rgba(207,218,226,.16),rgba(207,218,226,.16)),#fff; //Matches background used in Chili Piper iframe
+  .calendar-wrap {
+    position: relative;
+  }
+  .calendar-wrap:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    top: 0;
+    background: linear-gradient(0deg,rgba(207,218,226,.16),rgba(207,218,226,.16)),#fff;
+  }
+}

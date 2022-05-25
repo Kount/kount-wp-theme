@@ -1,0 +1,175 @@
+.text-slider-blade {
+  background-image: linear-gradient(to right, #024253, #2f4d7a);
+  //background: $primary;
+  position: relative;
+  padding: 20px 0;
+  margin-top: 50px;
+  margin-bottom: 27px;
+  @include container-down {
+    margin-bottom: 0;
+  }
+  @include tablet-down {
+    margin-top: 27px;
+  }
+  p,
+  span,
+  .value,
+  h3,
+  h4{
+    color: $white !important;
+  }
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  /*topToBottom Animation*/
+  .item{
+    //display: flex;
+    //flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+    position: relative;
+    padding: 7px 0;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    //align-items: center;
+    @include desktop-down {
+      padding: 4px 0 8px;
+    }
+    a {
+      color: $white;
+      //opacity: 0;
+      font-size: 22px;
+      font-family: 'proxima-nova-bold', sans-serif;
+      font-weight: 700;
+      transition: color .15s;
+      line-height: 1;
+      width: 100%;
+      //height: 50px;
+      //white-space: nowrap;
+      //overflow: hidden;
+      //text-overflow: ellipsis;
+      //display: flex;
+      //align-items: baseline;
+      //flex-direction: column;
+      span {
+        font-family: 'proxima-nova-light', sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        margin-right: 5px;
+        @include desktop-down {
+          display: block;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+      }
+      //padding-right: 20px;
+      @include desktop-down {
+        font-size: 18px;
+      }
+      //display: inline-block;
+      //position: relative;
+      &:hover,
+      &:focus{
+        color: #75dddd;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: calc(50% - 10px);
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    opacity: 0.8;
+    transition: opacity ease-in-out .15s;
+    &:hover,
+    &:focus{
+      opacity: 1;
+    }
+  }
+  .slick-prev {
+    left: -20px;
+    @include large_container-down {
+      left: 0;
+    }
+  }
+  .slick-next {
+    right: -20px;
+    @include large_container-down {
+      right: 0;
+    }
+  }
+  .slick-prev {
+    &:before {
+      content: '';
+      background: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-right.svg") center/contain no-repeat;
+      width: 12px;
+      height: 20px;
+      transform: rotate(180deg);
+      position: absolute;
+      left: 0;
+    }
+  }
+  .slick-next {
+    &:before {
+      content: '';
+      background: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-right.svg") center/contain no-repeat;
+      width: 12px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+    }
+  }
+  .slick-track {
+    //height: 38px;
+    //@include large_container-down {
+    //  height: auto;
+    //}
+  }
+  .item {
+    @include large_container-down {
+      //width: calc(100% - 40px) !important;
+      padding-left: 20px;
+      padding-right: 20px;
+      //margin: 0 auto;
+    }
+  }
+  &.page-home-b {
+    padding: 10px 0 20px;
+    background: $primary3;
+    mask-image: linear-gradient(to right, transparent 0%, $primary3 10%, $primary3 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, $primary3 10%, $primary3 90%, transparent 100%);
+    @include desktop-down {
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+    .item {
+      a {
+        span {
+          font-size: 18px;
+          text-align: center;
+          display: block;
+          margin-bottom: 10px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      top: calc(50% - 5px);
+    }
+  }
+}

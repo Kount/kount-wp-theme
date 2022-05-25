@@ -1,0 +1,302 @@
+.career-grid {
+  .jobs-nav {
+    @include tablet-down {
+      text-align: center;
+    }
+    a {
+      padding: 5px 20px;
+      border: 1px solid $lightbrown-gray;
+      border-radius: 100px;
+      background: $light-gray;
+      transition: background-color .15s linear;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      @include tablet-down {
+        margin: 5px;
+      }
+      &:hover {
+        background: $white;
+      }
+    }
+  }
+  .job-posts-wrapper {
+    .job-posting {
+      border-bottom: 1px solid $lightbrown-gray;
+      &:last-of-type {
+        border-bottom: 0;
+      }
+      //a {
+      //  transition: opacity .15s ease-in-out;
+      //  &:hover {
+      //    opacity: 0.5;
+      //  }
+      //}
+    }
+  }
+}
+.three-col-grid{
+  padding-bottom: 77px;
+  @include tablet{
+    padding-top: 0;
+  }
+  @include tablet-down{
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
+  .bg-pattern {
+    background: rgba(243, 243, 243, 0.5);
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-23%);
+    position: absolute;
+    height: 31.5%;
+    width: 100%;
+    &:before {
+
+      content: "";
+      position: absolute;
+      top: -170px;
+      z-index: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 170px solid hsla(0,0%,95%,.5);
+      border-left: 106vw solid transparent;
+
+      @include desktop-down {
+        display: none;
+      }
+    }
+  }
+  .pattern {
+    position: absolute;
+    right: -131px;
+    top: 33px;
+    width: 660px;
+    height: 690px;
+    @include tablet-down {
+      display: none;
+    }
+    img {
+      height: 100%;
+    }
+    &.pattern-left {
+      right: auto;
+      left: -470px;
+      width: 609px;
+      height: 600px;
+      top: 29.3%;
+      @include tablet-down{
+        display: none;
+      }
+      img {
+        max-height: 607px;
+      }
+    }
+  }
+  .card-wrapper{
+    float: left;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    text-align: center;
+    @include media-breakpoint-down(lg){
+      width: 100%;
+      margin: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin: 0;
+    }
+
+    .col-three {
+      width: calc(33.33% - 16px);
+      margin: 0 8px;
+      background: $white;
+      position: relative;
+      margin-bottom: 34px;
+      border: 2px solid $lightbrown-gray;
+      @include media-breakpoint-down(lg) {
+        min-height: 100px;
+      }
+      @include media-breakpoint-down(xs) {
+        height: auto;
+      }
+      @include media-breakpoint-down(sm) {
+        width: calc(50% - 10px);
+        display: inline-block;
+        margin: 0 5px 20px;
+      }
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 340px;
+      }
+      .content-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 31px 29px 40px;
+        min-height: 481px;
+        height: 100%;
+        @include media-breakpoint-down(md) {
+          padding: 20px;
+        }
+        @include media-breakpoint-down(xs) {
+          padding-bottom: 45px;
+          min-height: 415px;
+        }
+        .head-content {
+          border-bottom: 1px solid $lightbrown-gray;
+          padding-bottom: 7px;
+          display: block;
+          text-align: left;
+          @include media-breakpoint-down(xs) {
+            padding-bottom: 10px;
+          }
+          h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.2;
+            @include media-breakpoint-down(md) {
+              font-size: 16px;
+            }
+          }
+          p{
+            margin-bottom: 8px;
+            font-weight: 300;
+            color: #2f3640;
+            line-height: 1.33;
+            @include desktop-down{
+              font-size : 16px;
+            }
+          }
+        }
+
+        .bottom-content {
+          padding-top: 18px;
+          display: block;
+          text-align: left;
+          p{
+            line-height: 1.34;
+            @include desktop-down{
+              font-size: 16px;
+            }
+          }
+          @include media-breakpoint-down(xs) {
+            padding-top: 10px;
+          }
+        }
+
+        .card-arrow{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 0 30px;
+          left: 0;
+          background: $white;
+          height: 73px;
+          border-top: 17px solid $white;
+          text-align: left;
+          @include desktop-down{
+            padding: 0 20px;
+          }
+          .link-arrow{
+            display: inline-block;
+          }
+        }
+
+      }
+
+    }
+
+    .pagination-wrapper{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      float: left;
+      margin-top: 17px;
+      .pages{
+        display: flex;
+        float: left;
+        flex-wrap: wrap;
+        width: 290px;
+        justify-content: space-around;
+        margin: 0 22px;
+        @include media-breakpoint-down(xs) {
+          margin: 0 13px;
+        }
+        li{
+          display: inline-block;
+          margin: 0 3px;
+          font-size: 18px;
+          &.current{
+            color: $green;
+            position: relative;
+            &:after{
+              content: "";
+              position: absolute;
+              height: 2px;
+              width: 9px;;
+              bottom: 0;
+              left: -1px;
+              background-color: $green;
+            }
+          }
+          a{
+            transition: all 0.3s linear;
+            &:hover{
+              color: $green;
+            }
+          }
+        }
+      }
+      .next-arrow{
+        display: inline-block;
+        float: left;
+        padding-top:3px;
+        svg{
+          height: 10px;
+          width: 11px;
+          transition: all 0.3s linear;
+          path{
+            transition: all 0.3s linear;
+          }
+        }
+        &:hover{
+          svg{
+            transition: all 0.3s linear;
+            path{
+              fill: $green;
+              transition: all 0.3s linear;
+            }
+          }
+        }
+      }
+      .prev-arrow{
+        display: inline-block;
+        float: left;
+        padding-top: 3px;
+        svg{
+          height: 10px;
+          width: 11px;
+          transition: all 0.3s linear;
+          path{
+            transition: all 0.3s linear;
+          }
+        }
+        &:hover{
+          svg{
+            transition: all 0.3s linear;
+            path{
+              fill: $green;
+              transition: all 0.3s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

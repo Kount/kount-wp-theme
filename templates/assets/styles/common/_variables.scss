@@ -1,0 +1,407 @@
+/* Transition */
+@mixin transition($property, $time, $behaviour) {
+  -webkit-transition: $property $time $behaviour;
+  -moz-transition: $property $time $behaviour;
+  -o-transition: $property $time $behaviour;
+  -ms-transition: $property $time $behaviour;
+  transition: $property $time $behaviour;
+}
+
+/* Transition-delay  */
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+  -ms-transition-delay: $transition-delay;
+  -moz-transition-delay: $transition-delay;
+  -o-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  transition-property: $property;
+}
+
+/* Order  */
+@mixin order($order) {
+  -webkit-box-ordinal-group: $order;
+  -moz-box-ordinal-group: $order;
+  -ms-flex-order: $order;
+  -webkit-order: $order;
+  order: $order;
+}
+
+/* Transform-origin */
+@mixin transform-origin($origin) {
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+/* Transform */
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+/* border-radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Backface-visibility  */
+@mixin backface-visibility($arguments) {
+  -webkit-backface-visibility: $arguments;
+  -moz-backface-visibility: $arguments;
+  -ms-backface-visibility: $arguments;
+  -o-backface-visibility: $arguments;
+  backface-visibility: $arguments;
+}
+
+/* Box-shadow*/
+@mixin box-shadow($top, $left, $blur, $color) {
+  box-shadow: $top $left $blur $color;
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  -ms-box-shadow: $top $left $blur $color;
+  -o-box-shadow: $top $left $blur $color;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin box-orient($orientation) {
+  -webkit-box-orient: $orientation;
+  -moz-box-orient: $orientation;
+  -ms-box-orient: $orientation;
+  -o-box-orient: $orientation;
+  box-orient: $orientation;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -o-flex-direction: $direction;
+  flex-direction: $direction;
+  -ms-flex-direction: $direction;
+}
+
+@mixin box-align($alignment) {
+  -webkit-box-align: $alignment;
+  -moz-box-align: $alignment;
+  -ms-box-align: $alignment;
+  -o-box-align: $alignment;
+  box-align: $alignment;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  -o-align-items: $align;
+  align-items: $align;
+}
+@mixin line-clamp($line-clamp) {
+  -webkit-line-clamp: $line-clamp;
+  -moz-line-clamp: $line-clamp;
+  -ms-line-clamp: $line-clamp;
+  -o-line-clamp: $line-clamp;
+  line-clamp: $line-clamp;
+}
+
+
+/* Animation */
+@mixin animation($animation, $duration, $transition, $iteration) {
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $transition;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $transition;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-name: $animation;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: $transition;
+  -o-animation-iteration-count: $iteration;
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}
+
+/* Fonts */
+$font-families: "proxima-nova",sans-serif;
+
+/* Base colors*/
+$primary: #2f3640;
+$primary2: #2f4d7a;
+$primary3: #0096aa;
+$primary4: #99b33c;
+$primary5: #dcb338;
+$primary6: #75706e;
+$primary7: #c1b8b3;
+$green: #53c0a5;
+$neon-green: #95c949;
+$light-green: #9cb53c;
+$purple: #623c6d;
+$dark-purple: #3d0135;
+$dark-red: #c41757;
+$light-brown: #b3774f;
+$orange: #f46036;
+$light-orange: #f15a31;
+$dark-orange: #f1a545;
+$white: #ffffff;
+$black: #000000;
+$blue: #2e4f7c;
+$light-blue: #0095ab;
+$midnight-blue: #325893;
+$dark-blue: #024253;
+$light-white: #fafafa;
+$light-gray: #f3f3f3;
+$silver-gray: #9f9f9f;
+$yellow: #ffa429;
+
+$blackthin-light: #0a0605;
+$red: #eb0029;
+$gray:#576071;
+$dark-gray:#383838;
+$text-gray: #464646;
+
+$lightbrown-gray: #DBDBDB;
+$bar-gray: #999999;
+$nobal-gray: #B7B7B7;
+$light-black: #161616;
+$footer-bar: #6d6e71;
+$slate-gray: #666666;
+$sky-blue: #48ACF0;
+$podcast-blue: #325893;
+$teal: #03566c;
+
+$colors: ("gray-100", $gray-100, "gray-200", $gray-200, "gray-300", $gray-300, "gray-400", $gray-400, "gray-500", $gray-500, "gray-600", $gray-600, "white", $white, "black", $black, "gray", $gray, "yellow", $yellow, "teal", $teal, "blue", $blue, "midnight-blue", $midnight-blue, "podcast-blue", $podcast-blue, "dark-blue", $dark-blue, "light-blue", $light-blue, "green", $green, "light-green", $light-green, "orange", $orange, "primary", $primary, "primary2", $primary2, "primary3", $primary3, "primary6", $primary6, "red", $red, "text-gray", $text-gray, "light-gray", $light-gray, "bar-gray", $bar-gray, "light-black", $light-black, "footer-bar", $footer-bar, "slate-gray", $slate-gray, "blackthin-light", $blackthin-light);
+
+$gutter: 15px;
+$animate: all 0.2s ease-in-out;
+$rounded: 4px;
+$col1: desaturate(#FF22CC, 40%);
+$col2: desaturate(#EE0088, 40%);
+$col3: desaturate(#DD33AA, 40%);
+$col4: desaturate(#AA3399, 40%);
+
+
+/*  Media query variables */
+$phone_width: 481px;
+$phablet_width: 596px;
+$tablet_width: 768px;
+$desktop_width: 992px;
+$desktop_mid_width: 1024px;
+$container_width: 1150px;
+
+$orientation : landscape;
+
+/* 
+ * Mobile landscape media query 
+ */
+
+/* (max-width: 480px) */
+@mixin phonedown_landscape {
+  @media (max-width: #{$phone_width - 1px}) {
+    @content;
+  }
+}
+
+/* (max-width: 767px) */
+@mixin mobiledown_landscape {
+  @media (max-width: #{$tablet_width - 1px}) and (orientation: #{$orientation}) {
+    @content;
+  }
+}
+
+/* (max-width: 595px) */
+@mixin phabletdown_landscape {
+  @media (max-width: #{$phablet_width - 1px}) and (orientation: #{$orientation}) {
+    @content;
+  }
+}
+
+/* (min-width: 596px), (max-width: 767px) */
+@mixin mobile_landscape {
+  @media (min-width: #{$phablet_width}) and (max-width: #{$tablet_width - 1px}) and (orientation: #{$orientation}) {
+    @content;
+  }
+}
+
+/*  (min-width:481px), (max-width: 595px) */
+@mixin phoneup_landscape {
+  @media (min-width: #{$phone_width}) and (max-width: #{$phablet_width - 1px}) and (orientation: #{$orientation}){
+    @content;
+  }
+}
+
+/* (min-width: 768px), (max-width: 991px) */
+@mixin ipad_landscape{
+  @media (min-width: #{$tablet_width}) and (max-width: #{$desktop_width - 1px}) and (orientation: #{$orientation}) {
+    @content;
+  }
+}
+
+/*  Media query mixins*/
+
+@mixin laptop-only {
+  @media (min-width: #{$desktop_mid_width + 1px}) and (max-height: #{$tablet_width - 1px}) {
+    @content;
+  }
+}
+
+ /*(min-width:1250px) */
+@mixin large_container-up {
+  @media (min-width: #{$container_width + 100px}) {
+    @content;
+  }
+}
+/*  (min-width:1150px) */
+@mixin container-up {
+  @media (min-width: #{$container_width}) {
+    @content;
+  }
+}
+
+/*  (min-width:1024px) */
+@mixin desktop-mid-width-up {
+  @media (min-width: #{$desktop_mid_width}) {
+    @content;
+  }
+}
+
+/*  (min-width:992px) */
+@mixin desktop-up {
+  @media (min-width: #{$desktop_width}) {
+    @content;
+  }
+}
+
+/* (min-width:992px), (max-width: 1024px) */
+@mixin desktop-mid {
+  @media (min-width: #{$desktop_width}) and (max-width: #{$desktop_mid_width}) {
+    @content;
+  }
+}
+
+/* (min-width:992px), (max-width: 1200px) */
+@mixin large_desktop {
+  @media (min-width: #{$desktop_width}) and (max-width: #{$container_width + 50px}) {
+    @content;
+  }
+}
+
+/* (min-width:992px), (max-width: 1150px) */
+@mixin desktop {
+  @media (min-width: #{$desktop_width}) and (max-width: #{$container_width}) {
+    @content;
+  }
+}
+
+/*  (min-width:768px), (max-width: 991px) */
+@mixin tablet {
+  @media (min-width: #{$tablet_width}) and (max-width: #{$desktop_width - 1px}) {
+    @content;
+  }
+}
+
+/*  (min-width:596px), (max-width: 767px) */
+@mixin phablet {
+  @media (min-width: #{$phablet_width}) and (max-width: #{$tablet_width - 1px}) {
+    @content;
+  }
+}
+
+/*  (min-width:481px), (max-width: 595px) */
+@mixin phone {
+  @media (min-width: #{$phone_width}) and (max-width: #{$phablet_width - 1px}) {
+    @content;
+  }
+}
+
+/*(min-width:1250px) */
+@mixin large_container-down {
+  @media (max-width: #{$container_width + 99px}) {
+    @content;
+  }
+}
+
+/*(min-width:1200px) */
+@mixin large_desktop-up {
+  @media (min-width: #{$container_width + 50px}) {
+    @content;
+  }
+}
+
+/* (max-width:1150px) */
+@mixin container-down {
+  @media (max-width: #{$container_width - 1px}) {
+    @content;
+  }
+}
+
+/* (max-width:991px) */
+@mixin desktop-down {
+  @media (max-width: #{$desktop_width - 1px}) {
+    @content;
+  }
+}
+
+/* (max-width:767px) */
+@mixin tablet-down {
+  @media (max-width: #{$tablet_width - 1px}) {
+    @content;
+  }
+}
+
+/* (max-width:767px) */
+@mixin tablet-up {
+  @media (min-width: #{$tablet_width}) {
+    @content;
+  }
+}
+
+/* (max-width:595px) */
+@mixin phablet-down {
+  @media (max-width: #{$phablet_width - 1px}) {
+    @content;
+  }
+}
+
+/* (min-width:596px) */
+@mixin phablet-up {
+  @media (min-width: #{$phablet_width}) {
+    @content;
+  }
+}
+/* (min-width:481px) */
+@mixin phone-up {
+  @media (min-width: #{$phone_width}) {
+    @content;
+  }
+}
+
+/*  (max-width:480px) */
+@mixin phone-down {
+  @media (max-width: #{$phone_width - 1px}) {
+    @content;
+  }
+}

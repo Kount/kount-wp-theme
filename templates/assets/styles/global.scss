@@ -1,0 +1,208 @@
+//@import 'global';
+
+
+// Bootstrap integration
+//@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+//@import "bootstrap/scss/tables";
+//@import "bootstrap/scss/forms";
+//@import "bootstrap/scss/buttons";
+//@import "bootstrap/scss/transitions";
+//@import "bootstrap/scss/dropdown";
+//@import "bootstrap/scss/button-group";
+//@import "bootstrap/scss/input-group";
+//@import "bootstrap/scss/custom-forms";
+//@import "bootstrap/scss/nav";
+//@import "bootstrap/scss/navbar";
+//@import "bootstrap/scss/card";
+//@import "bootstrap/scss/breadcrumb";
+//@import "bootstrap/scss/pagination";
+//@import "bootstrap/scss/badge";
+//@import "bootstrap/scss/jumbotron";
+//@import "bootstrap/scss/alert";
+//@import "bootstrap/scss/progress";
+//@import "bootstrap/scss/media";
+//@import "bootstrap/scss/list-group";
+//@import "bootstrap/scss/close";
+//@import "bootstrap/scss/modal";
+//@import "bootstrap/scss/tooltip";
+//@import "bootstrap/scss/popover";
+//@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
+//@import "bootstrap/scss/functions";
+//@import "bootstrap/scss/_variables";
+//@import "bootstrap/scss/mixins/_breakpoints";
+
+
+@import 'common/default';
+@import 'common/variables';
+@import 'common/color-classes';
+@import 'common/effect';
+//@import "plugins/slick";
+@import "plugins/animate";
+//@import 'global/footer';
+
+@import "common/_fonts";
+
+@import "common/variables";
+@import "common/button";
+@import "common/mixins";
+
+// Plugins
+@import "plugins/animate";
+//@import "plugins/slick";
+@import "plugins/splide-core.min";
+
+// custom scss
+@import "custom";
+
+
+body * {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering:optimizeLegibility !important;
+}
+
+html.no-js .wow {
+  visibility: visible;
+}
+.ua-ie {
+  body .refresh19 .text-with-img .col-two .img-wrap .inner-img img {
+    width: auto;
+  }
+}
+
+body.page-template{
+  padding-top: 0;
+}
+
+//From global.scss
+@-webkit-keyframes wefadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes wefadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: wefadeIn;
+  animation-name: wefadeIn;
+}
+
+@-webkit-keyframes wefadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes wefadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.wefadeInLeft, .fadeInLeft {
+  -webkit-animation-name: wefadeInLeft;
+  animation-name: wefadeInLeft;
+}
+
+@-webkit-keyframes wefadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes wefadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.wefadeInRight, .fadeInRight {
+  -webkit-animation-name: wefadeInRight;
+  animation-name: wefadeInRight;
+}
+
+@-webkit-keyframes wefadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes wefadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.wefadeInUp, .fadeInUp {
+  -webkit-animation-name: wefadeInUp;
+  animation-name: wefadeInUp;
+}
+
+body.overflow-stop {
+  overflow-y: scroll;
+  padding-top: 0;
+}
+//End From global.scs

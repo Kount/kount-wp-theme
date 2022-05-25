@@ -1,0 +1,60 @@
+.grid-table{
+  .intro-block{
+    margin: 0 auto 35px;
+    p{
+      margin-top: 16px;
+    }
+  }
+  .col-grid{
+    padding: 20px 25px;
+    background-color: $light-gray;
+    margin-bottom: 4px;
+    &.first {
+      border-radius: 12px 12px 0 0;
+      padding-top: 30px;
+    }
+    &:last-child {
+      border-radius: 0 0 12px 12px;
+    }
+    span{
+      vertical-align: top;
+      color: $primary2;
+      font-size: 24px;
+      font-weight: 600;
+      opacity: .8;
+      max-width: 120px;
+      width: 100%;
+      display: block;
+      float: left;
+      @include phablet {
+        font-size: 20px;
+      }
+      @include phablet-down{
+        text-align: center;
+        margin: 10px auto;
+        float: none;
+        font-size: 20px;
+      }
+    }
+    p{
+      display: inline-block;
+      width: calc(85% - 35px);
+      margin-left: 30px;
+      font-size: 20px;
+      line-height: 1.45;
+      opacity: .8;
+      @include tablet{
+        width: calc(80% - 25px);
+        margin-left: 30px;
+      }
+      @include phablet {
+        width: calc(70% - 25px);
+      }
+      @include phablet-down{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}

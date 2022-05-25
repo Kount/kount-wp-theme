@@ -1,0 +1,69 @@
+.team-grid {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 164px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 54px;
+  }
+  .grid-wrapper {
+    margin: 0px -15px 39px;
+    @include media-breakpoint-down(xs) {
+      max-width: 350px;
+      margin: 0px auto 39px;
+    }
+    h2 {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 105px;
+    }
+    .col-wrap {
+      padding: 0 15px;
+      .grid-box {
+        width: 100%;
+        padding: 0 20px 42px;
+        border: solid 3px #f3f3f3;
+        text-align: center;
+        .img-wrap {
+          margin: -85px 0 24px;
+        }
+        h6 {
+          font-weight: 600;
+          color: $dark-blue;
+        }
+        .profile {
+          display: block;
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 1.2;
+        }
+        .cat {
+          display: block;
+          font-size: 18px;
+          font-weight: 300;
+          color: $primary3;
+          line-height: 1.3;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .pattern {
+    position: absolute;
+    z-index: 1;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    &.pattern-right {
+      right: -610px;
+      top: -350px;
+      width: 758px;
+      height: 608px;
+    }
+  }
+}

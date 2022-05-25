@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "plugins.js": {
+      "files": [
+        "scripts/plugins/*.js"
+      ],
+      "main": true
+    },
+    "global.js": {
+      "files": [
+        "scripts/global/*.js"
+      ]
+    },
+    "main.js": {
+      "files": [
+        "scripts/main.js",
+        "scripts/section/*.js"
+      ],
+      "main": true
+    }
+  },
+  "paths": {
+    "source": "templates/assets/",
+    "dist": "templates/dist/"
+  },
+  "config": {
+    "devUrl": "kount.local"
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.086" height="32.769" viewBox="0 0 44.086 32.769">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke:#ffffff;stroke-linecap:square;stroke-miterlimit:10}.cls-1{stroke-width:2px}.cls-2{stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="Icon" transform="translate(-990.777 -576.705)">
+        <path id="Path_2054" d="M1029.423 604.508h.577a3.857 3.857 0 0 0 3.863-3.852v-19.1A3.857 3.857 0 0 0 1030 577.7h-34.357a3.857 3.857 0 0 0-3.863 3.852v19.1a3.857 3.857 0 0 0 3.863 3.852h19.467" class="cls-1" data-name="Path 2054" transform="translate(-.001)"/>
+        <g id="Group_808" data-name="Group 808" transform="translate(1015.707 592.231)">
+            <path id="Rectangle_79" d="M0 0h13.282v10.213H0z" class="cls-2" data-name="Rectangle 79" transform="translate(0 6.28)"/>
+            <path id="Path_2055" d="M1041.584 624.851a1.69 1.69 0 1 1-1.691-1.69 1.69 1.69 0 0 1 1.691 1.69z" class="cls-2" data-name="Path 2055" transform="translate(-1033.252 -613.862)"/>
+            <path id="Line_5" d="M0 0v1.143" class="cls-2" data-name="Line 5" transform="translate(6.641 12.68)"/>
+            <path id="Path_2056" d="M1042.754 611.7a3.483 3.483 0 0 0-3.483-3.482h-2.379a3.482 3.482 0 0 0-3.482 3.482v2.8" class="cls-2" data-name="Path 2056" transform="translate(-1031.441 -608.213)"/>
+        </g>
+        <path id="Path_2057" d="M1033.141 591.37h-41.364v-6.026h41.364" class="cls-1" data-name="Path 2057" transform="translate(0 -2.887)"/>
+    </g>
+</svg>

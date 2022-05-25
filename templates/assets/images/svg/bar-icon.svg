@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60.825" height="53.112" viewBox="0 0 60.825 53.112">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#0096aa;stroke-width:6px}
+        </style>
+    </defs>
+    <g id="Bar_Icon" data-name="Bar Icon" transform="translate(3)">
+        <path id="Line_23" d="M0 0v53.112" class="cls-1" data-name="Line 23" transform="translate(54.825)"/>
+        <path id="Line_24" d="M0 0v44.545" class="cls-1" data-name="Line 24" transform="translate(41.119 8.566)"/>
+        <path id="Line_25" d="M0 0v34.266" class="cls-1" data-name="Line 25" transform="translate(27.412 18.846)"/>
+        <path id="Line_26" d="M0 0v25.699" class="cls-1" data-name="Line 26" transform="translate(13.706 27.412)"/>
+        <path id="Line_27" d="M0 0v15.42" class="cls-1" data-name="Line 27" transform="translate(0 37.692)"/>
+    </g>
+</svg>

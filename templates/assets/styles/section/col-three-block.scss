@@ -1,0 +1,500 @@
+.col-three-block {
+  overflow: visible;
+  z-index: 1;
+  @include desktop-up {
+    padding: 68px 0 50px;
+  }
+  @include laptop-only {
+    padding: 40px 0;
+  }
+  &.inner-overlay-active {
+    .column-wrapper {
+      //margin-bottom: 165px;
+      @include tablet {
+        //margin-bottom: 195px;
+      }
+      @include tablet-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .container {
+    //transition: all 0.4s ease;
+  }
+  .pattern {
+    display: none;
+    position: absolute;
+    width: 584px;
+    height: 610px;
+    right: -260px;
+    top: 40px;
+    @include desktop {
+      width: 454px;
+      height: 480px;
+    }
+    @include tablet {
+      width: 394px;
+      height: 420px;
+      top: 0;
+    }
+    @include tablet-down {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 610px;
+      transform: rotate(187deg);
+    }
+  }
+  .intro-block {
+    p {
+      padding: 0 20px;
+      @include desktop-down {
+        padding: 0;
+      }
+    }
+  }
+  .column-wrapper {
+    max-width: 952px;
+    margin: 42px auto 0;
+    font-size: 0;
+    text-align: center;
+    transition: all 0.4s ease;
+    @include desktop {
+      margin: 40px auto 0;
+    }
+    @include laptop-only {
+      margin: 25px auto 0;
+    }
+    @include tablet {
+      margin: 30px auto 0;
+    }
+    @include tablet-down {
+      text-align: center;
+      font-size: 0;
+    }
+    @include phablet {
+      margin: 15px auto 0;
+    }
+    @include phone {
+      margin: 20px auto 0;
+    }
+    @include phone-down {
+      margin: 30px auto 0;
+    }
+    .col-three {
+      border: 2px solid $lightbrown-gray;
+      padding: 10px 20px 10px 49px;
+      margin: 0 16px;
+      width: calc(33.33% - 32px);
+      visibility: hidden;
+      background: $white;
+      min-height: 129px;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      cursor: pointer;
+      @include tablet-down {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+      }
+      @include tablet {
+        width: calc(50% - 30px);
+        margin: 15px;
+      }
+      @include phablet {
+        width: calc(50% - 30px);
+        margin: 15px;
+      }
+      @include phone {
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+      @include phone-down {
+        width: 100%;
+        margin: 0 0 20px;
+      }
+      &:last-child {
+        @include phone-down {
+          margin: 0;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 110px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 14px;
+        height: 14px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("/wp-content/themes/kount/templates/dist/images/svg/plus.svg");
+      }
+      .content-wrap {
+        display: none;
+      }
+      &.text-sky-blue {
+        h6 {
+          color: $primary3;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/blue-arrow.svg");
+        }
+      }
+      &.text-cyan {
+        h6 {
+          color: $green;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/cyan-arrow.svg");
+        }
+      }
+      &.text-green {
+        h6 {
+          color: $primary4;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/green-arrow-new.svg");
+        }
+      }
+      &.text-orange {
+        h6 {
+          color: $light-orange;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/orange-arrow.svg");
+        }
+      }
+      &.text-dark-blue {
+        h6 {
+          color: $dark-blue;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-dark-blue.svg");
+        }
+      }
+      &.text-light-green {
+        h6 {
+          color: $light-green;
+        }
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-light-green.svg");
+        }
+      }
+      h6 {
+        //display: table-cell;
+        //vertical-align: middle;
+        position: relative;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        transition: all 0.4s ease-in-out;
+        top: 50%;
+        transform: translateY(-50%);
+        @include tablet {
+          font-size: 17px;
+        }
+        @include tablet-down {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .inner-overlay {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    max-width: 920px;
+    width: calc(100% - 40px);
+    //height: 429px;
+    min-height: 230px;
+    margin: 0 auto;
+    border: 2px solid $lightbrown-gray;
+    padding: 34px 66px 56px;
+    background: $white;
+    transition: all 0.4s ease;
+    @include tablet {
+      padding: 30px 50px 30px;
+      //height: 300px;
+      //overflow: scroll;
+    }
+    @include tablet-down {
+      height: 100%;
+      overflow: scroll;
+    }
+    @include phablet {
+      padding: 30px 40px;
+    }
+    @include phablet-down {
+      padding: 30px;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .close-overlay {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 40px;
+      height: 110px;
+      opacity: 1;
+      background-size: 100%;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      transition: all 0.4s ease-in-out;
+      @include phablet {
+        width: 30px;
+        height: 80px;
+      }
+      @include phablet-down {
+        width: 20px;
+        height: 90px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 110px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        @include phablet {
+          width: 30px;
+          height: 80px;
+        }
+        @include phablet-down {
+          width: 20px;
+          height: 55px;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 14px;
+        height: 2px;
+        background: $white;
+        @include phablet {
+          width: 10px;
+          left: 7px;
+        }
+        @include phablet-down {
+          width: 9px;
+          left: 3px;
+        }
+      }
+    }
+    &.blue-overlay {
+      h5 {
+        color: $primary3;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/blue-arrow.svg");
+        }
+      }
+    }
+    &.cyan-overlay {
+      h5 {
+        color: $green;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/cyan-arrow.svg");
+        }
+      }
+    }
+    &.green-overlay {
+      h5 {
+        color: $primary4;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/green-arrow-new.svg");
+        }
+      }
+    }
+    &.orange-overlay {
+      h5 {
+        color: $light-orange;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/orange-arrow.svg");
+        }
+      }
+    }
+
+    &.light-green-overlay {
+      h5 {
+        color: $light-green;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-light-green.svg");
+        }
+      }
+    }
+    &.dark-blue-overlay {
+      h5 {
+        color: $dark-blue;
+      }
+      .close-overlay {
+        &:before {
+          background-image: url("/wp-content/themes/kount/templates/dist/images/svg/arrow-dark-blue.svg");
+        }
+      }
+    }
+
+    h5 {
+      font-size: 24px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.21;
+      letter-spacing: normal;
+      @include phablet-down {
+        font-size: 20px;
+      }
+    }
+    p {
+      margin-top: 17px;
+    }
+
+    .slider-wrap {
+      max-width: 720px;
+      margin: 20px auto 0;
+      @include desktop-down {
+        margin: 20px 20px 0;
+      }
+      @include phone-down {
+        width: calc(100% + 10px);
+        margin-left: -5px;
+      }
+      .slider {
+        .item {
+          font-size: 0;
+          .icon {
+            width: 135px;
+            height: 135px;
+            display: inline-block;
+            vertical-align: middle;
+            background: $light-gray;
+            border-radius: 50%;
+            padding: 35px 30px;
+            text-align: center;
+            @include tablet-down {
+              padding: 30px 25px;
+              width: 115px;
+              height: 115px;
+            }
+            @include phablet-down {
+              margin: 0 auto;
+              display: block;
+            }
+            img {
+              max-height: 65px;
+            }
+          }
+          .content {
+            width: calc(100% - 135px);
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 44px;
+            @include phablet {
+              padding-left: 25px;
+              width: calc(100% - 115px);
+            }
+            @include phablet-down {
+              padding-left: 0;
+              width: 100%;
+            }
+            p {
+              line-height: 1.19;
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+      .slick-arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 3;
+        width: 7px;
+        height: 11px;
+        font-size: 0;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.4s ease;
+        background-size: 100%;
+        border: 0;
+        background: transparent;
+        &.slick-prev {
+          left: -28px;
+          background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+          background-repeat: no-repeat;
+          transform: rotate(-180deg);
+          background-position: center;
+          background-color: transparent;
+          @include media-breakpoint-only(lg) {
+            left: -30px;
+          }
+          @include desktop-down {
+            left: -20px;
+          }
+          @include phone-down {
+            left: -15px;
+          }
+        }
+        &.slick-next {
+          right: -13px;
+          background-image: url(/wp-content/themes/kount/templates/dist/images/svg/logo-right-arrow.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          @include media-breakpoint-only(lg) {
+            right: -30px;
+          }
+          @include desktop-down {
+            right: -20px;
+          }
+          @include phone-down {
+            right: -15px;
+          }
+        }
+      }
+    }
+  }
+}

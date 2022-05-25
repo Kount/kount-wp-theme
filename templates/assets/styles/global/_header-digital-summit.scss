@@ -1,0 +1,408 @@
+@import "../common/variables";
+
+.dps.btn {
+    border-radius: 2px;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    //font-size: 16px;
+    outline: 0;
+    box-shadow: none;
+
+  //&.btn-fill-orange{
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    transition: all 0.15s linear;
+    &:hover{
+      color: $orange;
+      background: none;
+    }
+  //}
+}
+
+header.header-digital-summit{
+  .logo{
+    padding-top: 18px;
+    float: left;
+    height: 58px;
+    @include phone-down{
+      max-width: 108px;
+      width: 100%;
+    }
+  }
+  h1 {
+    @include tablet-up {
+      font-size: 78px;
+    }
+  }
+   .link-wrap{
+        padding-top: 18px;
+        float: right;
+       .btn{
+         border: 1px solid $primary;
+         border-radius: 2px;
+         padding: 6px 20px;
+         text-transform: uppercase;
+         font-size: 16px;
+         outline: 0;
+         box-shadow: none;
+         transition: all .2s;
+         &:hover {
+           background: $primary;
+           color: $white;
+         }
+         &.btn-blue {
+               margin-right: 32px;
+               border: 1px solid $sky-blue;
+               color: $sky-blue;
+               transition: all 0.3s linear;
+               @include phone-down{
+                   margin-right: 8px;
+               }
+               &:hover{
+                   transition: all 0.3s linear;
+                   background-color: $sky-blue;
+                   color: $white;
+               }
+           }
+           &.btn-gray{
+            border: 1px solid $primary;
+            color: $primary;
+            transition: all 0.3s linear;
+            &:hover{
+                transition: all 0.3s linear;
+                background-color: $primary;
+                color: $white;
+            }
+           }
+       }
+   }
+
+
+  .menu-primary-container,
+  .menu-footer-container{
+    float: right;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 16px;
+      color: $gray;
+      transition: color .15s;
+      text-transform: uppercase;
+      &:hover,
+      &:focus{
+        color: $black;
+      }
+    }
+    li {
+      display: inline-block;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &.current-menu-item {
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .menu-primary-container {
+    padding-top: 22px;
+  }
+
+  //header.header-digital-summit{
+    @include desktop-down {
+      display: none;
+    }
+    + section {
+      margin-top: 70px;
+      //@include desktop-down {
+      //  margin-top: 60px;
+      //}
+    }
+    box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.15);
+    position: fixed;
+    height: 74px;
+    width: 100vw;
+    z-index: 100;
+    background: $white;
+    //.logo{
+    //  padding-top: 16px;
+    //  float: left;
+    //  @include phone-down{
+    //    max-width: 108px;
+    //    width: 100%;
+    //  }
+    //}
+
+    .link-wrap{
+      padding-top: 21px;
+      float: right;
+      a {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 16px;
+        color: $gray;
+        transition: color .15s;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:hover {
+          color: $black;
+        }
+      }
+      .btn{
+        margin-top: -5px;
+        border: 1px solid;
+        border-radius: 2px;
+        padding: 6px 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        outline: 0;
+        box-shadow: none;
+        @include phone-down{
+          padding: 6px 7px;
+        }
+        &.btn-blue {
+          margin-right: 32px;
+          border: 1px solid $sky-blue;
+          color: $sky-blue;
+          transition: all 0.3s linear;
+          @include phone-down{
+            margin-right: 8px;
+          }
+          &:hover{
+            transition: all 0.3s linear;
+            background-color: $sky-blue;
+            color: $white;
+          }
+        }
+        &.btn-gray{
+          border: 1px solid $primary;
+          color: $primary;
+          transition: all 0.3s linear;
+          &:hover{
+            transition: all 0.3s linear;
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  //}
+}
+.mobile-header-digital-summit {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: $white;
+  box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.15);
+  @include desktop-down {
+    display: block !important;
+  }
+  .logo {
+    float: left;
+    margin-left: 15px;
+    margin-top: 6px;
+    //margin: 17px 0 17px 20px;
+    transform: scale(0.8);
+    transform-origin: left;
+    @include phonedown_landscape {
+      margin-left: 10px;
+    }
+  }
+  nav {
+    float:right;
+  }
+  .attend-button-wrapper {
+    position: absolute;
+    right: 60px;
+    top: 21px;
+  }
+  //#menu-primary {
+  //  .nav-button {
+  //    display: none;
+  //  }
+  //}
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 23px;
+    left: calc(100% - 50px);
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    a {
+      text-decoration: none;
+      color: $dark-gray;
+      transition: color 0.3s ease;
+      &:hover,
+      &:focus{
+        color: $black;
+      }
+    }
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+
+      cursor: pointer;
+
+      opacity: 0; /* hide this */
+      z-index: 3000; /* and place it over the hamburger */
+
+      -webkit-touch-callout: none;
+    }
+    /*
+   * Just a quick hamburger
+   */
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #e57633;
+      border-radius: 2px;
+      z-index: 2000;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+    }
+
+    /*
+     * But let's hide the middle one.
+     */
+    input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: $white;
+  }
+
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu,
+  #menu-primary {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: $dark-gray;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: none;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    a {
+      display: block;
+      color: $white;
+      font-size: 22px;
+      &:hover,
+      &:focus{
+        color: $light-gray;
+      }
+    }
+    li {
+      padding: 10px 0;
+      font-size: 20px;
+      &.current-menu-item {
+        a {
+          color: $gray;
+          &:hover,
+          &:focus {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    //transform: none;
+    transform: translate(-100%, 0);
+  }
+}
+
+header.header-digital-summit,
+header.mobile-header-digital-summit {
+  .nav-button a {
+    margin-top: -5px;
+    border: 1px solid $dark-gray;
+    border-radius: 2px;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    outline: 0;
+    box-shadow: none;
+    transition: all .2s;
+    color: $dark-gray;
+    &:hover,
+    &:focus{
+      background: $dark-gray;
+      color: $white;
+    }
+    @include phonedown_landscape {
+      border: none;
+      &:hover,
+      &:focus{
+        background: none;
+        color: $gray;
+      }
+    }
+  }
+  .divider {
+    width: 1px;
+    height: 58px;
+    background: #707070;
+  }
+
+}
+
+

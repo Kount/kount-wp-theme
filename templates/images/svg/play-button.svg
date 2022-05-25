@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.125" height="96.125" viewBox="0 0 96.125 96.125">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2,.cls-4{fill:none}.cls-2{stroke:#fff;stroke-width:4px}.cls-3{stroke:none}.cls-5{filter:url(#Ellipse_135)}.cls-6{filter:url(#Path_2048)}
+        </style>
+        <filter id="Path_2048" width="56.206" height="62.555" x="23.527" y="17.234" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur" stdDeviation="6"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Ellipse_135" width="96.125" height="96.125" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-2" stdDeviation="6"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Play_button" data-name="Play button">
+        <g class="cls-6">
+            <path id="Path_2048-2" d="M446.645 4030.4l20.206 13.277-20.206 13.277z" class="cls-1" data-name="Path 2048" transform="translate(-405.12 -4001.17)"/>
+        </g>
+        <g class="cls-5">
+            <g id="Ellipse_135-2" class="cls-2" data-name="Ellipse 135" transform="translate(18 12)">
+                <circle cx="30.063" cy="30.063" r="30.063" class="cls-3"/>
+                <circle cx="30.063" cy="30.063" r="28.063" class="cls-4"/>
+            </g>
+        </g>
+    </g>
+</svg>

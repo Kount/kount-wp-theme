@@ -1,0 +1,17 @@
+// Generate color classes for every prefix and color
+
+$i: 1;
+
+@while $i <= length($colors) {
+  $name: nth($colors, $i);
+  $color: nth($colors, $i+1);
+
+  // Create styles for each prefix
+  .text-#{$name} { color: $color !important; }
+
+  .bg-#{$name} { background-color: $color; }
+
+  .border-#{$name} { border-color: $color !important; }
+
+  $i: $i + 2;
+}

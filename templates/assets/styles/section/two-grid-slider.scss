@@ -1,0 +1,317 @@
+.two-grid-slider {
+  position: relative;
+  @include desktop-up {
+    padding-bottom: 28px;
+  }
+  @include tablet {
+    position: relative;
+  }
+  @include tablet-down {
+    position: relative;
+  }
+  .container {
+    z-index: 12;
+  }
+  @media(max-width: 414px) and (min-width: 375px) {
+    .container {
+      width: 354px;
+    }
+  }
+  .pattern {
+    position: absolute;
+    right: -140px;
+    width: 660px;
+    height: 690px;
+    @include tablet-down {
+      display: none;
+    }
+    img {
+      height: 100%;
+    }
+    &.pattern-left {
+      right: -195px;
+      width: 669px;
+      height: 690px;
+      top: -130px;
+      img {
+        max-height: 607px;
+      }
+    }
+  }
+  .slider-wrapper {
+    width: 100%;
+    padding-top: 141px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 113px;
+      height: calc(100% - 282px);
+      width: 2px;
+      // background: $lightbrown-gray;
+      @include container-down {
+        display: none;
+      }
+    }
+    @include tablet {
+      padding-top: 185px;
+    }
+    @include tablet-down {
+      padding-top: 95px;
+    }
+    @include phone-down {
+      padding-top: 62px;
+    }
+    .slick-list {
+      position: relative;
+      &:after {
+        @include container-down {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          height: calc(100% - 159px);
+          width: 2px;
+          background: $lightbrown-gray;
+        }
+        @include tablet {
+          height: calc(100% - 134px);
+        }
+        @include tablet-down {
+          display: none;
+        }
+      }
+      @include tablet-down {
+        border: 2px solid $lightbrown-gray;
+      }
+    }
+    .slider {
+      margin: 0 auto;
+      overflow: hidden;
+      max-width: 881px;
+      @include desktop {
+        max-width: 815px;
+      }
+      @include desktop-mid {
+        max-width: 810px;
+      }
+      @include tablet {
+        max-width: 730px;
+      }
+      .content-wrapper {
+        float: left;
+        width: 100%;
+        background-color: $white;
+
+        a {
+          // position: absolute;
+          // left: 0;
+          // top: 0;
+          // right: 0;
+          // bottom: 0;
+          width: 100%;
+          display: block;
+        }
+
+        .img-box {
+          float: left;
+          max-width: 310px;
+          height: 241px;
+          object-fit: contain;
+          position: relative;
+          @include tablet {
+            max-width: 290px;
+          }
+          @include tablet-down {
+            height: 220px;
+          }
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          @include tablet-down {
+            float: none;
+            margin: 0 auto;
+            padding-top: 15px;
+          }
+          @media(max-width: 414px) and (min-width: 375px) {
+            @include tablet-down {
+              margin: 0;
+            }
+          }
+          @include phablet-down {
+            padding-top: 0;
+          }
+        }
+        .content {
+          float: left;
+          width: calc(100% - 310px);
+          padding: 20px 28px 16px 30px;
+          border-bottom: 2px solid $lightbrown-gray;
+          min-height: 241px;
+          @include desktop {
+            padding: 20px 10px 23px 30px;
+          }
+          @include tablet-down {
+            border: none;
+          }
+          @include tablet {
+            padding-top: 15px;
+            padding-left: 15px;
+            width: calc(100% - 290px);
+          }
+          @include tablet-down {
+            float: none;
+            width: 100%;
+            text-align: center;
+            padding: 20px 17px 20px 15px;
+          }
+          @media(max-width: 414px) and (min-width: 375px) {
+            @include tablet-down {
+              padding: 20px 18px 20px 15px;
+            }
+          }
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.21;
+            color: $primary;
+            padding-bottom: 53px;
+            display: block;
+            @include desktop {
+              padding-bottom: 25px;
+            }
+            @include tablet {
+              padding-bottom: 38px;
+            }
+            @include tablet-down {
+              padding-bottom: 10px;
+            }
+          }
+          .inner {
+            line-height: 1.33;
+            color: $primary2;
+            font-weight: 400;
+            padding-bottom: 7px;
+          }
+          h3 {
+            color: $primary;
+            line-height: 1.23;
+            font-weight: 500;
+            letter-spacing: - 0.3px;
+            padding-bottom: 10px;
+          }
+          .text {
+            p {
+              line-height: 1.33;
+              color: $primary;
+              //display: flex;
+              //-webkit-line-clamp: 2;
+              //overflow: hidden;
+              //height: 2.5em;
+            }
+          }
+        }
+      }
+      .slick-dots {
+        text-align: center;
+        margin-top: 20px;
+        li {
+          display: inline-block;
+          border: 0;
+          border-radius: 50%;
+          padding: 0 5px;
+          font-size: 0;
+          overflow: hidden;
+
+          button {
+            border: 0;
+            padding: 0;
+            background: $dark-blue;
+            width: 11px;
+            height: 11px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            text-indent: -9999px;
+            white-space: nowrap;
+            transition: all .4s ease-in-out;
+          }
+          &.slick-active {
+            button {
+              background: $green;
+            }
+          }
+        }
+      }
+    }
+    .slide-nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      top: calc(73% - 18px);
+      @include container-down {
+        top: calc(77% - 18px);
+      }
+      @include desktop-down {
+        display: none;
+      }
+      .slick-arrow {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 3;
+        width: 39px;
+        height: 39px;
+        border: 2px solid $dark-blue;
+        border-radius: 50%;
+        font-size: 0;
+        cursor: pointer;
+        outline: none;
+        transition: all .4s ease-in-out;
+        background-color: transparent;
+        padding: 9px;
+        text-align: center;
+        svg {
+          path {
+            transition: all .4s ease-in-out;
+          }
+        }
+        &:hover {
+          border-color: $green;
+          svg {
+            path {
+              fill: $green;
+              transition: all .4s ease-in-out;
+            }
+          }
+        }
+      }
+      .slide-prev {
+        float: left;
+        margin-left: 52px;
+        @include desktop {
+          margin-left: 32px;
+        }
+        @include tablet {
+          margin-left: 15px;
+        }
+      }
+      .slide-next {
+        float: right;
+        margin-right: 52px;
+        @include desktop {
+          margin-right: 32px;
+        }
+        @include tablet {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

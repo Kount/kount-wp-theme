@@ -1,0 +1,254 @@
+.case-study-detail {
+  ul {
+    margin-left: 20px;
+  }
+  li {
+    list-style: disc;
+    font-family: 'proxima-nova-light', sans-serif;
+    line-height: 1.5;
+  }
+  p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .logo-wrap {
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+    }
+  }
+  .sidebar {
+    .content {
+      max-width: 360px;
+      @include tablet-up {
+        float: right;
+      }
+    }
+  }
+  .list {
+    background: $light-gray;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    .h5 {
+      color: #1778bd;
+    }
+  }
+  .list-wrap {
+    p {
+      margin: 0 0 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.case-study-detail,
+.subheader {
+  blockquote {
+    position: relative;
+    font-size: 40px;
+    padding-left: 50px;
+    @include desktop-up {
+      padding-right: 80px;
+      padding-left: 110px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.25;
+      @include tablet-up {
+        font-size: 24px;
+      }
+      @include desktop-up {
+        font-size: 40px;
+      }
+    }
+    &:before {
+      content: '';
+      background: url('/wp-content/themes/kount/templates/dist/images/svg/d-quote-big-light-green.svg') center/contain no-repeat;
+      width: 75px;
+      height: 61px;
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 40px;
+      height: 28px;
+      @include desktop-up {
+        top: 12px;
+        width: 75px;
+        height: 61px;
+      }
+    }
+    cite {
+      font-family: 'proxima-nova-bold', san-serif;
+      font-style: normal;
+      font-size: 16px;
+      display: block;
+      padding-top: 15px;
+      @include desktop-up {
+        font-size: 18px;
+      }
+    }
+  }
+
+}
+
+.subheader {
+  blockquote {
+    padding-right: 0;
+    &:before {
+      top: 8px;
+    }
+    p {
+      margin-bottom: 0;
+      @include desktop-up {
+        font-size: 28px;
+      }
+    }
+  }
+}
+.testimonial{
+  z-index: 2;
+  @include desktop-up{
+    padding-top: 121px;
+    padding-bottom: 117px;
+  }
+  @include large_desktop{
+    padding-top: 115px;
+    padding-bottom: 70px;
+  }
+
+  .img-wrap{
+    max-height: 97px;
+    max-width: 344px;
+    margin: 0 auto;
+    text-align: center;
+    @include phablet-down{
+      max-width: 285px;
+    }
+   img{
+     width: auto;
+   }
+  }
+  .content-wrap{
+    display: block;
+    text-align: center;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 33px;
+    @include tablet-down{
+      margin-top: 20px;
+    }
+   .content-inner{
+     text-align: center;
+     font-size: 40px;
+     display: inline;
+     font-weight: 300;
+     line-height: 1.25;
+     letter-spacing: -.4px;
+     color: #2f3640;
+     quotes: "“" "”" "‘" "’";
+     position: relative;
+     @include desktop{
+       font-size: 35px;
+      }
+    @include tablet{
+       font-size: 30px;
+       max-width: 710px;
+       margin: 30px 20px 0 20px;
+       padding: 0 15px;
+     }
+     @include phablet{
+        font-size: 26px;
+        margin: 25px 10px 0 10px;
+        padding: 0;
+      }
+     @include phone{
+        font-size: 20px;
+         margin: 25px 8px 0 8px;
+        padding: 0 ;
+      }
+     @include phone-down{
+       font-size: 16px;
+       margin: 25px 10px 0 10px;
+       padding: 0;
+       display: block;
+     }
+    &:before{
+   content: open-quote;
+   font-size: 100px;
+   line-height: 1;
+   left: -44px;
+   height: 32px;
+   width: 33px;
+   color: $green;
+   letter-spacing: 1px;
+   position: absolute;
+   @include tablet{
+     font-size: 78px;
+     line-height: 1;
+     left: -25px;
+    }
+    @include tablet-down{
+     font-size: 62px;
+      left: -30px;
+    }
+    @include phone-down{
+     font-size: 55px;
+      left: -18px;
+    }
+  }
+   &:after{
+   content: close-quote;
+   font-size: 100px;
+   line-height: 1.2;
+   height: 32px;
+   width: 40px;
+   color: $green;
+   letter-spacing: -5px;
+   position: absolute;
+   @include desktop{
+     line-height: 1;
+   }
+   @include tablet{
+     line-height: 1;
+     font-size: 78px;
+   }
+   @include tablet-down{
+     line-height: 1;
+     font-size: 62px;
+   }
+   @include phone-down{
+     font-size: 55px;
+   }
+ }
+}
+.title{
+  display: inherit;
+  text-align: center;
+  color: $primary2;
+  line-height: 1.33;
+  font-weight: 700;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 37px;
+  @include tablet-down{
+    margin-top: 25px;
+  }
+  &:before{
+    content: "-";
+    //position: absolute;
+    left: -9px;
+    margin-right: 5px;
+    top: 0;
+    width: 6px;
+    height: 2px;
+  }
+}
+}
+}
